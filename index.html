@@ -11,38 +11,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
 <style>
-:root{
---cream:#F3EFE7;--paper:#FAF8F3;--beige:#E6DED1;
---ink:#25231F;--muted:#777064;--gold:#A58B60;
---line:#D8CCB8;--wine:#713D40;--night:#202127;
---serif:"Instrument Serif",Georgia,serif;
---editorial:"Cormorant Garamond",Georgia,serif;
---sans:"DM Sans",Arial,sans-serif
-}
+:root{--cream:#F3EFE7;--paper:#FAF8F3;--beige:#E6DED1;--ink:#25231F;--muted:#777064;--gold:#A58B60;--line:#D8CCB8;--wine:#713D40;--night:#202127;--serif:"Instrument Serif",Georgia,serif;--editorial:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:85px}
 body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;overflow-x:hidden}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .wrap{width:min(1180px,90%);margin:auto}
 .eyebrow{color:var(--gold);font-size:.67rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase}
 .display{font:clamp(3.5rem,8vw,7rem)/.92 var(--serif);letter-spacing:-1px}
 .display em{color:var(--wine);font-weight:400}
 .section{padding:105px 0;border-bottom:1px solid var(--line)}
-.head{margin-bottom:38px}
-.head p{max-width:650px;margin-top:16px;color:var(--muted)}
+.head{margin-bottom:38px}.head p{max-width:650px;margin-top:16px;color:var(--muted)}
 .btn{display:inline-block;padding:12px 19px;border:1px solid var(--ink);font-size:.67rem;letter-spacing:1.3px;text-transform:uppercase;transition:.25s}
 .btn:hover{background:var(--ink);color:white}
-
 header{position:sticky;top:0;z-index:100;background:#F3EFE7ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{min-height:75px;display:flex;align-items:center;justify-content:space-between}
-.brand{font:2.1rem var(--serif);letter-spacing:1px}
-.brand span{color:var(--wine)}
+.brand{font:2.1rem var(--serif);letter-spacing:1px}.brand span{color:var(--wine)}
 .navlinks{display:flex;align-items:center;gap:23px}
 .navlinks a{font-size:.65rem;letter-spacing:1.2px;text-transform:uppercase;color:#625c52}
 .navlinks a:hover{color:var(--wine)}
 .menu{display:none;background:none;border:1px solid var(--line);padding:7px 12px;font-size:1.3rem;cursor:pointer}
-
 .hero{padding:75px 0 90px}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:6%;align-items:center}
 .kicker{color:var(--gold);font-size:.67rem;letter-spacing:2.5px}
@@ -51,30 +39,22 @@ header{position:sticky;top:0;z-index:100;background:#F3EFE7ed;backdrop-filter:bl
 .hero-copy{max-width:460px;color:var(--muted)}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
 .hero-note{margin-top:25px;color:var(--gold);font-size:.62rem;letter-spacing:1.8px;text-transform:uppercase}
-
 .visual{position:relative;width:100%;height:570px}
 .visual .main{position:absolute;right:2%;top:0;width:76%;height:88%;object-fit:cover;object-position:center;filter:saturate(.83)}
 .visual .small{position:absolute;left:0;bottom:0;width:39%;height:38%;object-fit:cover;border:9px solid var(--cream)}
 .stamp{position:absolute;right:0;bottom:25px;background:var(--paper);padding:12px 17px;font:italic 1.3rem var(--editorial);color:var(--wine)}
-
 .statement{background:var(--wine);color:#F6EEE3;text-align:center;padding:26px 15px;font:italic clamp(1.8rem,4vw,3rem) var(--editorial)}
 .statement small{display:block;color:#E0C8B7;font:.62rem var(--sans);letter-spacing:3px;text-transform:uppercase}
-
 .about{display:grid;grid-template-columns:1.05fr .95fr;gap:7%;align-items:center}
-.about-copy{font:1.45rem/1.55 var(--editorial)}
-.about-copy p+p{margin-top:18px}
+.about-copy{font:1.45rem/1.55 var(--editorial)}.about-copy p+p{margin-top:18px}
 .facts{border-top:1px solid var(--line)}
 .fact{display:flex;justify-content:space-between;gap:15px;padding:15px 0;border-bottom:1px solid var(--line);font-size:.82rem}
-.fact span{color:var(--muted)}
-.fact strong{text-align:right}
-
+.fact span{color:var(--muted)}.fact strong{text-align:right}
 .inline-photo{position:relative;max-width:390px;margin:10px auto 0}
 .inline-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.82)}
 .inline-photo figcaption{padding:10px 0 0;color:var(--muted);font:italic 1.15rem var(--editorial)}
 .inline-photo figcaption strong{display:block;color:var(--ink);font:2rem/1 var(--serif)}
-.offset-left{transform:rotate(-2deg)}
-.offset-right{transform:rotate(2deg)}
-
+.offset-left{transform:rotate(-2deg)}.offset-right{transform:rotate(2deg)}
 .interests{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
 .interest{padding:25px;background:var(--paper);border:1px solid var(--line);min-height:155px}
 .interest small{color:var(--gold);letter-spacing:2px;font-size:.65rem}
@@ -83,46 +63,33 @@ header{position:sticky;top:0;z-index:100;background:#F3EFE7ed;backdrop-filter:bl
 .interest-photo{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;padding:15px;background:var(--beige)}
 .interest-photo img{width:100%;height:230px;object-fit:cover}
 .interest-photo p{font:italic 1.5rem/1.3 var(--editorial);color:var(--ink)}
-
 .career-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:7%;align-items:center}
 .timeline{border-left:1px solid var(--gold);padding-left:26px;margin-left:8px}
 .timeline article{position:relative;padding-bottom:28px}
 .timeline article:before{content:"";position:absolute;left:-31px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--wine)}
 .timeline small{color:var(--gold);letter-spacing:2px;font-size:.65rem}
-.timeline h3{font:2rem var(--editorial)}
-.timeline p{color:var(--muted);max-width:700px}
+.timeline h3{font:2rem var(--editorial)}.timeline p{color:var(--muted);max-width:700px}
 .education{padding:22px;background:var(--beige);margin-top:12px}
-
 .projects{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .project{background:var(--paper);border:1px solid var(--line);padding:30px;min-height:245px;display:flex;flex-direction:column;justify-content:space-between}
-.project h3{font:3rem var(--serif);margin:10px 0}
-.project p{color:var(--muted);margin-bottom:20px}
+.project h3{font:3rem var(--serif);margin:10px 0}.project p{color:var(--muted);margin-bottom:20px}
 .project-feature{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:center;margin-top:45px}
 .project-feature img{width:100%;height:310px;object-fit:cover}
 .project-feature p{font:italic 1.5rem/1.3 var(--editorial);color:var(--muted)}
-
-/* JOURNAL */
+/* JOURNAL — ORIGINAL PHOTO PLACEMENT PRESERVED */
 .gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:75px 22px;align-items:start}
-.photo{min-width:0;position:relative}
-.photo .frame{width:100%;overflow:hidden;background:var(--beige)}
+.photo{min-width:0;position:relative}.photo .frame{width:100%;overflow:hidden;background:var(--beige)}
 .photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.84);transition:transform .6s}
 .photo:hover img{transform:scale(1.025)}
 .photo figcaption{display:block;padding-top:12px;color:var(--muted);font:italic 1.2rem/1.35 var(--editorial)}
 .photo figcaption strong{display:block;color:var(--ink);font:2rem/1.05 var(--serif);margin-bottom:4px}
-.p1{grid-column:1/span 7}
-.p1 .frame{aspect-ratio:4/4.5}
-.p2{grid-column:8/span 5;margin-top:95px}
-.p2 .frame{aspect-ratio:4/4.7}
-.p3{grid-column:2/span 6;margin-top:-15px}
-.p3 .frame{aspect-ratio:4/4.4}
-.p4{grid-column:8/span 5;margin-top:55px}
-.p4 .frame{aspect-ratio:4/4.5}
-
+.p1{grid-column:1/span 7}.p1 .frame{aspect-ratio:4/4.5}
+.p2{grid-column:8/span 5;margin-top:95px}.p2 .frame{aspect-ratio:4/4.7}
+.p3{grid-column:2/span 6;margin-top:-15px}.p3 .frame{aspect-ratio:4/4.4}
+.p4{grid-column:8/span 5;margin-top:55px}.p4 .frame{aspect-ratio:4/4.5}
 .creator{background:var(--night);color:#F5F0E8;padding:35px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
-.creator h3{font:3rem var(--serif)}
-.creator p{color:#C9C1B5;max-width:650px}
+.creator h3{font:3rem var(--serif)}.creator p{color:#C9C1B5;max-width:650px}
 .creator .eyebrow{color:#C7A979}
-
 .cinema-top{display:flex;justify-content:space-between;align-items:end;gap:20px}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin:25px 0}
 .filter{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:30px;padding:9px 16px;font:.7rem var(--sans);letter-spacing:1px;cursor:pointer}
@@ -134,23 +101,67 @@ header{position:sticky;top:0;z-index:100;background:#F3EFE7ed;backdrop-filter:bl
 .poster img{width:100%;height:100%;object-fit:cover}
 .placeholder{height:100%;display:grid;place-items:center;text-align:center;padding:18px;color:white;background:linear-gradient(145deg,#635653,#202127);font:2rem/1.05 var(--serif)}
 .status{position:absolute;bottom:7px;left:7px;background:#171717d9;color:white;padding:4px 7px;font-size:.54rem;letter-spacing:1px;text-transform:uppercase}
-.movie-info{padding:11px}
-.movie-info h3{font:1.3rem/1.05 var(--editorial)}
+.movie-info{padding:11px}.movie-info h3{font:1.3rem/1.05 var(--editorial)}
 .meta{font-size:.67rem;color:var(--muted);margin-top:6px}
 .type{display:block;font-size:.57rem;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase;margin-top:7px}
 .note{font-size:.75rem;color:var(--muted);margin-top:18px}
-
 .socials{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .social{padding:19px;background:var(--paper);border:1px solid var(--line);display:flex;justify-content:space-between;transition:.2s}
-.social:hover{border-color:var(--gold)}
-.social strong{display:block;font:1.4rem var(--editorial)}
+.social:hover{border-color:var(--gold)}.social strong{display:block;font:1.4rem var(--editorial)}
 .social small{color:var(--muted);font-size:.7rem}
 .contact{background:var(--beige);padding:42px;display:flex;justify-content:space-between;align-items:center;gap:25px}
-.contact h3{font:clamp(2.6rem,6vw,4.8rem)/.9 var(--serif)}
-.contact p{color:var(--muted);margin-top:12px}
+.contact h3{font:clamp(2.6rem,6vw,4.8rem)/.9 var(--serif)}.contact p{color:var(--muted);margin-top:12px}
 footer{padding:28px 0;color:var(--muted);font-size:.72rem}
 .footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}
 
+/* NEW FEATURES — these do not alter original photo/grid positioning */
+#readingProgress{position:fixed;z-index:10020;top:0;left:0;width:0;height:3px;background:var(--gold)}
+body.archive-dark{--cream:#171719;--paper:#202127;--beige:#303036;--ink:#eee9df;--muted:#aaa39a;--line:#49443c;--gold:#b99b68;--wine:#a66c70;background:var(--cream);color:var(--ink)}
+body.archive-dark header{background:#202127ed}
+body.archive-dark .navlinks a{color:#d1c9bc}
+body.archive-dark .visual .small{border-color:var(--cream)}
+body.archive-dark .archive-quote{background:#292a30}
+.archive-tools{position:fixed;z-index:10010;right:15px;bottom:15px;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.archive-tools button{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:30px;padding:9px 13px;font:10px var(--sans);letter-spacing:1px;cursor:pointer;box-shadow:0 4px 16px #0002}
+#liveClock{background:var(--paper);color:var(--muted);padding:6px 11px;border-radius:30px;font:10px var(--sans);letter-spacing:1px}
+.archive-quote{width:min(760px,86%);margin:38px auto;padding:23px 27px;border-left:2px solid var(--gold);background:var(--paper);color:var(--ink)}
+.archive-quote blockquote{font:italic clamp(22px,4vw,34px)/1.2 var(--editorial)}
+.archive-quote cite{display:block;margin-top:10px;color:var(--muted);font:9px var(--sans);letter-spacing:1.5px;text-transform:uppercase}
+#archiveTimeline{padding:75px 7%;background:var(--paper);border-bottom:1px solid var(--line)}
+.archive-timeline-inner{max-width:780px;margin:auto}
+.archive-timeline-list{border-left:1px solid var(--gold);padding-left:28px;margin-top:32px}
+.archive-timeline-item{position:relative;padding:0 0 25px}
+.archive-timeline-item:before{content:"";position:absolute;left:-33px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.archive-timeline-item h3{font:27px var(--serif);font-weight:400}
+.archive-timeline-item p{font:13px/1.7 var(--sans);color:var(--muted);margin-top:4px}
+#contactCard{position:fixed;inset:0;z-index:10030;background:#000a;display:none;place-items:center;padding:20px}
+#contactCard.open{display:grid}
+.contact-card-inner{position:relative;width:min(390px,100%);padding:30px;background:var(--paper);color:var(--ink);border:1px solid var(--gold)}
+.contact-card-inner h2{font:42px var(--serif)}
+.contact-card-inner p{font:12px var(--sans);color:var(--muted);margin:10px 0 20px;overflow-wrap:anywhere}
+.contact-card-inner button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:10px 12px;font:10px var(--sans);margin-right:6px;cursor:pointer}
+#cardClose{position:absolute;right:12px;top:9px;border:0;font-size:22px}
+#photoViewer{position:fixed;inset:0;z-index:10040;background:#08090cf2;display:none;align-items:center;justify-content:center;padding:55px 18px}
+#photoViewer.open{display:flex}
+#photoViewer img{max-width:100%;max-height:82vh;object-fit:contain}
+.viewer-button{position:absolute;background:#222;color:#fff;border:1px solid #777;padding:10px 14px;cursor:pointer}
+#viewerClose{right:18px;top:18px}#viewerPrev{left:18px;top:50%}#viewerNext{right:18px;top:50%}
+#cinematicIntro{position:fixed;inset:0;z-index:10050;background:#080b10;color:#f3efe7;display:grid;place-items:center;text-align:center;overflow:hidden;padding:25px;transition:opacity 1s ease,visibility 1s ease}
+#cinematicIntro.leaving{opacity:0;visibility:hidden;pointer-events:none}
+.gotham-sky{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 82%,#59616a 0%,#202a35 27%,#0a1019 72%);overflow:hidden}
+.gotham-sky:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#05080dc9 0%,#101a27a8 48%,#05070bd9 100%),repeating-linear-gradient(105deg,transparent 0 8px,#b8c5d022 9px 10px,transparent 11px 21px)}
+.gotham-sky:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-8%;height:48%;background:linear-gradient(0deg,#050609 0 30%,transparent),repeating-linear-gradient(90deg,transparent 0 22px,#111a26 23px 66px,transparent 67px 92px);clip-path:polygon(0 44%,4% 44%,4% 18%,8% 18%,8% 55%,12% 55%,12% 0,17% 0,17% 62%,22% 62%,22% 30%,26% 30%,26% 70%,31% 70%,31% 12%,37% 12%,37% 57%,42% 57%,42% 23%,48% 23%,48% 65%,54% 65%,54% 8%,60% 8%,60% 53%,65% 53%,65% 28%,71% 28%,71% 65%,76% 65%,76% 15%,82% 15%,82% 56%,88% 56%,88% 25%,93% 25%,93% 62%,100% 62%,100% 100%,0 100%);opacity:.96}
+.gotham-building-lights{position:absolute;inset:54% 0 0;background:repeating-linear-gradient(90deg,transparent 0 29px,#d6a75c55 30px 32px,transparent 33px 51px);mask-image:linear-gradient(transparent,#000)}
+.bat-signal{position:absolute;top:3%;right:7%;width:min(38vw,410px);aspect-ratio:1;border-radius:50%;background:radial-gradient(ellipse,#e9e6d8aa 0%,#cbd2d244 35%,transparent 70%);filter:blur(2px);transform:rotate(-17deg);opacity:.8}
+.bat-signal:before{content:"";position:absolute;inset:22%;background:#111821;clip-path:polygon(0 28%,12% 38%,20% 15%,35% 31%,50% 8%,65% 31%,80% 15%,88% 38%,100% 28%,94% 65%,75% 88%,50% 100%,25% 88%,6% 65%);filter:drop-shadow(0 0 12px #fff)}
+.intro-content{position:relative;z-index:2;width:min(850px,100%);padding-top:8vh;text-shadow:0 3px 25px #000}
+.intro-location{font:11px var(--sans);letter-spacing:.42em;text-transform:uppercase;color:#e3ded2}
+.intro-name{font:clamp(48px,10vw,112px)/.95 var(--serif);letter-spacing:.12em;margin:30px 0 12px}
+.intro-tagline{font:italic clamp(17px,3vw,26px) var(--editorial);letter-spacing:.25em;color:#c6a36b}
+.intro-rule{width:150px;height:1px;background:#b8955e;margin:25px auto}
+#enterArchive{margin-top:14px;padding:15px 25px;border:1px solid #b8955e;background:#0a0d12aa;color:#f5eee2;font:10px var(--sans);letter-spacing:.25em;cursor:pointer}
+#enterArchive:hover{background:#b8955e;color:#111}
+.intro-credit{margin-top:18px;color:#c7c1b6;font:9px var(--sans);letter-spacing:.16em;text-transform:uppercase}
 @media(max-width:900px){
 .navlinks{gap:12px}.navlinks a{font-size:.58rem}
 .hero{padding:55px 0 65px}.hero-grid{gap:3%}
@@ -195,12 +206,31 @@ html{scroll-padding-top:70px}.nav{min-height:65px}.brand{font-size:1.9rem}
 .movie-info{padding:9px}.socials{grid-template-columns:1fr}
 .contact{display:block;padding:28px}.contact .btn{margin-top:20px}
 .footer{flex-direction:column;gap:9px}
+.archive-tools{right:9px;bottom:9px}.archive-tools button{padding:8px 10px}
+.archive-quote{width:90%;margin:27px auto;padding:18px}
+#archiveTimeline{padding:55px 8%}
+.intro-name{letter-spacing:.06em}.intro-location{letter-spacing:.22em;font-size:9px}
+.bat-signal{top:6%;right:2%;width:55vw;opacity:.65}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 </style>
 </head>
-
 <body>
+<div id="readingProgress"></div>
+
+<!-- GOTHAM CINEMATIC INTRO -->
+<div id="cinematicIntro" aria-label="Gotham cinematic introduction">
+  <div class="gotham-sky"><div class="gotham-building-lights"></div><div class="bat-signal"></div></div>
+  <div class="intro-content">
+    <div class="intro-location">GOTHAM CITY — 11:59 PM</div>
+    <div class="intro-name">SAI KUMAR</div>
+    <div class="intro-tagline">THE STORY BEGINS.</div>
+    <div class="intro-rule"></div>
+    <button id="enterArchive">ENTER THE ARCHIVE →</button>
+    <div class="intro-credit">A PERSONAL ARCHIVE · EST. 2004</div>
+  </div>
+</div>
+
 <header>
 <div class="wrap nav">
 <a class="brand" href="#home">SAI<span>.</span></a>
@@ -273,150 +303,95 @@ html{scroll-padding-top:70px}.nav{min-height:65px}.brand{font-size:1.9rem}
 
 <section class="section" id="career">
 <div class="wrap">
-<div class="head"><div class="eyebrow">03 / THE PROFESSIONAL FILE</div><h2 class="display">Building the <em>next chapter.</em></h2></div>
+<div class="head"><div class="eyebrow">03 / THE WORK IN PROGRESS</div><h2 class="display">Building the<br><em>next chapter.</em></h2></div>
 <div class="career-layout">
-<div>
 <div class="timeline">
-<article><small>CURRENT ROLE</small><h3>US Bench Sales Recruiter</h3><strong>TetraConnects Private Limited</strong><p>Working in US bench sales recruitment, supporting candidate marketing, communication and recruitment coordination.</p></article>
+<article><small>THE PRESENT</small><h3>Learning by doing.</h3><p>Exploring business, technology and communication while building practical skills and professional experience.</p></article>
+<article><small>THE DIRECTION</small><h3>Business & technology.</h3><p>Interested in business analysis, digital products, data and the way technology solves real-world problems.</p></article>
+<article><small>THE MINDSET</small><h3>Stay curious.</h3><p>Small improvements, consistent effort and a long-term approach to growth.</p></article>
 </div>
-<div class="education"><div class="eyebrow">EDUCATION</div><h3 style="font:2rem var(--editorial);margin-top:5px">B.Sc Computer Science</h3></div>
-</div>
+<div>
 <figure class="inline-photo offset-left">
 <img src="images/Professional-1.jpg" alt="Professional portrait" loading="lazy">
-<figcaption><strong>Work in progress.</strong>Building something beyond the scroll.</figcaption>
+<figcaption><strong>Work in progress.</strong>Building something worth remembering.</figcaption>
 </figure>
+<div class="education"><div class="eyebrow">EDUCATION</div><h3 style="font:1.8rem var(--editorial);margin-top:8px">B.Sc Computer Science</h3><p style="font-size:.8rem;color:var(--muted)">Mathematics · Electronics · Computer Science</p></div>
+</div>
 </div>
 </div>
 </section>
 
 <section class="section" id="projects">
 <div class="wrap">
-<div class="head"><div class="eyebrow">04 / THINGS I'VE BUILT</div><h2 class="display">Ideas into <em>reality.</em></h2></div>
+<div class="head"><div class="eyebrow">04 / THINGS I'VE BUILT</div><h2 class="display">Ideas into<br><em>something real.</em></h2></div>
 <div class="projects">
-<article class="project"><div><div class="eyebrow">01 / WEB PROJECT</div><h3>EchoWave.</h3><p>A music-player website experiment exploring web design and digital experiences.</p></div><a class="btn" href="https://saikumarurukuti.github.io/Echowave/" target="_blank" rel="noopener">Explore EchoWave ↗</a></article>
-<article class="project"><div><div class="eyebrow">02 / PERSONAL ARCHIVE</div><h3>This space.</h3><p>A corner of the internet for photographs, interests, projects and the ongoing story.</p></div><a class="btn" href="#home">Back to the beginning ↑</a></article>
+<article class="project"><div><div class="eyebrow">WEB PROJECT / 01</div><h3>EchoWave</h3><p>A personal music-player web experience exploring interface design, layout and front-end creativity.</p></div><a class="btn" href="https://saikumarurukuti.github.io/Echowave/" target="_blank" rel="noopener">Visit project ↗</a></article>
+<article class="project"><div><div class="eyebrow">PERSONAL PROJECT / 02</div><h3>This archive.</h3><p>A living portfolio and visual journal — a place to collect projects, photographs, interests and milestones.</p></div><a class="btn" href="#home">Back to the beginning ↑</a></article>
 </div>
 <div class="project-feature">
-<p>Somewhere between the destination and the detour. Always worth taking the scenic route.</p>
 <img src="images/travel-1.jpg" alt="Travel photograph" loading="lazy">
+<p>“You don't need to have it all figured out. You just need to start building.”</p>
 </div>
 </div>
 </section>
 
 <section class="section" id="gallery">
 <div class="wrap">
-<div class="head"><div class="eyebrow">05 / THE PHOTO JOURNAL</div><h2 class="display">Life in <em>frames.</em></h2><p>A few more moments from the camera roll. No strict grid, no fixed rhythm.</p></div>
+<div class="head"><div class="eyebrow">05 / THE VISUAL JOURNAL</div><h2 class="display">Collected<br><em>moments.</em></h2><p>Little fragments of life, saved one frame at a time. Tap any photograph to see it full-screen.</p></div>
 <div class="gallery">
-<figure class="photo p1"><div class="frame"><img src="images/lifestyle-2.jpg" alt="Lifestyle photograph" loading="lazy"></div><figcaption><strong>Off-duty energy.</strong>No occasion. Just a good day.</figcaption></figure>
-<figure class="photo p2"><div class="frame"><img src="images/portraits-2.jpg" alt="Portrait photograph" loading="lazy"></div><figcaption><strong>New perspective.</strong>Same person. New chapter.</figcaption></figure>
-<figure class="photo p3"><div class="frame"><img src="images/travel-2.jpg" alt="Travel photograph" loading="lazy"></div><figcaption><strong>Somewhere else.</strong>A change of scenery hits different.</figcaption></figure>
-<figure class="photo p4"><div class="frame"><img src="images/hero-2.jpg" alt="Personal photograph" loading="lazy"></div><figcaption><strong>Another chapter.</strong>Still collecting moments.</figcaption></figure>
+<figure class="photo p1"><div class="frame"><img src="images/lifestyle-2.jpg" alt="Lifestyle journal photograph" loading="lazy"></div><figcaption><strong>Slow moments.</strong>Finding beauty in the everyday.</figcaption></figure>
+<figure class="photo p2"><div class="frame"><img src="images/portraits-2.jpg" alt="Portrait journal photograph" loading="lazy"></div><figcaption><strong>In my own frame.</strong>A little perspective goes a long way.</figcaption></figure>
+<figure class="photo p3"><div class="frame"><img src="images/travel-2.jpg" alt="Travel journal photograph" loading="lazy"></div><figcaption><strong>Somewhere new.</strong>Collecting places, not things.</figcaption></figure>
+<figure class="photo p4"><div class="frame"><img src="images/hero-2.jpg" alt="Personal journal photograph" loading="lazy"></div><figcaption><strong>Another chapter.</strong>The story keeps moving.</figcaption></figure>
 </div>
 </div>
 </section>
 
-<section class="section"><div class="wrap"><div class="creator">
-<div><div class="eyebrow">06 / THE CREATOR CHAPTER</div><h3>Creating without a rulebook.</h3><p>Still experimenting with content, cinematic edits, everyday life and whatever catches my curiosity. The niche? We're letting the plot develop.</p></div>
-<a class="btn" style="border-color:#D7C7AD;color:#F5F0E8" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener">Watch the journey ↗</a>
-</div></div></section>
+<div class="wrap" style="padding:35px 0">
+<div class="creator">
+<div><div class="eyebrow">THE CREATOR</div><h3>Just getting started.</h3><p>Documenting the process — the work, the lessons, the little wins and everything in between.</p></div>
+<a class="btn" href="#socials" style="border-color:#c7a979;color:#f5f0e8">Find me online ↗</a>
+</div>
+</div>
 
 <section class="section" id="cinema">
 <div class="wrap">
-<div class="cinema-top"><div class="head"><div class="eyebrow">07 / THE CINEMA ARCHIVE</div><h2 class="display">My kind of <em>escape.</em></h2><p>For plot-twist enthusiasts, hopeless romantics and people who say "just one more movie".</p></div><span class="eyebrow">31 TITLES · 4 COLLECTIONS</span></div>
-<div class="filters" id="filters">
-<button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Bollywood">Bollywood</button><button class="filter" data-filter="Tollywood">Tollywood</button><button class="filter" data-filter="Hollywood">Hollywood</button><button class="filter" data-filter="Korean">Korean</button>
+<div class="cinema-top"><div class="head"><div class="eyebrow">06 / THE CINEMA ARCHIVE</div><h2 class="display">Stories that<br><em>stay with me.</em></h2></div><p style="color:var(--muted);font-size:.8rem">A personal collection of films and series.</p></div>
+<div class="filters">
+<button class="filter active" data-filter="all">All</button><button class="filter" data-filter="batman">Batman</button><button class="filter" data-filter="film">Films</button><button class="filter" data-filter="series">Series</button>
 </div>
-<div class="movies" id="movies"><p>Loading cinema archive…</p></div>
-<p class="note">Posters are retrieved automatically from the Cinemeta public movie catalogue. If artwork is unavailable, a title card appears instead of a broken image.</p>
-<p class="note">Artwork belongs to its respective owners. Metadata and poster images are served by Cinemeta / Stremio.</p>
+<div class="movies" id="movies">
+<div class="movie" data-category="batman"><div class="poster"><div class="placeholder">Batman<br>Begins</div><span class="status">Favourite</span></div><div class="movie-info"><h3>Batman Begins</h3><div class="meta">2005 · Film</div><span class="type">Batman collection</span></div></div>
+<div class="movie" data-category="batman"><div class="poster"><div class="placeholder">The Dark<br>Knight</div><span class="status">Favourite</span></div><div class="movie-info"><h3>The Dark Knight</h3><div class="meta">2008 · Film</div><span class="type">Batman collection</span></div></div>
+<div class="movie" data-category="batman"><div class="poster"><div class="placeholder">The Dark<br>Knight Rises</div></div><div class="movie-info"><h3>The Dark Knight Rises</h3><div class="meta">2012 · Film</div><span class="type">Batman collection</span></div></div>
+<div class="movie" data-category="batman"><div class="poster"><div class="placeholder">The<br>Batman</div></div><div class="movie-info"><h3>The Batman</h3><div class="meta">2022 · Film</div><span class="type">Batman collection</span></div></div>
+<div class="movie" data-category="series"><div class="poster"><div class="placeholder">The<br>Penguin</div></div><div class="movie-info"><h3>The Penguin</h3><div class="meta">2024 · Series</div><span class="type">Gotham stories</span></div></div>
+</div>
+<p class="note">More titles can be added to this archive as the collection grows.</p>
 </div>
 </section>
 
 <section class="section" id="socials">
 <div class="wrap">
-<div class="head"><div class="eyebrow">08 / FIND ME AROUND THE INTERNET</div><h2 class="display">Different platforms.<br><em>Same person.</em></h2></div>
+<div class="head"><div class="eyebrow">07 / ELSEWHERE ON THE INTERNET</div><h2 class="display">Stay in<br><em>the loop.</em></h2></div>
 <div class="socials">
-<a class="social" href="https://www.instagram.com/saikumar.fr/" target="_blank" rel="noopener"><div><strong>Instagram</strong><small>@saikumar.fr</small></div>↗</a>
-<a class="social" href="https://www.snapchat.com/add/saikumar.fr" target="_blank" rel="noopener"><div><strong>Snapchat</strong><small>@saikumar.fr</small></div>↗</a>
-<a class="social" href="https://www.linkedin.com/in/sai-kumar-urukuti-519172253/" target="_blank" rel="noopener"><div><strong>LinkedIn</strong><small>Sai Kumar Urukuti</small></div>↗</a>
-<a class="social" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener"><div><strong>YouTube</strong><small>@Saikumarforreal</small></div>↗</a>
-<a class="social" href="https://github.com/Saikumarurukuti" target="_blank" rel="noopener"><div><strong>GitHub</strong><small>@Saikumarurukuti</small></div>↗</a>
+<a class="social" href="https://instagram.com/" target="_blank" rel="noopener"><span><strong>Instagram</strong><small>Photos & everyday frames</small></span><span>↗</span></a>
+<a class="social" href="https://youtube.com/" target="_blank" rel="noopener"><span><strong>YouTube</strong><small>Videos & experiments</small></span><span>↗</span></a>
+<a class="social" href="https://github.com/Saikumarurukuti" target="_blank" rel="noopener"><span><strong>GitHub</strong><small>Projects & code</small></span><span>↗</span></a>
 </div>
 </div>
 </section>
 
-<section class="section" id="contact"><div class="wrap"><div class="contact">
-<div><div class="eyebrow">09 / THE BAT-SIGNAL</div><h3>Got something<br>interesting?</h3><p>Work, collaboration, ideas or just a good conversation.</p></div>
-<a class="btn" href="mailto:saikumaryadav1436@gmail.com?subject=Hello%20Sai">Send an email ↗</a>
-</div></div></section>
+<section class="section" id="contact">
+<div class="wrap">
+<div class="contact">
+<div><div class="eyebrow">HAVE A GOOD IDEA?</div><h3>Let's make<br>something happen.</h3><p>For collaborations, opportunities or just a friendly hello.</p></div>
+<button class="btn" id="openContact">Open contact card ↗</button>
+</div>
+</div>
+</section>
 </main>
 
-<footer><div class="wrap footer"><span>SAI. — Made with curiosity.</span><span>© <span id="year"></span> Sai Kumar Urukuti</span><a href="#home">Back to top ↑</a></div></footer>
-
-<script>
-document.getElementById("year").textContent=new Date().getFullYear();
-const menu=document.getElementById("menu"),nav=document.getElementById("navlinks");
-menu.addEventListener("click",()=>{const open=nav.classList.toggle("open");menu.textContent=open?"×":"☰";menu.setAttribute("aria-expanded",String(open));});
-nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("open");menu.textContent="☰";menu.setAttribute("aria-expanded","false");}));
-
-const movieData=[
-["Tamasha",2015,"Bollywood","Movie","movie"],["Rockstar",2011,"Bollywood","Movie","movie"],["Barfi!",2012,"Bollywood","Movie","movie"],["Wake Up Sid",2009,"Bollywood","Movie","movie"],["Yeh Jawaani Hai Deewani",2013,"Bollywood","Movie","movie"],["Ae Dil Hai Mushkil",2016,"Bollywood","Movie","movie"],["Socha Na Tha",2005,"Bollywood","Movie","movie"],["Jab We Met",2007,"Bollywood","Movie","movie"],["Love Aaj Kal",2009,"Bollywood","Movie","movie"],["Highway",2014,"Bollywood","Movie","movie"],["Jab Harry Met Sejal",2017,"Bollywood","Movie","movie"],["Laila Majnu",2018,"Bollywood","Movie","movie"],["Love Aaj Kal",2020,"Bollywood","Movie","movie"],["Amar Singh Chamkila",2024,"Bollywood","Movie","movie"],
-["Mr. Majnu",2019,"Tollywood","Movie","movie"],["Lucky Baskhar",2024,"Tollywood","Movie","movie"],["Chal Mohan Ranga",2018,"Tollywood","Movie","movie"],
-["San Andreas",2015,"Hollywood","Movie","movie"],["2012",2009,"Hollywood","Movie","movie"],["The Day After Tomorrow",2004,"Hollywood","Movie","movie"],["Greenland",2020,"Hollywood","Movie","movie"],["The Impossible",2012,"Hollywood","Movie","movie"],["Deepwater Horizon",2016,"Hollywood","Movie","movie"],["Twisters",2024,"Hollywood","Movie","movie"],["Deep Impact",1998,"Hollywood","Movie","movie"],["Armageddon",1998,"Hollywood","Movie","movie"],
-["Train to Busan",2016,"Korean","Movie","movie"],["All of Us Are Dead",2022,"Korean","Series","series"],["Happiness",2021,"Korean","Series","series"],["Colony",2026,"Korean","Movie","movie"],["Hope",2026,"Korean","Movie","movie"]
-].map(([title,year,category,type,kind])=>({title,year,category,type,kind}));
-
-const posterPromises=new Map();
-async function getPoster(movie){
-const key=movie.kind+"|"+movie.title+"|"+movie.year;
-if(posterPromises.has(key))return posterPromises.get(key);
-const promise=(async()=>{
-for(const url of [
-`https://v3-cinemeta.strem.io/catalog/${movie.kind}/top/search=${encodeURIComponent(movie.title+" "+movie.year)}.json`,
-`https://v3-cinemeta.strem.io/catalog/${movie.kind}/top/search=${encodeURIComponent(movie.title)}.json`
-]){
-try{
-const response=await fetch(url);if(!response.ok)continue;
-const data=await response.json(),list=data.metas||[];
-const exact=list.find(item=>(item.name||"").toLowerCase()===movie.title.toLowerCase()&&(!item.releaseInfo||String(item.releaseInfo).includes(String(movie.year))));
-const match=exact||list.find(item=>(item.name||"").toLowerCase()===movie.title.toLowerCase())||list[0];
-if(match&&match.poster)return match.poster;
-}catch(e){}
-}
-return null;
-})();
-posterPromises.set(key,promise);return promise;
-}
-function createMovieCard(movie){
-const card=document.createElement("article");card.className="movie";
-const poster=document.createElement("div");poster.className="poster";
-const fallback=document.createElement("div");fallback.className="placeholder";fallback.textContent=movie.title;
-const status=document.createElement("span");status.className="status";status.textContent="Loading poster";
-poster.append(fallback,status);
-const info=document.createElement("div");info.className="movie-info";
-const title=document.createElement("h3");title.textContent=movie.title;
-const meta=document.createElement("div");meta.className="meta";meta.textContent=movie.category+" · "+movie.year;
-const type=document.createElement("span");type.className="type";type.textContent=movie.type;
-info.append(title,meta,type);card.append(poster,info);
-getPoster(movie).then(source=>{
-if(!source){status.textContent="Artwork unavailable";return;}
-const img=new Image();img.alt=movie.title+" poster";img.loading="lazy";
-img.onload=()=>{fallback.remove();status.textContent="Poster";};
-img.onerror=()=>{status.textContent="Artwork unavailable";img.remove();};
-img.src=source;poster.append(img);
-});
-return card;
-}
-const movies=document.getElementById("movies");
-function renderMovies(category="All"){
-movies.replaceChildren();
-movieData.filter(movie=>category==="All"||movie.category===category).forEach(movie=>movies.append(createMovieCard(movie)));
-}
-renderMovies();
-document.querySelectorAll(".filter").forEach(button=>button.addEventListener("click",()=>{
-document.querySelectorAll(".filter").forEach(item=>item.classList.toggle("active",item===button));
-renderMovies(button.dataset.filter);
-}));
-</script>
+<footer><div class="wrap footer"><span>© <span id="year"></span> SAI KUMAR URUKUTI. ALL RIGHTS RESERVED.</span><span>MADE WITH CURIOSITY. AND A LITTLE GOTHAM ENERGY.</span></div></footer>
 </body>
 </html>
