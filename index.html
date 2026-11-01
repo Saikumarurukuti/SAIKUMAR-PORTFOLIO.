@@ -123,7 +123,7 @@ body.archive-dark .visual .small{border-color:var(--cream)}
 body.archive-dark .archive-quote{background:#292a30}
 .archive-tools{position:fixed;z-index:10010;right:15px;bottom:15px;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
 .archive-tools button{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:30px;padding:9px 13px;font:10px var(--sans);letter-spacing:1px;cursor:pointer;box-shadow:0 4px 16px #0002}
-#liveClock{background:var(--paper);color:var(--muted);padding:6px 11px;border-radius:30px;font:10px var(--sans);letter-spacing:1px}
+
 .archive-quote{width:min(760px,86%);margin:38px auto;padding:23px 27px;border-left:2px solid var(--gold);background:var(--paper);color:var(--ink)}
 .archive-quote blockquote{font:italic clamp(22px,4vw,34px)/1.2 var(--editorial)}
 .archive-quote cite{display:block;margin-top:10px;color:var(--muted);font:9px var(--sans);letter-spacing:1.5px;text-transform:uppercase}
@@ -220,9 +220,9 @@ html{scroll-padding-top:70px}.nav{min-height:65px}.brand{font-size:1.9rem}
 
 <!-- GOTHAM CINEMATIC INTRO -->
 <div id="cinematicIntro" aria-label="Gotham cinematic introduction">
-  <div class="gotham-sky"><div class="gotham-building-lights"></div><div class="bat-signal"></div></div>
+  <div class="gotham-sky"><div class="gotham-building-lights"></div><div class="bat-signal"></div><div class="batman-rooftop" aria-hidden="true"><svg viewBox="0 0 260 230"><path class="cape" d="M108 80 L65 106 L28 205 L85 184 L111 218 L132 185 L184 205 L155 105 L132 80 Z" fill="#05070b"/><path d="M105 76 L98 43 L84 17 L109 30 L130 10 L151 30 L176 17 L161 45 L154 78 Z" fill="#05070b"/><path d="M108 81 L154 81 L165 145 L96 145 Z" fill="#080a0e"/><path d="M112 83 L100 119 L82 155 L100 164 L127 132 L150 164 L171 155 L154 119 L148 83 Z" fill="#05070b"/><path d="M119 82 L130 98 L141 82" fill="none" stroke="#777" stroke-width="2" opacity=".45"/><path d="M0 215 H260" stroke="#030407" stroke-width="14"/></svg></div><div class="rain"></div><div class="searchlight"></div></div>
   <div class="intro-content">
-    <div class="intro-location">GOTHAM CITY — 11:59 PM</div>
+    <div class="intro-location">GOTHAM CITY</div>
     <div class="intro-name">SAI KUMAR</div>
     <div class="intro-tagline">THE STORY BEGINS.</div>
     <div class="intro-rule"></div>
@@ -354,33 +354,9 @@ html{scroll-padding-top:70px}.nav{min-height:65px}.brand{font-size:1.9rem}
 </div>
 </div>
 
-<section class="section" id="cinema">
-<div class="wrap">
-<div class="cinema-top"><div class="head"><div class="eyebrow">06 / THE CINEMA ARCHIVE</div><h2 class="display">Stories that<br><em>stay with me.</em></h2></div><p style="color:var(--muted);font-size:.8rem">A personal collection of films and series.</p></div>
-<div class="filters">
-<button class="filter active" data-filter="all">All</button><button class="filter" data-filter="batman">Batman</button><button class="filter" data-filter="film">Films</button><button class="filter" data-filter="series">Series</button>
-</div>
-<div class="movies" id="movies">
-<div class="movie" data-category="batman"><div class="poster"><div class="placeholder">Batman<br>Begins</div><span class="status">Favourite</span></div><div class="movie-info"><h3>Batman Begins</h3><div class="meta">2005 · Film</div><span class="type">Batman collection</span></div></div>
-<div class="movie" data-category="batman"><div class="poster"><div class="placeholder">The Dark<br>Knight</div><span class="status">Favourite</span></div><div class="movie-info"><h3>The Dark Knight</h3><div class="meta">2008 · Film</div><span class="type">Batman collection</span></div></div>
-<div class="movie" data-category="batman"><div class="poster"><div class="placeholder">The Dark<br>Knight Rises</div></div><div class="movie-info"><h3>The Dark Knight Rises</h3><div class="meta">2012 · Film</div><span class="type">Batman collection</span></div></div>
-<div class="movie" data-category="batman"><div class="poster"><div class="placeholder">The<br>Batman</div></div><div class="movie-info"><h3>The Batman</h3><div class="meta">2022 · Film</div><span class="type">Batman collection</span></div></div>
-<div class="movie" data-category="series"><div class="poster"><div class="placeholder">The<br>Penguin</div></div><div class="movie-info"><h3>The Penguin</h3><div class="meta">2024 · Series</div><span class="type">Gotham stories</span></div></div>
-</div>
-<p class="note">More titles can be added to this archive as the collection grows.</p>
-</div>
-</section>
+<section class="section" id="cinema"><div class="wrap"><div class="cinema-top"><div class="head"><div class="eyebrow">06 / THE CINEMA ARCHIVE</div><h2 class="display">Stories that<br><em>stay with me.</em></h2></div><p style="color:var(--muted);font-size:.8rem">A personal collection of films and series.</p></div><div class="filters" role="group" aria-label="Filter cinema collection"><button class="filter active" data-filter="all" aria-pressed="true">All · 38</button><button class="filter" data-filter="batman" aria-pressed="false">Batman · 3</button><button class="filter" data-filter="film" aria-pressed="false">Films</button><button class="filter" data-filter="series" aria-pressed="false">Series</button></div><div class="movies" id="movies" aria-live="polite"></div><p class="note">A personal watchlist of stories, characters and worlds worth revisiting.</p></div></section>
 
-<section class="section" id="socials">
-<div class="wrap">
-<div class="head"><div class="eyebrow">07 / ELSEWHERE ON THE INTERNET</div><h2 class="display">Stay in<br><em>the loop.</em></h2></div>
-<div class="socials">
-<a class="social" href="https://instagram.com/" target="_blank" rel="noopener"><span><strong>Instagram</strong><small>Photos & everyday frames</small></span><span>↗</span></a>
-<a class="social" href="https://youtube.com/" target="_blank" rel="noopener"><span><strong>YouTube</strong><small>Videos & experiments</small></span><span>↗</span></a>
-<a class="social" href="https://github.com/Saikumarurukuti" target="_blank" rel="noopener"><span><strong>GitHub</strong><small>Projects & code</small></span><span>↗</span></a>
-</div>
-</div>
-</section>
+<section class="section" id="socials"><div class="wrap"><div class="head"><div class="eyebrow">07 / ELSEWHERE ON THE INTERNET</div><h2 class="display">Stay in<br><em>the loop.</em></h2></div><div class="socials"><a class="social" href="https://www.instagram.com/saikumar.fr/" target="_blank" rel="noopener"><span><strong>Instagram</strong><small>@saikumar.fr · Photos & everyday frames</small></span><span>↗</span></a><a class="social" href="https://www.snapchat.com/add/saikumar.fr" target="_blank" rel="noopener"><span><strong>Snapchat</strong><small>@saikumar.fr · Everyday moments</small></span><span>↗</span></a><a class="social" href="https://www.linkedin.com/in/sai-kumar-urukuti-519172253/" target="_blank" rel="noopener"><span><strong>LinkedIn</strong><small>Sai Kumar Urukuti · Professional</small></span><span>↗</span></a><a class="social" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener"><span><strong>YouTube</strong><small>@Saikumarforreal · Videos & experiments</small></span><span>↗</span></a><a class="social" href="https://github.com/Saikumarurukuti" target="_blank" rel="noopener"><span><strong>GitHub</strong><small>@Saikumarurukuti · Projects & code</small></span><span>↗</span></a></div></div></section>
 
 <section class="section" id="contact">
 <div class="wrap">
@@ -395,7 +371,11 @@ html{scroll-padding-top:70px}.nav{min-height:65px}.brand{font-size:1.9rem}
 <footer><div class="wrap footer"><span>© <span id="year"></span> SAI KUMAR URUKUTI. ALL RIGHTS RESERVED.</span><span>MADE WITH CURIOSITY. AND A LITTLE GOTHAM ENERGY.</span></div></footer>
 
 <style>
-/* Cinematic enhancement — does not alter gallery layout */
+/* Cinematic enhancement — original gallery layout preserved */
+.batman-rooftop{position:absolute;z-index:3;left:50%;bottom:10%;width:min(34vw,300px);transform:translateX(-50%);filter:drop-shadow(0 0 18px #000)}
+.batman-rooftop svg{display:block;width:100%;height:auto;overflow:visible}
+.batman-rooftop .cape{transform-origin:130px 90px;animation:capeWind 2.8s ease-in-out infinite alternate}
+@keyframes capeWind{from{transform:skewX(-2deg) scaleX(.96)}to{transform:skewX(5deg) scaleX(1.04)}}
 .gotham-sky{isolation:isolate}
 .gotham-sky:before{animation:skyDrift 18s linear infinite}
 .gotham-sky:after{box-shadow:0 -15px 50px #080b12}
@@ -429,7 +409,7 @@ html{scroll-padding-top:70px}.nav{min-height:65px}.brand{font-size:1.9rem}
 @keyframes skyDrift{to{background-position:300px 0}}
 @media(prefers-reduced-motion:reduce){
  .gotham-sky .rain,.gotham-sky .searchlight{display:none}
- .bat-signal{animation:none}
+ .bat-signal{animation:none}.batman-rooftop .cape{animation:none}
 }
 </style>
 
@@ -520,63 +500,38 @@ html{scroll-padding-top:70px}.nav{min-height:65px}.brand{font-size:1.9rem}
 
   document.body.classList.toggle("archive-dark", dark);
 
-  const tools = document.createElement("div");
-  tools.className = "archive-tools";
-  tools.innerHTML = `
-    <span id="liveClock" aria-live="off"></span>
-    <button type="button" id="themeToggle" aria-label="Toggle dark mode">
-      ${dark ? "☀ LIGHT MODE" : "☾ DARK MODE"}
-    </button>`;
-  document.body.appendChild(tools);
-
-  $("#themeToggle").addEventListener("click", () => {
-    dark = !dark;
-    document.body.classList.toggle("archive-dark", dark);
-    $("#themeToggle").textContent = dark ? "☀ LIGHT MODE" : "☾ DARK MODE";
-    try {
-      localStorage.setItem("sai-archive-dark", dark ? "yes" : "no");
-    } catch (_) {}
-  });
-
-  // India clock
-  const clock = $("#liveClock");
-  const updateClock = () => {
-    if (!clock) return;
-    clock.textContent = new Intl.DateTimeFormat("en-IN", {
-      timeZone: "Asia/Kolkata",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: true
-    }).format(new Date()) + " IST";
-  };
-
-  updateClock();
-  window.setInterval(updateClock, 1000);
-
-  // Cinema filters
-  const filters = $$(".filter");
-  const movies = $$(".movie");
-
-  filters.forEach(button => {
-    button.addEventListener("click", () => {
-      const category = button.dataset.filter;
-
-      filters.forEach(item => {
-        const active = item === button;
-        item.classList.toggle("active", active);
-        item.setAttribute("aria-pressed", String(active));
-      });
-
-      movies.forEach(movie => {
-        movie.hidden = category !== "all" &&
-          movie.dataset.category !== category;
-      });
+  const tools=document.createElement("div");tools.className="archive-tools";tools.innerHTML=`<button type="button" id="themeToggle" aria-label="Toggle dark mode">${dark?"☀ LIGHT MODE":"☾ DARK MODE"}</button>`;document.body.appendChild(tools);
+  $("#themeToggle").addEventListener("click",()=>{dark=!dark;document.body.classList.toggle("archive-dark",dark);$("#themeToggle").textContent=dark?"☀ LIGHT MODE":"☾ DARK MODE";try{localStorage.setItem("sai-archive-dark",dark?"yes":"no");}catch(_){}});
+  // Cinema collection — 38 selected titles
+  const movieData = [{"title":"Laila Majnu","year":2018,"kind":"film","category":"film","label":"Bollywood"},{"title":"Rockstar","year":2011,"kind":"film","category":"film","label":"Bollywood"},{"title":"Tamasha","year":2015,"kind":"film","category":"film","label":"Bollywood"},{"title":"Yeh Jawaani Hai Deewani","year":2013,"kind":"film","category":"film","label":"Bollywood"},{"title":"October","year":2018,"kind":"film","category":"film","label":"Bollywood"},{"title":"Badlapur","year":2015,"kind":"film","category":"film","label":"Bollywood"},{"title":"Humpty Sharma Ki Dulhania","year":2014,"kind":"film","category":"film","label":"Bollywood"},{"title":"Chal Mohan Ranga","year":2018,"kind":"film","category":"film","label":"Tollywood"},{"title":"Mr. Majnu","year":2019,"kind":"film","category":"film","label":"Tollywood"},{"title":"Gautham Nanda","year":2017,"kind":"film","category":"film","label":"Tollywood"},{"title":"Lucky Baskhar","year":2024,"kind":"film","category":"film","label":"Tollywood"},{"title":"Baththa","year":2026,"kind":"film","category":"film","label":"Tamil"},{"title":"San Andreas","year":2015,"kind":"film","category":"film","label":"Hollywood"},{"title":"Crawl","year":2019,"kind":"film","category":"film","label":"Hollywood"},{"title":"Twisters","year":2024,"kind":"film","category":"film","label":"Hollywood"},{"title":"2012","year":2009,"kind":"film","category":"film","label":"Hollywood"},{"title":"Breaking Bad","year":2008,"kind":"series","category":"series","label":"Series"},{"title":"From","year":2022,"kind":"series","category":"series","label":"Series"},{"title":"All of Us Are Dead","year":2022,"kind":"series","category":"series","label":"Korean series"},{"title":"Happiness","year":2021,"kind":"series","category":"series","label":"Korean series"},{"title":"Hope","year":2026,"kind":"film","category":"film","label":"Korean"},{"title":"Colony","year":2026,"kind":"film","category":"film","label":"Korean"},{"title":"Meem Se Mohobbat","year":2024,"kind":"series","category":"series","label":"Pakistani series"},{"title":"Kabhi Main Kabhi Tum","year":2024,"kind":"series","category":"series","label":"Pakistani series"},{"title":"Love Aaj Kal","year":2020,"kind":"film","category":"film","label":"Bollywood"},{"title":"Chhichhore","year":2019,"kind":"film","category":"film","label":"Bollywood"},{"title":"Kedarnath","year":2018,"kind":"film","category":"film","label":"Bollywood"},{"title":"Son of Satyamurthy","year":2015,"kind":"film","category":"film","label":"Tollywood"},{"title":"A Aa","year":2016,"kind":"film","category":"film","label":"Tollywood"},{"title":"Dude","year":2025,"kind":"film","category":"film","label":"Tamil"},{"title":"Dragon","year":2025,"kind":"film","category":"film","label":"Tamil"},{"title":"Premalu","year":2024,"kind":"film","category":"film","label":"Malayalam"},{"title":"24","year":2016,"kind":"film","category":"film","label":"Tamil"},{"title":"Ra.One","year":2011,"kind":"film","category":"film","label":"Bollywood"},{"title":"Saiyaara","year":2025,"kind":"film","category":"film","label":"Bollywood"},{"title":"Batman Begins","year":2005,"kind":"film","category":"batman","label":"Batman"},{"title":"The Dark Knight","year":2008,"kind":"film","category":"batman","label":"Batman"},{"title":"The Batman","year":2022,"kind":"film","category":"batman","label":"Batman"}];
+  const movieGrid = $("#movies"), filters = $$(".filter"), posterCache = new Map();
+  async function findPoster(movie) {
+    const key=movie.kind+"|"+movie.title+"|"+movie.year;
+    if(posterCache.has(key)) return posterCache.get(key);
+    const task=(async()=>{const urls=[
+      `https://v3-cinemeta.strem.io/catalog/${movie.kind}/top/search=${encodeURIComponent(movie.title+" "+movie.year)}.json`,
+      `https://v3-cinemeta.strem.io/catalog/${movie.kind}/top/search=${encodeURIComponent(movie.title)}.json`];
+      for(const url of urls){try{const response=await fetch(url);if(!response.ok)continue;const json=await response.json(),list=json.metas||[];
+      const exact=list.find(item=>(item.name||"").toLowerCase()===movie.title.toLowerCase()&&(!item.releaseInfo||String(item.releaseInfo).includes(String(movie.year))));
+      const match=exact||list.find(item=>(item.name||"").toLowerCase()===movie.title.toLowerCase())||list[0];if(match?.poster)return match.poster;}catch(_){}}
+      return null;})();posterCache.set(key,task);return task;
+  }
+  function renderMovies(category="all"){
+    if(!movieGrid)return;movieGrid.innerHTML="";
+    movieData.filter(movie=>category==="all"||movie.category===category).forEach(movie=>{
+      const card=document.createElement("article");card.className="movie";card.dataset.category=movie.category;
+      const poster=document.createElement("div");poster.className="poster";
+      const fallback=document.createElement("div");fallback.className="placeholder";fallback.textContent=movie.title;poster.appendChild(fallback);
+      const info=document.createElement("div");info.className="movie-info";
+      const title=document.createElement("h3");title.textContent=movie.title;
+      const meta=document.createElement("div");meta.className="meta";meta.textContent=movie.year+" · "+(movie.kind==="series"?"Series":"Film");
+      const type=document.createElement("span");type.className="type";type.textContent=movie.label+(movie.category==="batman"?" · Gotham collection":"");
+      info.append(title,meta,type);card.append(poster,info);movieGrid.appendChild(card);
+      findPoster(movie).then(url=>{if(!url||!card.isConnected)return;const image=document.createElement("img");image.loading="lazy";image.alt=movie.title+" poster";image.src=url;image.onerror=()=>image.remove();poster.replaceChildren(image);});
     });
-
-    button.setAttribute("aria-pressed",
-      String(button.classList.contains("active")));
-  });
+  }
+  filters.forEach(button=>button.addEventListener("click",()=>{const category=button.dataset.filter;filters.forEach(item=>{const active=item===button;item.classList.toggle("active",active);item.setAttribute("aria-pressed",String(active));});renderMovies(category);}));
+  renderMovies("all");
 
   // Contact card — no invented email address
   const contactCard = document.createElement("div");
@@ -690,4 +645,4 @@ html{scroll-padding-top:70px}.nav{min-height:65px}.brand{font-size:1.9rem}
 })();
 </script>
 </body>
-</html>
+  </html>
