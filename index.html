@@ -1,756 +1,1358 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101114">
-<meta name="description" content="Sai Kumar Urukuti. Creator, explorer, cinema enthusiast. A personal universe inspired by Gotham.">
-<title>Sai Kumar Urukuti — Gotham Noir</title>
+<meta name="theme-color" content="#101014">
+<meta name="description" content="The personal portfolio and creative world of Sai Kumar Urukuti.">
+<title>Sai Kumar Urukuti — Personal Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
- --black:#101114;
- --dark:#17191e;
- --graphite:#22242a;
- --white:#f5f3ef;
- --muted:#aaa9a7;
- --red:#b32632;
- --redlight:#ed6972;
- --line:rgba(255,255,255,.14);
- --font:"Times New Roman",Times,serif;
+  --black:#101014;
+  --black2:#15151b;
+  --panel:#1b1b22;
+  --white:#f4f0eb;
+  --muted:#aaa6a4;
+  --red:#bd2938;
+  --redlight:#e36a73;
+  --line:rgba(255,255,255,.13);
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{
- background:var(--black);color:var(--white);
- font-family:var(--font);line-height:1.6;overflow-x:hidden
+  background:var(--black);
+  color:var(--white);
+  font-family:var(--sans);
+  line-height:1.7;
+  overflow-x:hidden;
 }
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-button{font-family:var(--font);cursor:pointer}
+button{font:inherit;cursor:pointer}
 ::selection{background:var(--red);color:white}
-.container{width:min(1180px,90%);margin:auto}
-section{padding:105px 0;border-bottom:1px solid var(--line)}
+.container{width:min(1160px,88%);margin:auto}
+section{
+  padding:115px 0;
+  border-bottom:1px solid var(--line);
+}
 .eyebrow{
- color:var(--redlight);font-size:.76rem;
- letter-spacing:3px;text-transform:uppercase;font-weight:bold
+  color:var(--redlight);
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
 .heading{
- font-size:clamp(3.2rem,8vw,6.7rem);
- line-height:.91;letter-spacing:-3px;margin:18px 0 30px
+  font-family:var(--serif);
+  font-size:clamp(3rem,7vw,6rem);
+  line-height:1.04;
+  font-weight:500;
+  letter-spacing:-2px;
+  margin:20px 0 30px;
 }
-.heading em{color:var(--redlight);font-weight:normal}
+.heading em{color:var(--redlight);font-weight:400}
 .muted{color:var(--muted)}
 .tag{
- display:inline-block;border:1px solid var(--line);
- padding:6px 13px;border-radius:30px;
- font-size:.8rem;margin:4px 3px 4px 0
+  display:inline-block;
+  border:1px solid var(--line);
+  padding:7px 14px;
+  border-radius:30px;
+  color:#ddd;
+  font-size:.75rem;
+  margin:5px 5px 0 0;
+  letter-spacing:.4px;
 }
 .btn{
- display:inline-flex;align-items:center;justify-content:center;
- padding:13px 22px;background:var(--red);
- border:1px solid var(--red);color:white;
- transition:.25s;font-size:1rem;margin:5px 5px 5px 0
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 22px;
+  background:var(--red);
+  color:white;
+  border:1px solid var(--red);
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.5px;
+  transition:.3s;
+  margin:5px 8px 5px 0;
 }
 .btn:hover{background:transparent;transform:translateY(-3px)}
 .btn-outline{background:transparent;border-color:var(--line)}
 .btn-outline:hover{background:var(--red);border-color:var(--red)}
 
-/* Navigation */
+/* NAVIGATION */
 header{
- position:sticky;top:0;z-index:100;
- background:rgba(16,17,20,.96);
- backdrop-filter:blur(14px);
- border-bottom:1px solid var(--line)
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(16,16,20,.94);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
 }
 .nav{
- height:72px;display:flex;justify-content:space-between;
- align-items:center;gap:20px
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
-.brand{font-size:1.5rem;font-weight:bold;letter-spacing:2px}
+.brand{
+  font-family:var(--serif);
+  font-size:2rem;
+  font-weight:700;
+  letter-spacing:4px;
+}
 .brand span{color:var(--redlight)}
-.navlinks{display:flex;gap:21px;align-items:center}
-.navlinks a{font-size:.88rem;color:#ccc;transition:.2s}
+.navlinks{display:flex;align-items:center;gap:25px}
+.navlinks a{
+  font-size:.76rem;
+  color:#ccc;
+  letter-spacing:1px;
+  transition:.2s;
+}
 .navlinks a:hover{color:var(--redlight)}
 .menu{
- display:none;background:none;color:white;
- border:1px solid var(--line);padding:7px 12px;font-size:1.3rem
+  display:none;
+  color:white;
+  background:transparent;
+  border:1px solid var(--line);
+  padding:7px 13px;
+  font-size:1.4rem;
 }
 
-/* Hero */
+/* HERO */
 .hero{
- min-height:88vh;display:grid;align-items:center;
- padding:85px 0;position:relative;overflow:hidden;
- background:
- radial-gradient(ellipse at 83% 45%,rgba(179,38,50,.2),transparent 44%),
- linear-gradient(125deg,#101114,#191a20)
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  padding:90px 0;
+  background:
+    radial-gradient(ellipse at 85% 45%,rgba(189,41,56,.17),transparent 42%),
+    linear-gradient(130deg,#101014,#19191f);
 }
-.hero:after{
- content:"";position:absolute;width:380px;height:380px;
- border:1px solid rgba(179,38,50,.17);
- border-radius:50%;right:-180px;bottom:-190px
+.hero:before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  border:1px solid rgba(227,106,115,.12);
+  border-radius:50%;
+  right:-250px;
+  top:10%;
 }
 .hero-grid{
- display:grid;grid-template-columns:1.15fr .85fr;
- gap:55px;align-items:center;position:relative;z-index:2
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:65px;
+  align-items:center;
+  position:relative;
+  z-index:2;
 }
-.hero-kicker{color:var(--redlight);letter-spacing:4px;font-size:.8rem}
+.hero-kicker{
+  color:var(--redlight);
+  letter-spacing:4px;
+  font-size:.72rem;
+  font-weight:700;
+}
 .hero h1{
- font-size:clamp(4rem,10.5vw,9rem);
- line-height:.79;letter-spacing:-6px;margin:28px 0;
- font-weight:bold
+  font-family:var(--serif);
+  font-size:clamp(4rem,9vw,8.4rem);
+  line-height:.92;
+  letter-spacing:-5px;
+  font-weight:600;
+  margin:28px 0;
 }
-.hero h1 span{display:block;color:var(--redlight);font-style:italic}
-.hero-copy{font-size:1.25rem;color:#ccc;max-width:580px}
+.hero h1 span{
+  display:block;
+  color:var(--redlight);
+  font-style:italic;
+  font-weight:400;
+}
+.hero-copy{
+  color:#c6c2c0;
+  max-width:540px;
+  font-size:1.04rem;
+  line-height:1.9;
+}
 .hero-actions{margin-top:28px}
-.hero-photo{position:relative;max-width:430px;margin:auto;transform:rotate(2deg)}
+.hero-note{
+  margin-top:28px;
+  color:#888;
+  font-size:.7rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.hero-photo{
+  position:relative;
+  max-width:430px;
+  margin:auto;
+  transform:rotate(2deg);
+}
+.hero-photo:before{
+  content:"";
+  position:absolute;
+  inset:17px -17px -17px 17px;
+  border:1px solid rgba(227,106,115,.5);
+  z-index:-1;
+}
 .hero-photo img{
- width:100%;height:550px;object-fit:cover;
- border:1px solid var(--line)
+  width:100%;
+  height:550px;
+  object-fit:cover;
+  object-position:center;
+  border:1px solid var(--line);
+  filter:saturate(.85);
 }
 .photo-label{
- position:absolute;bottom:18px;left:-18px;
- background:var(--red);padding:13px 20px;
- letter-spacing:2px;font-size:.8rem
-}
-.hero-note{margin-top:25px;color:#999;letter-spacing:2px;font-size:.78rem;text-transform:uppercase}
-.bat-icon{
- display:inline-grid;place-items:center;
- width:36px;height:36px;border:1px solid var(--red);
- border-radius:50%;color:var(--redlight)
+  position:absolute;
+  bottom:20px;
+  left:-22px;
+  background:var(--red);
+  padding:12px 19px;
+  font-size:.68rem;
+  letter-spacing:2px;
+  font-weight:700;
 }
 .marquee{
- background:var(--red);padding:13px 0;text-align:center;
- letter-spacing:3px;font-size:.9rem;white-space:nowrap;overflow:hidden
+  overflow:hidden;
+  white-space:nowrap;
+  background:var(--red);
+  color:white;
+  padding:13px 0;
+  text-align:center;
+  letter-spacing:3px;
+  font-size:.72rem;
 }
 
-/* About */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
-.about-copy{font-size:1.3rem;max-width:660px}
-.about-copy p{margin-bottom:20px}
-.info-card{
- padding:30px;background:var(--graphite);
- border-left:3px solid var(--red)
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:75px;
+  align-items:start;
 }
-.info-card h3{font-size:2rem;margin-bottom:12px}
+.about-copy{
+  font-family:var(--serif);
+  font-size:1.35rem;
+  color:#d4cfcb;
+  line-height:1.9;
+}
+.about-copy p{margin-bottom:22px}
+.info-card{
+  padding:32px;
+  background:var(--panel);
+  border-left:3px solid var(--red);
+}
+.info-card h3{
+  font-family:var(--serif);
+  font-size:2rem;
+  margin-bottom:20px;
+}
 .fact{
- display:flex;justify-content:space-between;
- gap:15px;padding:13px 0;border-bottom:1px solid var(--line)
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding:15px 0;
+  border-bottom:1px solid var(--line);
+  font-size:.83rem;
 }
 .fact span{color:var(--muted)}
+.fact strong{text-align:right;font-weight:600}
 
-/* Interests */
-.interests{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+/* INTERESTS */
+.interests{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
 .interest{
- min-height:175px;background:var(--graphite);
- border:1px solid var(--line);padding:25px;transition:.3s
+  min-height:205px;
+  padding:28px;
+  background:linear-gradient(145deg,#202027,#17171c);
+  border:1px solid var(--line);
+  transition:.3s;
 }
-.interest:hover{border-color:var(--red);transform:translateY(-5px)}
-.interest small{color:var(--redlight);letter-spacing:2px}
-.interest h3{font-size:1.8rem;margin:15px 0 5px}
-.interest p{color:var(--muted)}
+.interest:hover{
+  border-color:var(--red);
+  transform:translateY(-6px);
+}
+.interest small{
+  color:var(--redlight);
+  font-size:.65rem;
+  letter-spacing:2px;
+  font-weight:700;
+}
+.interest h3{
+  font-family:var(--serif);
+  font-size:1.8rem;
+  font-weight:500;
+  margin:20px 0 7px;
+}
+.interest p{color:var(--muted);font-size:.85rem}
 
-/* Career */
-.timeline{border-left:1px solid var(--red);padding-left:28px;margin-left:8px}
-.timeline article{position:relative;padding-bottom:38px}
+/* CAREER */
+.timeline{
+  border-left:1px solid var(--red);
+  padding-left:32px;
+  margin:35px 0 0 9px;
+}
+.timeline article{
+  position:relative;
+  padding-bottom:42px;
+}
 .timeline article:before{
- content:"";position:absolute;left:-34px;top:7px;
- width:11px;height:11px;border-radius:50%;background:var(--red)
+  content:"";
+  position:absolute;
+  left:-38px;
+  top:7px;
+  width:11px;
+  height:11px;
+  background:var(--redlight);
+  border-radius:50%;
+  box-shadow:0 0 15px rgba(227,106,115,.4);
 }
-.timeline small{color:var(--redlight)}
-.timeline h3{font-size:1.8rem}
-.timeline p{color:var(--muted);max-width:700px;margin-top:8px}
-.education{padding:25px;background:var(--graphite);margin-top:20px}
+.timeline small{
+  color:var(--redlight);
+  font-size:.68rem;
+  letter-spacing:2px;
+  font-weight:700;
+}
+.timeline h3{
+  font-family:var(--serif);
+  font-size:2.1rem;
+  font-weight:500;
+  margin:8px 0;
+}
+.timeline strong{font-size:.9rem}
+.timeline p{
+  color:var(--muted);
+  max-width:680px;
+  margin-top:9px;
+  font-size:.9rem;
+}
+.education{
+  margin-top:12px;
+  padding:25px 30px;
+  background:var(--panel);
+  border-left:3px solid var(--red);
+}
+.education h3{
+  font-family:var(--serif);
+  font-size:1.8rem;
+  font-weight:500;
+  margin-top:8px;
+}
 
-/* Projects */
-.projects{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
 .project{
- min-height:260px;padding:30px;
- background:linear-gradient(145deg,#292b32,#17181c);
- border:1px solid var(--line);
- display:flex;flex-direction:column;justify-content:space-between
+  min-height:290px;
+  padding:32px;
+  background:linear-gradient(145deg,#25252c,#17171c);
+  border:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:.3s;
 }
-.project h3{font-size:2.7rem}
-.project p{color:var(--muted);margin:12px 0;max-width:480px}
+.project:hover{border-color:var(--red);transform:translateY(-4px)}
+.project h3{
+  font-family:var(--serif);
+  font-size:3rem;
+  font-weight:500;
+  margin-top:15px;
+}
+.project p{
+  color:var(--muted);
+  max-width:440px;
+  font-size:.9rem;
+  margin:12px 0 22px;
+}
 
-/* Gallery */
-.gallery-intro{max-width:700px;color:var(--muted);font-size:1.15rem}
+/* PHOTO ARCHIVE — IRREGULAR EDITORIAL COLLAGE */
+.gallery-intro{
+  max-width:700px;
+  color:var(--muted);
+  font-family:var(--serif);
+  font-size:1.35rem;
+  line-height:1.8;
+}
 .gallery{
- display:grid;grid-template-columns:repeat(12,1fr);
- grid-auto-rows:65px;gap:15px;margin-top:42px
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  grid-auto-rows:48px;
+  gap:22px;
+  margin-top:58px;
+  align-items:stretch;
 }
 .gallery figure{
- position:relative;overflow:hidden;
- background:var(--graphite);border:1px solid var(--line);
- border-radius:3px
+  position:relative;
+  min-width:0;
+  overflow:hidden;
+  background:#202027;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:3px;
+  isolation:isolate;
 }
 .gallery figure img{
- width:100%;height:100%;object-fit:cover;
- filter:saturate(.85);transition:transform .6s,filter .6s
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  filter:saturate(.88);
+  transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s;
 }
-.gallery figure:hover img{transform:scale(1.06);filter:saturate(1.1)}
-.gallery figure:after{
- content:"";position:absolute;inset:35% 0 0;
- background:linear-gradient(transparent,rgba(0,0,0,.9))
+.gallery figure:hover img{
+  transform:scale(1.045);
+  filter:saturate(1.05);
 }
-.gallery figcaption{position:absolute;bottom:14px;left:15px;right:12px;z-index:2}
-.gallery figcaption strong{display:block;font-size:1.35rem;line-height:1.15}
-.gallery figcaption span{font-size:.82rem;color:#ddd}
-.g1{grid-column:span 7;grid-row:span 5}
-.g2{grid-column:span 5;grid-row:span 4}
-.g3{grid-column:span 5;grid-row:span 4}
-.g4{grid-column:span 7;grid-row:span 5}
-.g5{grid-column:span 4;grid-row:span 4}
-.g6{grid-column:span 4;grid-row:span 4}
-.g7{grid-column:span 4;grid-row:span 4}
-.g8{grid-column:span 6;grid-row:span 4}
-.g9{grid-column:span 6;grid-row:span 4}
-.gallery-note{font-size:.8rem;color:#888;margin-top:18px}
+.gallery figure figcaption{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:36px 22px 19px;
+  background:linear-gradient(transparent,rgba(0,0,0,.78));
+  z-index:2;
+  opacity:.92;
+}
+.gallery figcaption strong{
+  display:block;
+  font-family:var(--serif);
+  font-size:clamp(1.1rem,2vw,1.65rem);
+  line-height:1.2;
+  font-weight:600;
+}
+.gallery figcaption span{
+  display:block;
+  margin-top:5px;
+  color:#e0dcda;
+  font-size:.76rem;
+  letter-spacing:.2px;
+}
 
-/* Creator */
-.creator-panel{
- display:grid;grid-template-columns:1fr auto;gap:25px;
- align-items:center;padding:35px;
- background:linear-gradient(120deg,#292b32,#17181c);
- border:1px solid var(--line)
+/* Large lead image */
+.g1{grid-column:1 / span 7;grid-row:span 7;min-height:420px}
+/* Smaller image on the upper right */
+.g2{grid-column:9 / span 4;grid-row:span 5;min-height:260px;margin-top:35px}
+/* A tilted-looking offset image */
+.g3{grid-column:8 / span 5;grid-row:span 5;min-height:270px;margin-top:12px}
+/* Wide image lower down */
+.g4{grid-column:2 / span 6;grid-row:span 6;min-height:350px;margin-top:10px}
+/* Smaller portrait */
+.g5{grid-column:9 / span 4;grid-row:span 6;min-height:340px;margin-top:35px}
+/* Two different sized frames */
+.g6{grid-column:1 / span 5;grid-row:span 5;min-height:280px;margin-top:15px}
+.g7{grid-column:7 / span 6;grid-row:span 6;min-height:340px;margin-top:5px}
+.g8{grid-column:2 / span 5;grid-row:span 5;min-height:280px;margin-top:15px}
+.g9{grid-column:8 / span 5;grid-row:span 5;min-height:290px;margin-top:30px}
+.gallery-note{
+  color:#777;
+  font-size:.72rem;
+  margin-top:25px;
+  letter-spacing:.4px;
 }
-.creator-panel h3{font-size:2.8rem}
+
+/* CREATOR */
+.creator-panel{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:30px;
+  align-items:center;
+  padding:42px;
+  background:linear-gradient(120deg,#29242a,#17171c);
+  border:1px solid var(--line);
+  margin-top:25px;
+}
+.creator-panel h3{
+  font-family:var(--serif);
+  font-size:2.8rem;
+  font-weight:500;
+  line-height:1.2;
+  margin-bottom:12px;
+}
 .creator-panel p{color:var(--muted);max-width:650px}
 
-/* Cinema */
-.cinema-header{display:flex;justify-content:space-between;align-items:end;gap:20px}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:25px 0}
-.filter{
- border:1px solid var(--line);background:transparent;
- color:#ddd;border-radius:30px;padding:9px 17px
+/* CINEMA */
+.cinema-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
 }
-.filter.active,.filter:hover{background:var(--red);border-color:var(--red);color:white}
-.movies{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.bat-icon{
+  display:grid;
+  place-items:center;
+  width:52px;
+  height:52px;
+  border:1px solid var(--red);
+  border-radius:50%;
+  color:var(--redlight);
+  font-size:1.5rem;
+}
+.tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:30px 0;
+}
+.filter{
+  background:transparent;
+  color:#ddd;
+  border:1px solid var(--line);
+  border-radius:30px;
+  padding:9px 17px;
+  font-size:.75rem;
+  transition:.2s;
+}
+.filter.active,.filter:hover{
+  background:var(--red);
+  border-color:var(--red);
+  color:white;
+}
+.movies{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:17px;
+}
 .movie{
- background:var(--graphite);border:1px solid var(--line);
- overflow:hidden;transition:.25s
+  background:var(--panel);
+  border:1px solid var(--line);
+  overflow:hidden;
+  transition:.3s;
 }
 .movie:hover{transform:translateY(-5px);border-color:var(--red)}
 .poster{
- position:relative;aspect-ratio:2/3;overflow:hidden;
- display:grid;place-items:center;text-align:center;padding:20px;
- background:
- radial-gradient(circle at 50% 28%,#6d2832,#17181e 70%),
- linear-gradient(135deg,#24242a,#111)
+  position:relative;
+  aspect-ratio:2/3;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  padding:18px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 25%,#702b36,#19191f 68%),
+    #17171c;
 }
 .poster:before{
- content:"";position:absolute;inset:10px;
- border:1px solid rgba(255,255,255,.13);pointer-events:none
+  content:"";
+  position:absolute;
+  inset:10px;
+  border:1px solid rgba(255,255,255,.16);
+  z-index:3;
+  pointer-events:none;
 }
-.poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.poster img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:2;
+}
 .poster-fallback{
- position:relative;z-index:1;
- font-size:1.8rem;font-weight:bold;line-height:1.05;
- text-transform:uppercase;text-shadow:0 3px 15px #000
+  position:relative;
+  z-index:1;
+  font-family:var(--serif);
+  font-size:1.7rem;
+  font-weight:700;
+  line-height:1.1;
+  text-transform:uppercase;
+  text-shadow:0 3px 15px #000;
 }
 .poster-fallback small{
- display:block;color:#f08b92;font-size:.62rem;
- letter-spacing:3px;margin-bottom:15px
+  display:block;
+  color:#f08b92;
+  font-family:var(--sans);
+  font-size:.57rem;
+  letter-spacing:3px;
+  margin-bottom:15px;
 }
 .movie-info{padding:14px}
-.movie-info h3{font-size:1.22rem;line-height:1.2}
-.movie-meta{color:var(--muted);font-size:.8rem;margin-top:7px}
-.movie-type{
- display:inline-block;margin-top:10px;
- padding:4px 9px;border:1px solid var(--red);
- color:#f08b92;font-size:.7rem;letter-spacing:1px;text-transform:uppercase
+.movie-info h3{
+  font-family:var(--serif);
+  font-size:1.15rem;
+  line-height:1.25;
 }
-.cinema-note{font-size:.8rem;color:#888;margin-top:20px}
+.movie-meta{color:var(--muted);font-size:.72rem;margin-top:7px}
+.movie-type{
+  display:inline-block;
+  margin-top:10px;
+  padding:4px 9px;
+  border:1px solid var(--red);
+  color:#f08b92;
+  font-size:.62rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.cinema-note{font-size:.75rem;color:#888;margin-top:22px}
 
-/* Socials */
-.socials{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+/* SOCIALS */
+.socials{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:35px;
+}
 .social{
- display:flex;align-items:center;justify-content:space-between;
- gap:14px;padding:22px;background:var(--graphite);
- border:1px solid var(--line);transition:.25s
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:22px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  transition:.3s;
 }
 .social:hover{border-color:var(--red);transform:translateY(-4px)}
-.social-left{display:flex;align-items:center;gap:14px}
+.social-left{display:flex;align-items:center;gap:13px}
 .social-icon{
- display:grid;place-items:center;width:43px;height:43px;
- border:1px solid var(--red);border-radius:50%;
- color:var(--redlight);font-weight:bold
+  display:grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  border:1px solid var(--red);
+  border-radius:50%;
+  color:var(--redlight);
+  font-size:.75rem;
+  font-weight:700;
 }
-.social strong{display:block;font-size:1.2rem}
-.social small{color:var(--muted)}
-.social-arrow{color:var(--redlight);font-size:1.3rem}
+.social strong{display:block;font-size:.95rem}
+.social small{color:var(--muted);font-size:.7rem}
+.social-arrow{color:var(--redlight);font-size:1.2rem}
 
-/* Contact */
+/* CONTACT */
 .contact{
- display:grid;grid-template-columns:1fr auto;gap:25px;
- align-items:center;padding:45px;background:var(--red)
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:25px;
+  align-items:center;
+  padding:50px;
+  background:linear-gradient(115deg,#9f202d,#c33340);
 }
-.contact h3{font-size:clamp(2.5rem,6vw,4.6rem);line-height:.98}
-.contact p{color:#ffe2e4;margin-top:15px}
-.contact .btn{background:var(--white);color:var(--black);border-color:white}
+.contact h3{
+  font-family:var(--serif);
+  font-size:clamp(2.7rem,6vw,4.8rem);
+  line-height:1.05;
+  font-weight:500;
+}
+.contact p{color:#ffe1e3;margin-top:14px}
+.contact .eyebrow{color:#ffe1e3}
+.contact .btn{
+  background:var(--white);
+  color:var(--black);
+  border-color:white;
+}
 .contact .btn:hover{background:transparent;color:white}
 
-/* Footer */
-footer{padding:35px 0;color:#999}
-.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.footer-brand{font-size:1.35rem;color:white;font-weight:bold}
-.backtop{color:var(--redlight)}
-
-@media(max-width:850px){
- .hero-grid,.about-grid{grid-template-columns:1fr}
- .hero-photo{max-width:390px}
- .interests{grid-template-columns:repeat(2,1fr)}
- .movies{grid-template-columns:repeat(3,1fr)}
- .socials{grid-template-columns:repeat(2,1fr)}
+/* FOOTER */
+footer{padding:38px 0;color:#888}
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  align-items:center;
 }
+.footer-brand{
+  font-family:var(--serif);
+  font-size:1.3rem;
+  color:white;
+  letter-spacing:1px;
+}
+.backtop{color:var(--redlight);font-size:.8rem}
+
+/* TABLET */
+@media(max-width:900px){
+  .hero-grid{gap:35px}
+  .about-grid{gap:35px}
+  .interests{grid-template-columns:repeat(2,1fr)}
+  .movies{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .socials{grid-template-columns:repeat(2,1fr)}
+}
+
+/* MOBILE */
 @media(max-width:600px){
- .nav{height:65px}
- .menu{display:block}
- .navlinks{
-  display:none;position:absolute;top:65px;left:0;right:0;
-  padding:20px 5%;background:#17181e;
-  flex-direction:column;align-items:flex-start;
-  border-bottom:1px solid var(--line)
- }
- .navlinks.open{display:flex}
- .hero{min-height:auto;padding:70px 0}
- .hero h1{font-size:clamp(3.8rem,17vw,6rem);letter-spacing:-4px}
- .hero-photo img{height:430px}
- section{padding:75px 0}
- .heading{letter-spacing:-2px}
- .interests,.projects{grid-template-columns:1fr}
- .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}
- .g1,.g4,.g8,.g9{grid-column:span 2;grid-row:span 1}
- .g2,.g3,.g5,.g6,.g7{grid-column:span 1;grid-row:span 1}
- .movies{grid-template-columns:repeat(2,1fr);gap:10px}
- .movie-info{padding:10px}
- .movie-info h3{font-size:1.05rem}
- .socials{grid-template-columns:1fr}
- .creator-panel,.contact{grid-template-columns:1fr;padding:27px}
+  .container{width:88%}
+  section{padding:82px 0}
+  .nav{height:68px}
+  .brand{font-size:1.8rem}
+  .menu{display:block}
+  .navlinks{
+    display:none;
+    position:absolute;
+    top:68px;
+    left:0;
+    right:0;
+    padding:22px 6%;
+    background:#17171d;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+    border-bottom:1px solid var(--line);
+  }
+  .navlinks.open{display:flex}
+  .navlinks a{font-size:.9rem}
+  .hero{min-height:auto;padding:75px 0 85px}
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero h1{
+    font-size:clamp(3.5rem,15vw,5.5rem);
+    letter-spacing:-3px;
+    margin:24px 0;
+  }
+  .hero-copy{font-size:.95rem}
+  .hero-photo{width:82%;max-width:360px}
+  .hero-photo img{height:430px}
+  .photo-label{left:-15px;font-size:.58rem}
+  .heading{font-size:clamp(2.8rem,12vw,4.2rem);letter-spacing:-1.5px}
+  .about-grid{grid-template-columns:1fr;gap:35px}
+  .about-copy{font-size:1.12rem}
+  .info-card{padding:24px}
+  .interests{grid-template-columns:1fr 1fr;gap:10px}
+  .interest{min-height:190px;padding:19px}
+  .interest h3{font-size:1.4rem}
+  .interest p{font-size:.77rem}
+  .timeline h3{font-size:1.75rem}
+  .projects{grid-template-columns:1fr}
+  .project{min-height:250px;padding:25px}
+  .project h3{font-size:2.5rem}
+
+  /* The collage stays irregular on phones — never a uniform grid. */
+  .gallery{
+    grid-template-columns:repeat(6,minmax(0,1fr));
+    grid-auto-rows:38px;
+    gap:15px 11px;
+    margin-top:38px;
+  }
+  .gallery figure{border-radius:3px}
+  .gallery figure img{object-position:center}
+  .gallery figure figcaption{
+    padding:30px 12px 12px;
+  }
+  .gallery figcaption strong{font-size:1.05rem}
+  .gallery figcaption span{font-size:.66rem;line-height:1.4}
+
+  .g1{
+    grid-column:1 / span 6;
+    grid-row:span 7;
+    min-height:300px;
+  }
+  .g2{
+    grid-column:1 / span 3;
+    grid-row:span 6;
+    min-height:245px;
+    margin-top:0;
+  }
+  .g3{
+    grid-column:4 / span 3;
+    grid-row:span 6;
+    min-height:245px;
+    margin-top:20px;
+  }
+  .g4{
+    grid-column:1 / span 6;
+    grid-row:span 7;
+    min-height:300px;
+    margin-top:5px;
+  }
+  .g5{
+    grid-column:1 / span 3;
+    grid-row:span 6;
+    min-height:245px;
+    margin-top:10px;
+  }
+  .g6{
+    grid-column:4 / span 3;
+    grid-row:span 6;
+    min-height:245px;
+    margin-top:0;
+  }
+  .g7{
+    grid-column:1 / span 6;
+    grid-row:span 7;
+    min-height:300px;
+    margin-top:8px;
+  }
+  .g8{
+    grid-column:1 / span 3;
+    grid-row:span 6;
+    min-height:245px;
+    margin-top:0;
+  }
+  .g9{
+    grid-column:4 / span 3;
+    grid-row:span 6;
+    min-height:245px;
+    margin-top:20px;
+  }
+
+  .creator-panel{grid-template-columns:1fr;padding:26px}
+  .creator-panel h3{font-size:2.2rem}
+  .cinema-header{align-items:flex-start}
+  .movies{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .movie-info{padding:10px}
+  .movie-info h3{font-size:1rem}
+  .poster-fallback{font-size:1.35rem}
+  .socials{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr;padding:30px 24px}
+  .contact h3{font-size:3rem}
+  .footer-row{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:370px){
+  .interests{grid-template-columns:1fr}
+  .gallery figcaption span{font-size:.6rem}
+  .gallery figcaption strong{font-size:.95rem}
 }
 @media(prefers-reduced-motion:reduce){
- html{scroll-behavior:auto}
- *,*:before,*:after{transition:none!important}
+  html{scroll-behavior:auto}
+  *,*:before,*:after{transition:none!important}
 }
 </style>
 </head>
 
 <body>
-
 <header>
- <div class="container nav">
-  <a href="#home" class="brand">SAI<span>.</span></a>
-  <button class="menu" id="menu" aria-label="Open navigation">☰</button>
-  <nav class="navlinks" id="navlinks">
-   <a href="#about">About</a>
-   <a href="#interests">Interests</a>
-   <a href="#career">Career</a>
-   <a href="#projects">Projects</a>
-   <a href="#gallery">Gallery</a>
-   <a href="#cinema">Cinema</a>
-   <a href="#socials">Socials</a>
-  </nav>
- </div>
+  <div class="container nav">
+    <a href="#home" class="brand">SAI<span>.</span></a>
+    <button class="menu" id="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">ABOUT</a>
+      <a href="#interests">INTERESTS</a>
+      <a href="#career">CAREER</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#cinema">CINEMA</a>
+      <a href="#socials">SOCIALS</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 
-<!-- HOME -->
+<!-- HERO -->
 <section class="hero" id="home">
- <div class="container hero-grid">
-  <div>
-   <div class="hero-kicker">A PERSONAL UNIVERSE · EST. 2004</div>
-   <h1>SAI KUMAR <span>URUKUTI.</span></h1>
-   <p class="hero-copy">
-    Not famous. Not finished. Just getting started.
-    A little ambition, a lot of curiosity, and a camera roll
-    that desperately needs organising.
-   </p>
-   <div class="hero-actions">
-    <a class="btn" href="#about">Enter my world ↗</a>
-    <a class="btn btn-outline" href="#gallery">Explore the frames</a>
-   </div>
-   <div class="hero-note">Creator · Explorer · Cinema enthusiast · Gotham state of mind 🦇</div>
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-kicker">A PERSONAL UNIVERSE · EST. 2004</div>
+      <h1>SAI KUMAR <span>URUKUTI.</span></h1>
+      <p class="hero-copy">
+        Not famous. Not finished. Just getting started.
+        A little ambition, a lot of curiosity, and a story
+        that's still finding its shape.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#about">ENTER MY WORLD ↗</a>
+        <a class="btn btn-outline" href="#gallery">EXPLORE THE FRAMES</a>
+      </div>
+      <div class="hero-note">CREATOR · EXPLORER · CINEMA ENTHUSIAST · GOTHAM STATE OF MIND</div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="images/hero-1.jpg" alt="Featured portrait" fetchpriority="high">
+      <div class="photo-label">THE STORY IS STILL LOADING.</div>
+    </div>
   </div>
-  <div class="hero-photo">
-   <img src="images/hero-1.jpg" alt="Sai Kumar — main portrait">
-   <div class="photo-label">THE STORY IS STILL LOADING.</div>
-  </div>
- </div>
 </section>
 
 <div class="marquee">
- GOTHAM STATE OF MIND 🦇 &nbsp; · &nbsp;
- STAY CURIOUS &nbsp; · &nbsp;
- NO SPOILERS, JUST STORIES &nbsp; · &nbsp;
- THE PLOT IS THICKENING
+  GOTHAM STATE OF MIND 🦇 &nbsp; · &nbsp;
+  STAY CURIOUS &nbsp; · &nbsp;
+  NO SPOILERS, JUST STORIES &nbsp; · &nbsp;
+  THE PLOT IS THICKENING
 </div>
 
 <!-- ABOUT -->
 <section id="about">
- <div class="container">
-  <div class="eyebrow">01 / THE PERSON BEHIND THE PAGE</div>
-  <h2 class="heading">A little mystery.<br><em>A lot of ambition.</em></h2>
-  <div class="about-grid">
-   <div class="about-copy">
-    <p>I'm Sai Kumar Urukuti. A curious mind with an interest in people, technology, cinema, creativity and the occasional questionable life decision.</p>
-    <p>I'm building my career, discovering my style, exploring new places and documenting the journey. No perfectly scripted success story here. Just real progress, one chapter at a time.</p>
-    <p>Still figuring things out. That's kind of the point.</p>
-    <span class="tag">Main character energy</span>
-    <span class="tag">Work in progress</span>
-    <span class="tag">Gotham approved 🦇</span>
-   </div>
-   <div class="info-card">
-    <h3>The character file.</h3>
-    <div class="fact"><span>Name</span><strong>Sai Kumar Urukuti</strong></div>
-    <div class="fact"><span>Based in</span><strong>Visakhapatnam, India</strong></div>
-    <div class="fact"><span>Education</span><strong>B.Sc. Computer Science (MECS)</strong></div>
-    <div class="fact"><span>Current chapter</span><strong>Career & creativity</strong></div>
-    <div class="fact"><span>Favourite universe</span><strong>Gotham City 🦇</strong></div>
-   </div>
+  <div class="container">
+    <div class="eyebrow">01 / THE PERSON BEHIND THE PAGE</div>
+    <h2 class="heading">A little mystery.<br><em>A lot of ambition.</em></h2>
+
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>
+          A curious mind, a creative side and a habit of finding
+          interesting stories in ordinary moments.
+        </p>
+        <p>
+          Building a career, exploring personal style, discovering
+          new ideas and documenting the journey. No perfectly
+          scripted success story — just real progress, one chapter
+          at a time.
+        </p>
+        <p>Still figuring things out. That's kind of the point.</p>
+        <span class="tag">MAIN CHARACTER ENERGY</span>
+        <span class="tag">WORK IN PROGRESS</span>
+        <span class="tag">STAY CURIOUS</span>
+      </div>
+
+      <div class="info-card">
+        <h3>The character file.</h3>
+        <div class="fact"><span>Name</span><strong>Sai Kumar Urukuti</strong></div>
+        <div class="fact"><span>Favourite character</span><strong>Batman 🦇</strong></div>
+        <div class="fact"><span>Education</span><strong>B.Sc Computer Science</strong></div>
+      </div>
+    </div>
   </div>
- </div>
 </section>
 
 <!-- INTERESTS -->
 <section id="interests">
- <div class="container">
-  <div class="eyebrow">02 / THINGS THAT KEEP ME INTERESTED</div>
-  <h2 class="heading">Different tabs.<br><em>Same browser.</em></h2>
-  <div class="interests">
-   <article class="interest"><small>01 / FITNESS</small><h3>Built in silence.</h3><p>Strength, discipline and the long game. Gym arc loading.</p></article>
-   <article class="interest"><small>02 / STYLE</small><h3>Dress the part.</h3><p>Clean fits, timeless details and a little old-money energy.</p></article>
-   <article class="interest"><small>03 / CINEMA</small><h3>One more episode.</h3><p>Movies, series, plot twists and emotionally damaging soundtracks.</p></article>
-   <article class="interest"><small>04 / TECHNOLOGY</small><h3>Curiosity.exe</h3><p>Websites, digital ideas and figuring out how things work.</p></article>
-   <article class="interest"><small>05 / TRAVEL</small><h3>Out of office.</h3><p>New places, new views and the occasional wrong turn.</p></article>
-   <article class="interest"><small>06 / CREATIVITY</small><h3>Frame by frame.</h3><p>Photography, editing, storytelling and trying new things.</p></article>
+  <div class="container">
+    <div class="eyebrow">02 / THINGS THAT KEEP ME INTERESTED</div>
+    <h2 class="heading">Different tabs.<br><em>Same browser.</em></h2>
+
+    <div class="interests">
+      <article class="interest">
+        <small>01 / FITNESS</small>
+        <h3>Built in silence.</h3>
+        <p>Strength, discipline and the long game.</p>
+      </article>
+      <article class="interest">
+        <small>02 / STYLE</small>
+        <h3>Dress the part.</h3>
+        <p>Clean fits, timeless details and old-money energy.</p>
+      </article>
+      <article class="interest">
+        <small>03 / CINEMA</small>
+        <h3>One more episode.</h3>
+        <p>Movies, series, plot twists and unforgettable soundtracks.</p>
+      </article>
+      <article class="interest">
+        <small>04 / TECHNOLOGY</small>
+        <h3>Curiosity.exe</h3>
+        <p>Digital ideas, websites and exploring what's possible.</p>
+      </article>
+      <article class="interest">
+        <small>05 / TRAVEL</small>
+        <h3>Out of office.</h3>
+        <p>New places, new views and unexpected adventures.</p>
+      </article>
+      <article class="interest">
+        <small>06 / CREATIVITY</small>
+        <h3>Frame by frame.</h3>
+        <p>Photography, editing, storytelling and visual details.</p>
+      </article>
+    </div>
   </div>
- </div>
 </section>
 
 <!-- CAREER -->
 <section id="career">
- <div class="container">
-  <div class="eyebrow">03 / THE PROFESSIONAL FILE</div>
-  <h2 class="heading">Building the <em>next chapter.</em></h2>
-  <div class="timeline">
-   <article>
-    <small>CURRENT ROLE · VISAKHAPATNAM</small>
-    <h3>US Bench Sales Recruiter</h3>
-    <strong>TetraConnects Private Limited</strong>
-    <p>Working in US bench sales recruitment, supporting candidate marketing, communication and recruitment coordination.</p>
-   </article>
-   <article>
-    <small>PREVIOUS EXPERIENCE</small>
-    <h3>Customer Support</h3>
-    <strong>Bill Gosling India</strong>
-    <p>Customer-facing experience, communication and support operations.</p>
-   </article>
+  <div class="container">
+    <div class="eyebrow">03 / THE PROFESSIONAL FILE</div>
+    <h2 class="heading">Building the <em>next chapter.</em></h2>
+
+    <div class="timeline">
+      <article>
+        <small>CURRENT ROLE</small>
+        <h3>US Bench Sales Recruiter</h3>
+        <strong>TetraConnects Private Limited</strong>
+        <p>
+          Working in US bench sales recruitment, supporting candidate
+          marketing, professional communication and recruitment coordination.
+        </p>
+      </article>
+    </div>
   </div>
-  <div class="education">
-   <div class="eyebrow">EDUCATION</div>
-   <h3 style="font-size:1.8rem;margin-top:8px">B.Sc. Computer Science (MECS)</h3>
-   <p class="muted">Mathematics · Electronics · Computer Science</p>
-  </div>
- </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
- <div class="container">
-  <div class="eyebrow">04 / THINGS I'VE BUILT</div>
-  <h2 class="heading">Ideas into <em>reality.</em></h2>
-  <div class="projects">
-   <article class="project">
-    <div>
-     <div class="eyebrow">01 / WEB PROJECT</div>
-     <h3>EchoWave.</h3>
-     <p>A music-player website experiment exploring web design and digital experiences.</p>
+  <div class="container">
+    <div class="eyebrow">04 / THINGS I'VE BUILT</div>
+    <h2 class="heading">Ideas into <em>reality.</em></h2>
+
+    <div class="projects">
+      <article class="project">
+        <div>
+          <div class="eyebrow">01 / WEB PROJECT</div>
+          <h3>EchoWave.</h3>
+          <p>
+            A music-player website experiment exploring digital
+            experiences and visual design.
+          </p>
+        </div>
+        <a class="btn btn-outline" href="https://saikumarurukuti.github.io/Echowave/" target="_blank" rel="noopener">EXPLORE ECHOWAVE ↗</a>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="eyebrow">02 / PERSONAL BRAND</div>
+          <h3>This website.</h3>
+          <p>
+            A personal corner of the internet for photographs,
+            interests, projects and the ongoing story.
+          </p>
+        </div>
+        <a class="btn btn-outline" href="#home">BACK TO THE BEGINNING ↗</a>
+      </article>
     </div>
-    <a class="btn btn-outline" href="https://saikumarurukuti.github.io/Echowave/" target="_blank" rel="noopener">Explore EchoWave ↗</a>
-   </article>
-   <article class="project">
-    <div>
-     <div class="eyebrow">02 / PERSONAL BRAND</div>
-     <h3>This website.</h3>
-     <p>A little corner of the internet for my work, interests, photographs and ongoing story.</p>
-    </div>
-    <a class="btn btn-outline" href="#home">You're already here ↗</a>
-   </article>
   </div>
- </div>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery">
- <div class="container">
-  <div class="eyebrow">05 / THE PHOTO ARCHIVE</div>
-  <h2 class="heading">Life in <em>frames.</em></h2>
-  <p class="gallery-intro">
-   Not every moment needs a caption. But the good ones deserve a frame.
-   A collection of portraits, places, little adventures and main-character moments.
-  </p>
+  <div class="container">
+    <div class="eyebrow">05 / THE PHOTO ARCHIVE</div>
+    <h2 class="heading">Life in <em>frames.</em></h2>
+    <p class="gallery-intro">
+      Not every moment needs a caption. But the good ones deserve a frame.
+      A collection of portraits, places, little adventures and
+      main-character moments.
+    </p>
 
-  <div class="gallery">
-   <figure class="g1">
-    <img src="images/hero-2.jpg" alt="Second featured photograph" loading="lazy">
-    <figcaption><strong>New frame. Same plot.</strong><span>Character development in progress.</span></figcaption>
-   </figure>
-   <figure class="g2">
-    <img src="images/lifestyle-1.jpg" alt="Lifestyle photograph one" loading="lazy">
-    <figcaption><strong>Off-duty energy.</strong><span>No occasion. Just a good day.</span></figcaption>
-   </figure>
-   <figure class="g3">
-    <img src="images/travel-1.jpg" alt="Travel photograph one" loading="lazy">
-    <figcaption><strong>Out of the ordinary.</strong><span>A change of scenery hits different.</span></figcaption>
-   </figure>
-   <figure class="g4">
-    <img src="images/potraits-1.jpg" alt="Portrait photograph one" loading="lazy">
-    <figcaption><strong>Quiet confidence.</strong><span>Less noise. More presence.</span></figcaption>
-   </figure>
-   <figure class="g5">
-    <img src="images/hero-1.jpg" alt="Featured profile portrait" loading="lazy">
-    <figcaption><strong>The opening scene.</strong><span>Every story needs a first frame.</span></figcaption>
-   </figure>
-   <figure class="g6">
-    <img src="images/lifestyle-2.jpg" alt="Lifestyle photograph two" loading="lazy">
-    <figcaption><strong>Little things.</strong><span>Collecting moments, not pixels.</span></figcaption>
-   </figure>
-   <figure class="g7">
-    <img src="images/potraits-2.jpg" alt="Portrait photograph two" loading="lazy">
-    <figcaption><strong>Another chapter.</strong><span>Same person. New perspective.</span></figcaption>
-   </figure>
-   <figure class="g8">
-    <img src="images/travel-2.jpg" alt="Travel photograph two" loading="lazy">
-    <figcaption><strong>Somewhere else.</strong><span>Mentally, I'm already there.</span></figcaption>
-   </figure>
-   <figure class="g9">
-    <img src="images/Professional-1.jpg" alt="Professional photograph" loading="lazy">
-    <figcaption><strong>Business, with a pulse.</strong><span>Building something beyond the scroll.</span></figcaption>
-   </figure>
+    <div class="gallery">
+
+      <figure class="g1">
+        <img src="images/hero-2.jpg" alt="Featured photograph" loading="lazy">
+        <figcaption>
+          <strong>New frame. Same plot.</strong>
+          <span>Character development in progress.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="g2">
+        <img src="images/lifestyle-1.jpg" alt="Lifestyle photograph" loading="lazy">
+        <figcaption>
+          <strong>Off-duty energy.</strong>
+          <span>No occasion. Just a good day.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="g3">
+        <img src="images/travel-1.jpg" alt="Travel photograph" loading="lazy">
+        <figcaption>
+          <strong>Out of the ordinary.</strong>
+          <span>A change of scenery hits different.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="g4">
+        <img src="images/portraits-1.jpg" alt="Portrait photograph" loading="lazy">
+        <figcaption>
+          <strong>Quiet confidence.</strong>
+          <span>Less noise. More presence.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="g5">
+        <img src="images/hero-1.jpg" alt="Portrait photograph" loading="lazy">
+        <figcaption>
+          <strong>The opening scene.</strong>
+          <span>Every story needs a first frame.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="g6">
+        <img src="images/lifestyle-2.jpg" alt="Lifestyle photograph" loading="lazy">
+        <figcaption>
+          <strong>Little things.</strong>
+          <span>Collecting moments, not pixels.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="g7">
+        <img src="images/portraits-2.jpg" alt="Portrait photograph" loading="lazy">
+        <figcaption>
+          <strong>Another chapter.</strong>
+          <span>Same person. New perspective.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="g8">
+        <img src="images/travel-2.jpg" alt="Travel photograph" loading="lazy">
+        <figcaption>
+          <strong>Somewhere else.</strong>
+          <span>Mentally, I'm already there.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="g9">
+        <img src="images/Professional-1.jpg" alt="Professional photograph" loading="lazy">
+        <figcaption>
+          <strong>Business, with a pulse.</strong>
+          <span>Building something beyond the scroll.</span>
+        </figcaption>
+      </figure>
+
+    </div>
   </div>
-  <p class="gallery-note">Editorial captions are initial creative interpretations. Each can be refined to match the exact scene in its photograph.</p>
- </div>
 </section>
 
 <!-- CREATOR -->
 <section id="creator">
- <div class="container">
-  <div class="eyebrow">06 / THE CREATOR CHAPTER</div>
-  <div class="creator-panel" style="margin-top:22px">
-   <div>
-    <h3>Creating without a rulebook.</h3>
-    <p>Still experimenting with content, cinematic edits, everyday life and whatever catches my curiosity. The niche? We're letting the plot develop.</p>
-    <div style="margin-top:15px">
-     <span class="tag">Creator arc loading</span>
-     <span class="tag">No fake guru energy</span>
-     <span class="tag">Just getting started</span>
+  <div class="container">
+    <div class="eyebrow">06 / THE CREATOR CHAPTER</div>
+
+    <div class="creator-panel">
+      <div>
+        <h3>Creating without a rulebook.</h3>
+        <p>
+          Experimenting with content, cinematic edits, everyday life
+          and whatever catches my curiosity. The niche?
+          We're letting the plot develop.
+        </p>
+        <div style="margin-top:16px">
+          <span class="tag">CREATOR ARC LOADING</span>
+          <span class="tag">NO FAKE GURU ENERGY</span>
+          <span class="tag">JUST GETTING STARTED</span>
+        </div>
+      </div>
+      <a class="btn" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener">WATCH THE JOURNEY ↗</a>
     </div>
-   </div>
-   <a class="btn" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener">Watch the journey ↗</a>
   </div>
- </div>
 </section>
 
 <!-- CINEMA -->
 <section id="cinema">
- <div class="container">
-  <div class="cinema-header">
-   <div>
-    <div class="eyebrow">07 / THE CINEMA ARCHIVE</div>
-    <h2 class="heading">My kind of <em>escape.</em></h2>
-    <p class="muted">For plot-twist enthusiasts, hopeless romantics and people who say "just one more movie".</p>
-   </div>
-   <span class="bat-icon">✦</span>
-  </div>
+  <div class="container">
+    <div class="cinema-header">
+      <div>
+        <div class="eyebrow">07 / THE CINEMA ARCHIVE</div>
+        <h2 class="heading">My kind of <em>escape.</em></h2>
+        <p class="muted">
+          For plot-twist enthusiasts, hopeless romantics and people
+          who say "just one more movie".
+        </p>
+      </div>
+      <span class="bat-icon">✦</span>
+    </div>
 
-  <div class="tabs" id="tabs">
-   <button class="filter active" data-filter="All">All</button>
-   <button class="filter" data-filter="Bollywood">Bollywood</button>
-   <button class="filter" data-filter="Tollywood">Tollywood</button>
-   <button class="filter" data-filter="Hollywood">Hollywood</button>
-   <button class="filter" data-filter="Korean">Korean</button>
-  </div>
+    <div class="tabs" id="tabs">
+      <button class="filter active" data-filter="All">All</button>
+      <button class="filter" data-filter="Bollywood">Bollywood</button>
+      <button class="filter" data-filter="Tollywood">Tollywood</button>
+      <button class="filter" data-filter="Hollywood">Hollywood</button>
+      <button class="filter" data-filter="Korean">Korean</button>
+    </div>
 
-  <div class="movies" id="movies">
-   <p class="muted">Loading the cinema files...</p>
+    <div class="movies" id="movies">
+      <p class="muted">Loading the cinema files...</p>
+    </div>
+
+    <p class="cinema-note">
+      A personal watchlist and recommendation collection.
+      Genuine posters are used where direct image sources are available;
+      other titles have custom Gotham-inspired covers.
+    </p>
   </div>
-  <p class="cinema-note">A personal watchlist and recommendation collection. Genuine posters are used where direct image sources are available; other titles have custom Gotham-inspired covers. Streaming availability varies.</p>
- </div>
 </section>
 
 <!-- SOCIALS -->
 <section id="socials">
- <div class="container">
-  <div class="eyebrow">08 / FIND ME AROUND THE INTERNET</div>
-  <h2 class="heading">Different platforms.<br><em>Same person.</em></h2>
-  <p class="muted">The digital footprints. Follow along, say hello, or just have a look around.</p>
+  <div class="container">
+    <div class="eyebrow">08 / FIND ME AROUND THE INTERNET</div>
+    <h2 class="heading">Different platforms.<br><em>Same person.</em></h2>
+    <p class="muted">
+      The digital footprints. Follow along, say hello, or have a look around.
+    </p>
 
-  <div class="socials">
-   <a class="social" href="https://www.instagram.com/saikumar.fr/" target="_blank" rel="noopener">
-    <div class="social-left"><span class="social-icon">IG</span><div><strong>Instagram</strong><small>@saikumar.fr</small></div></div><span class="social-arrow">↗</span>
-   </a>
-   <a class="social" href="https://www.snapchat.com/add/saikumar.fr" target="_blank" rel="noopener">
-    <div class="social-left"><span class="social-icon">SC</span><div><strong>Snapchat</strong><small>@saikumar.fr</small></div></div><span class="social-arrow">↗</span>
-   </a>
-   <a class="social" href="https://www.linkedin.com/in/sai-kumar-urukuti-519172253/" target="_blank" rel="noopener">
-    <div class="social-left"><span class="social-icon">in</span><div><strong>LinkedIn</strong><small>Sai Kumar Urukuti</small></div></div><span class="social-arrow">↗</span>
-   </a>
-   <a class="social" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener">
-    <div class="social-left"><span class="social-icon">YT</span><div><strong>YouTube</strong><small>@Saikumarforreal</small></div></div><span class="social-arrow">↗</span>
-   </a>
-   <a class="social" href="https://github.com/Saikumarurukuti" target="_blank" rel="noopener">
-    <div class="social-left"><span class="social-icon">GH</span><div><strong>GitHub</strong><small>@Saikumarurukuti</small></div></div><span class="social-arrow">↗</span>
-   </a>
+    <div class="socials">
+      <a class="social" href="https://www.instagram.com/saikumar.fr/" target="_blank" rel="noopener">
+        <div class="social-left">
+          <span class="social-icon">IG</span>
+          <div><strong>Instagram</strong><small>@saikumar.fr</small></div>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <a class="social" href="https://www.snapchat.com/add/saikumar.fr" target="_blank" rel="noopener">
+        <div class="social-left">
+          <span class="social-icon">SC</span>
+          <div><strong>Snapchat</strong><small>@saikumar.fr</small></div>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <a class="social" href="https://www.linkedin.com/in/sai-kumar-urukuti-519172253/" target="_blank" rel="noopener">
+        <div class="social-left">
+          <span class="social-icon">in</span>
+          <div><strong>LinkedIn</strong><small>Professional profile</small></div>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <a class="social" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener">
+        <div class="social-left">
+          <span class="social-icon">YT</span>
+          <div><strong>YouTube</strong><small>@Saikumarforreal</small></div>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <a class="social" href="https://github.com/Saikumarurukuti" target="_blank" rel="noopener">
+        <div class="social-left">
+          <span class="social-icon">GH</span>
+          <div><strong>GitHub</strong><small>@Saikumarurukuti</small></div>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+    </div>
   </div>
- </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
- <div class="container">
-  <div class="contact">
-   <div>
-    <div class="eyebrow" style="color:#ffe0e2">09 / THE BAT-SIGNAL</div>
-    <h3>Got something<br>interesting?</h3>
-    <p>Work, collaboration, ideas or just a good conversation. My inbox is open.</p>
-   </div>
-   <a class="btn" href="mailto:saikumaryadav1436@gmail.com?subject=Hello%20Sai">Send an email ↗</a>
+  <div class="container">
+    <div class="contact">
+      <div>
+        <div class="eyebrow">09 / THE BAT-SIGNAL</div>
+        <h3>Got something<br>interesting?</h3>
+        <p>Work, collaboration, ideas or just a good conversation. My inbox is open.</p>
+      </div>
+      <a class="btn" href="mailto:saikumaryadav1436@gmail.com?subject=Hello%20Sai">SEND AN EMAIL ↗</a>
+    </div>
   </div>
- </div>
 </section>
 
 </main>
 
 <footer>
- <div class="container footer-row">
-  <div>
-   <div class="footer-brand">SAI KUMAR URUKUTI<span style="color:var(--redlight)">.</span></div>
-   <small>Made with curiosity. Powered by late-night ideas. 🦇</small>
+  <div class="container footer-row">
+    <div>
+      <div class="footer-brand">SAI<span style="color:var(--redlight)">.</span></div>
+      <small>Made with curiosity. Powered by late-night ideas.</small>
+    </div>
+    <small>© <span id="year"></span> · All stories still unfolding.</small>
+    <a class="backtop" href="#home">BACK TO TOP ↑</a>
   </div>
-  <small>© <span id="year"></span> Sai Kumar Urukuti · All stories still unfolding.</small>
-  <a class="backtop" href="#home">Back to top ↑</a>
- </div>
 </footer>
 
 <script>
-/* Mobile navigation */
+/* MOBILE NAVIGATION */
 const menuButton=document.getElementById("menu");
 const navigation=document.getElementById("navlinks");
 
 menuButton.addEventListener("click",()=>{
- navigation.classList.toggle("open");
- menuButton.textContent=navigation.classList.contains("open")?"✕":"☰";
+  const isOpen=navigation.classList.toggle("open");
+  menuButton.textContent=isOpen?"✕":"☰";
+  menuButton.setAttribute("aria-expanded",String(isOpen));
 });
 
 navigation.querySelectorAll("a").forEach(link=>{
- link.addEventListener("click",()=>{
-  navigation.classList.remove("open");
-  menuButton.textContent="☰";
- });
+  link.addEventListener("click",()=>{
+    navigation.classList.remove("open");
+    menuButton.textContent="☰";
+    menuButton.setAttribute("aria-expanded","false");
+  });
 });
 
 document.getElementById("year").textContent=new Date().getFullYear();
 
-/* Cinema data */
+/* CINEMA COLLECTION */
 const movieData=[
- {title:"Tamasha",year:2015,category:"Bollywood",type:"Movie",poster:"https://images.static-bluray.com/movies/covers/147566_front.jpg?t=1452445534"},
- {title:"Rockstar",year:2011,category:"Bollywood",type:"Movie"},
- {title:"Barfi!",year:2012,category:"Bollywood",type:"Movie"},
- {title:"Wake Up Sid",year:2009,category:"Bollywood",type:"Movie"},
- {title:"Yeh Jawaani Hai Deewani",year:2013,category:"Bollywood",type:"Movie"},
- {title:"Ae Dil Hai Mushkil",year:2016,category:"Bollywood",type:"Movie"},
- {title:"Socha Na Tha",year:2005,category:"Bollywood",type:"Movie"},
- {title:"Jab We Met",year:2007,category:"Bollywood",type:"Movie"},
- {title:"Love Aaj Kal",year:2009,category:"Bollywood",type:"Movie"},
- {title:"Highway",year:2014,category:"Bollywood",type:"Movie"},
- {title:"Jab Harry Met Sejal",year:2017,category:"Bollywood",type:"Movie"},
- {title:"Laila Majnu",year:2018,category:"Bollywood",type:"Movie",poster:"https://m.media-amazon.com/images/M/MV5BNzdkMTA4ZDgtNThkNC00ZjFiLThlY2MtMTUxMjFmMjE0MTRjXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg"},
- {title:"Love Aaj Kal",year:2020,category:"Bollywood",type:"Movie"},
- {title:"Amar Singh Chamkila",year:2024,category:"Bollywood",type:"Movie"},
- {title:"Mr. Majnu",year:2019,category:"Tollywood",type:"Movie"},
- {title:"Lucky Baskhar",year:2024,category:"Tollywood",type:"Movie"},
- {title:"Chal Mohan Ranga",year:2018,category:"Tollywood",type:"Movie"},
- {title:"San Andreas",year:2015,category:"Hollywood",type:"Movie"},
- {title:"2012",year:2009,category:"Hollywood",type:"Movie"},
- {title:"The Day After Tomorrow",year:2004,category:"Hollywood",type:"Movie"},
- {title:"Greenland",year:2020,category:"Hollywood",type:"Movie"},
- {title:"The Impossible",year:2012,category:"Hollywood",type:"Movie"},
- {title:"Deepwater Horizon",year:2016,category:"Hollywood",type:"Movie"},
- {title:"Twisters",year:2024,category:"Hollywood",type:"Movie"},
- {title:"Deep Impact",year:1998,category:"Hollywood",type:"Movie"},
- {title:"Armageddon",year:1998,category:"Hollywood",type:"Movie"},
- {title:"Train to Busan",year:2016,category:"Korean",type:"Movie",poster:"https://m.media-amazon.com/images/M/MV5BZTMyMjJhMDYtZTQzMC00MjcxLTkyYjQtN2RlZThlYmM3NjczXkEyXkFqcGc%40._V1_.jpg"},
- {title:"All of Us Are Dead",year:2022,category:"Korean",type:"Series"},
- {title:"Happiness",year:2021,category:"Korean",type:"Series"},
- {title:"Colony",year:2026,category:"Korean",type:"Movie"},
- {title:"Hope",year:2026,category:"Korean",type:"Movie"}
+  {title:"Tamasha",year:2015,category:"Bollywood",type:"Movie",poster:"https://images.static-bluray.com/movies/covers/147566_front.jpg?t=1452445534"},
+  {title:"Rockstar",year:2011,category:"Bollywood",type:"Movie"},
+  {title:"Barfi!",year:2012,category:"Bollywood",type:"Movie"},
+  {title:"Wake Up Sid",year:2009,category:"Bollywood",type:"Movie"},
+  {title:"Yeh Jawaani Hai Deewani",year:2013,category:"Bollywood",type:"Movie"},
+  {title:"Ae Dil Hai Mushkil",year:2016,category:"Bollywood",type:"Movie"},
+  {title:"Socha Na Tha",year:2005,category:"Bollywood",type:"Movie"},
+  {title:"Jab We Met",year:2007,category:"Bollywood",type:"Movie"},
+  {title:"Love Aaj Kal",year:2009,category:"Bollywood",type:"Movie"},
+  {title:"Highway",year:2014,category:"Bollywood",type:"Movie"},
+  {title:"Jab Harry Met Sejal",year:2017,category:"Bollywood",type:"Movie"},
+  {title:"Laila Majnu",year:2018,category:"Bollywood",type:"Movie",poster:"https://m.media-amazon.com/images/M/MV5BNzdkMTA4ZDgtNThkNC00ZjFiLThlY2MtMTUxMjFmMjE0MTRjXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg"},
+  {title:"Love Aaj Kal",year:2020,category:"Bollywood",type:"Movie"},
+  {title:"Amar Singh Chamkila",year:2024,category:"Bollywood",type:"Movie"},
+
+  {title:"Mr. Majnu",year:2019,category:"Tollywood",type:"Movie"},
+  {title:"Lucky Baskhar",year:2024,category:"Tollywood",type:"Movie"},
+  {title:"Chal Mohan Ranga",year:2018,category:"Tollywood",type:"Movie"},
+
+  {title:"San Andreas",year:2015,category:"Hollywood",type:"Movie"},
+  {title:"2012",year:2009,category:"Hollywood",type:"Movie"},
+  {title:"The Day After Tomorrow",year:2004,category:"Hollywood",type:"Movie"},
+  {title:"Greenland",year:2020,category:"Hollywood",type:"Movie"},
+  {title:"The Impossible",year:2012,category:"Hollywood",type:"Movie"},
+  {title:"Deepwater Horizon",year:2016,category:"Hollywood",type:"Movie"},
+  {title:"Twisters",year:2024,category:"Hollywood",type:"Movie"},
+  {title:"Deep Impact",year:1998,category:"Hollywood",type:"Movie"},
+  {title:"Armageddon",year:1998,category:"Hollywood",type:"Movie"},
+
+  {title:"Train to Busan",year:2016,category:"Korean",type:"Movie",poster:"https://m.media-amazon.com/images/M/MV5BZTMyMjJhMDYtZTQzMC00MjcxLTkyYjQtN2RlZThlYmM3NjczXkEyXkFqcGc%40._V1_.jpg"},
+  {title:"All of Us Are Dead",year:2022,category:"Korean",type:"Series"},
+  {title:"Happiness",year:2021,category:"Korean",type:"Series"},
+  {title:"Colony",year:2026,category:"Korean",type:"Movie"},
+  {title:"Hope",year:2026,category:"Korean",type:"Movie"}
 ];
 
-/* Build movie cards safely */
 const movieContainer=document.getElementById("movies");
 
 function renderMovies(category="All"){
- movieContainer.innerHTML="";
- const filtered=movieData.filter(movie=>
-  category==="All"||movie.category===category
- );
+  movieContainer.innerHTML="";
 
- filtered.forEach(movie=>{
-  const card=document.createElement("article");
-  card.className="movie";
+  const filtered=movieData.filter(movie=>
+    category==="All"||movie.category===category
+  );
 
-  const poster=document.createElement("div");
-  poster.className="poster";
+  filtered.forEach(movie=>{
+    const card=document.createElement("article");
+    card.className="movie";
 
-  const fallback=document.createElement("div");
-  fallback.className="poster-fallback";
+    const poster=document.createElement("div");
+    poster.className="poster";
 
-  const label=document.createElement("small");
-  label.textContent="GOTHAM CINEMA FILE";
-  fallback.append(label,document.createTextNode(movie.title));
-  poster.appendChild(fallback);
+    const fallback=document.createElement("div");
+    fallback.className="poster-fallback";
 
-  if(movie.poster){
-   const img=document.createElement("img");
-   img.src=movie.poster;
-   img.alt=movie.title+" poster";
-   img.loading="lazy";
-   img.onerror=()=>img.remove();
-   poster.appendChild(img);
-  }
+    const label=document.createElement("small");
+    label.textContent="GOTHAM CINEMA FILE";
+    fallback.append(label,document.createTextNode(movie.title));
+    poster.appendChild(fallback);
 
-  const info=document.createElement("div");
-  info.className="movie-info";
+    if(movie.poster){
+      const img=document.createElement("img");
+      img.src=movie.poster;
+      img.alt=movie.title+" poster";
+      img.loading="lazy";
+      img.onerror=()=>img.remove();
+      poster.appendChild(img);
+    }
 
-  const title=document.createElement("h3");
-  title.textContent=movie.title;
+    const info=document.createElement("div");
+    info.className="movie-info";
 
-  const meta=document.createElement("div");
-  meta.className="movie-meta";
-  meta.textContent=movie.category+" · "+movie.year;
+    const title=document.createElement("h3");
+    title.textContent=movie.title;
 
-  const type=document.createElement("span");
-  type.className="movie-type";
-  type.textContent=movie.type;
+    const meta=document.createElement("div");
+    meta.className="movie-meta";
+    meta.textContent=movie.category+" · "+movie.year;
 
-  info.append(title,meta,type);
-  card.append(poster,info);
-  movieContainer.appendChild(card);
- });
+    const type=document.createElement("span");
+    type.className="movie-type";
+    type.textContent=movie.type;
+
+    info.append(title,meta,type);
+    card.append(poster,info);
+    movieContainer.appendChild(card);
+  });
 }
 
 renderMovies();
 
 document.querySelectorAll(".filter").forEach(button=>{
- button.addEventListener("click",()=>{
-  document.querySelectorAll(".filter").forEach(item=>{
-   item.classList.remove("active");
+  button.addEventListener("click",()=>{
+    document.querySelectorAll(".filter").forEach(item=>{
+      item.classList.remove("active");
+    });
+    button.classList.add("active");
+    renderMovies(button.dataset.filter);
   });
-  button.classList.add("active");
-  renderMovies(button.dataset.filter);
- });
 });
 </script>
 </body>
