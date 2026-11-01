@@ -1,49 +1,1613 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#F3EFE7"><title>SAI. — Personal Archive</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<style>
-:root{--cream:#F3EFE7;--paper:#FAF8F3;--beige:#E6DED1;--ink:#25231F;--muted:#777064;--gold:#A58B60;--line:#D8CCB8;--wine:#713D40;--night:#202127;--serif:"Instrument Serif",Georgia,serif;--ed:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:80px}body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{width:min(1180px,90%);margin:auto}.eyebrow{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700}.display{font:clamp(3.3rem,8vw,7.3rem)/.9 var(--serif);letter-spacing:-1.5px}.display em{color:var(--wine);font-weight:400}.section{padding:105px 0;border-bottom:1px solid var(--line)}.head{margin-bottom:35px}.head p{max-width:650px;color:var(--muted);margin-top:18px}.btn{display:inline-block;padding:12px 19px;border:1px solid var(--ink);font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;transition:.2s}.btn:hover{background:var(--ink);color:white}header{position:sticky;top:0;z-index:10;background:#f3efe7ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font:2rem var(--serif);letter-spacing:1px}.brand span{color:var(--wine)}.navlinks{display:flex;gap:22px}.navlinks a{font-size:.68rem;letter-spacing:1.3px;text-transform:uppercase;color:#625c52}.menu{display:none;background:none;border:1px solid var(--line);padding:7px 11px;font-size:1.2rem}
-.hero{padding:70px 0 90px;min-height:670px;display:flex;align-items:center}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:6%;align-items:center}.kicker{font-size:.68rem;color:var(--gold);letter-spacing:3px}.hero h1{font:clamp(4.3rem,9vw,8.3rem)/.78 var(--serif);letter-spacing:-3px;margin:28px 0}.hero h1 span{display:block;color:var(--wine);font-style:italic}.hero-copy{max-width:470px;color:var(--muted)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero-note{margin-top:28px;color:var(--gold);font-size:.64rem;letter-spacing:2px;text-transform:uppercase}.visual{position:relative;height:540px}.visual .main{position:absolute;right:5%;top:0;width:74%;height:470px;object-fit:cover;filter:saturate(.8)}.visual .small{position:absolute;left:0;bottom:0;width:41%;height:215px;object-fit:cover;border:9px solid var(--cream)}.stamp{position:absolute;right:0;bottom:30px;background:var(--paper);padding:12px 17px;font:italic 1.35rem var(--ed);color:var(--wine)}.statement{background:var(--wine);color:#f6eee3;text-align:center;padding:25px;font:italic clamp(1.8rem,4vw,3rem) var(--ed)}.statement small{display:block;font:.62rem var(--sans);letter-spacing:3px;text-transform:uppercase;color:#e0c8b7}
-.about{display:grid;grid-template-columns:1.1fr .9fr;gap:9%}.about-copy{font:1.45rem/1.55 var(--ed)}.about-copy p+p{margin-top:18px}.facts{border-top:1px solid var(--line)}.fact{display:flex;justify-content:space-between;gap:15px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.82rem}.fact span{color:var(--muted)}.fact strong{text-align:right}.interests{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.interest{padding:25px;background:var(--paper);border:1px solid var(--line);min-height:155px}.interest small{color:var(--gold);letter-spacing:2px;font-size:.65rem}.interest h3{font:2rem var(--ed);margin:10px 0 3px}.interest p{font-size:.82rem;color:var(--muted)}.timeline{border-left:1px solid var(--gold);padding-left:26px;margin-left:8px}.timeline article{position:relative;padding-bottom:28px}.timeline article:before{content:"";position:absolute;left:-31px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--wine)}.timeline small{color:var(--gold);letter-spacing:2px;font-size:.65rem}.timeline h3{font:2rem var(--ed)}.timeline p{color:var(--muted);max-width:700px}.education{padding:22px;background:var(--beige);margin-top:12px}.projects{display:grid;grid-template-columns:1fr 1fr;gap:16px}.project{background:var(--paper);border:1px solid var(--line);padding:30px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between}.project h3{font:3rem var(--serif);margin:10px 0}.project p{color:var(--muted);margin-bottom:20px}
-.gallery{margin-top:45px}.photo{position:relative;margin-bottom:120px}.photo .frame{height:100%;overflow:hidden;background:var(--beige)}.photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.8);transition:transform .6s}.photo:hover img{transform:scale(1.025)}.photo figcaption{font:italic 1.2rem var(--ed);color:var(--muted);margin-top:10px}.photo figcaption strong{display:block;font:1.6rem var(--serif);color:var(--ink)}.p1{width:68%;height:560px;margin-left:1%}.p2{width:39%;height:390px;margin-left:60%;margin-top:-190px}.p3{width:56%;height:500px;margin-left:42%}.p4{width:44%;height:450px;margin-left:3%;margin-top:-65px}.p5{width:76%;height:460px;margin-left:12%}.p6{width:43%;height:490px;margin-left:55%}.p7{width:58%;height:510px;margin-left:2%}.p8{width:40%;height:400px;margin-left:59%;margin-top:-85px}.p9{width:70%;height:510px;margin-left:15%}.creator{background:var(--night);color:#f5f0e8;padding:35px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.creator h3{font:3rem var(--serif)}.creator p{color:#c9c1b5;max-width:650px}.creator .eyebrow{color:#c7a979}
-.cinema-top{display:flex;justify-content:space-between;align-items:end;gap:20px}.filters{display:flex;flex-wrap:wrap;gap:8px;margin:25px 0}.filter{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:30px;padding:9px 16px;font: .7rem var(--sans);letter-spacing:1px;cursor:pointer}.filter.active,.filter:hover{background:var(--ink);color:white;border-color:var(--ink)}.movies{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}.movie{background:var(--paper);border:1px solid var(--line);overflow:hidden;transition:.2s}.movie:hover{transform:translateY(-4px)}.poster{aspect-ratio:2/3;position:relative;background:linear-gradient(145deg,#b8a994,#403a39);overflow:hidden}.poster img{width:100%;height:100%;object-fit:cover}.placeholder{height:100%;display:grid;place-items:center;text-align:center;padding:18px;color:white;background:linear-gradient(145deg,#635653,#202127);font:2rem/1.05 var(--serif)}.status{position:absolute;bottom:7px;left:7px;background:#171717d9;color:white;padding:4px 7px;font-size:.54rem;letter-spacing:1px;text-transform:uppercase}.movie-info{padding:11px}.movie-info h3{font:1.3rem/1.05 var(--ed)}.meta{font-size:.67rem;color:var(--muted);margin-top:6px}.type{display:block;font-size:.57rem;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase;margin-top:7px}.note{font-size:.75rem;color:var(--muted);margin-top:18px}.socials{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.social{padding:19px;background:var(--paper);border:1px solid var(--line);display:flex;justify-content:space-between}.social strong{display:block;font:1.4rem var(--ed)}.social small{color:var(--muted);font-size:.7rem}.contact{background:var(--beige);padding:42px;display:flex;justify-content:space-between;align-items:center;gap:25px}.contact h3{font:clamp(2.6rem,6vw,4.8rem)/.9 var(--serif)}.contact p{color:var(--muted);margin-top:12px}footer{padding:28px 0;color:var(--muted);font-size:.72rem}.footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}
-@media(max-width:900px){.movies{grid-template-columns:repeat(4,1fr)}.visual{height:460px}.visual .main{height:410px}}
-@media(max-width:650px){.wrap{width:90%}.nav{height:65px}.menu{display:block}.navlinks{display:none;position:absolute;top:65px;left:0;right:0;background:var(--paper);padding:18px 5%;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.hero{padding:50px 0 60px;min-height:0}.hero-grid,.about{grid-template-columns:1fr}.hero h1{font-size:clamp(4rem,18vw,6rem)}.visual{height:390px;margin-top:25px}.visual .main{height:345px;width:76%}.visual .small{height:155px}.section{padding:72px 0}.interests{grid-template-columns:repeat(2,1fr);gap:8px}.interest{padding:17px;min-height:140px}.projects{grid-template-columns:1fr}.photo{margin-bottom:72px}.p1{width:88%;height:410px;margin:0}.p2{width:58%;height:285px;margin-left:42%;margin-top:-75px}.p3{width:78%;height:345px;margin-left:22%}.p4{width:65%;height:320px;margin:0}.p5{width:94%;height:315px;margin-left:3%}.p6{width:64%;height:335px;margin-left:36%}.p7{width:82%;height:350px;margin:0}.p8{width:60%;height:280px;margin-left:40%;margin-top:-30px}.p9{width:90%;height:345px;margin-left:5%}.creator{grid-template-columns:1fr;padding:26px}.cinema-top{display:block}.movies{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.movie-info{padding:9px}.socials{grid-template-columns:1fr}.contact{display:block;padding:28px}.contact .btn{margin-top:20px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-</style></head><body>
-<header><div class="wrap nav"><a class="brand" href="#home">SAI<span>.</span></a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button><nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#interests">Interests</a><a href="#career">Career</a><a href="#projects">Projects</a><a href="#gallery">Journal</a><a href="#cinema">Cinema</a><a href="#socials">Socials</a></nav></div></header>
-<main>
-<section class="hero" id="home"><div class="wrap hero-grid"><div><div class="kicker">A PERSONAL ARCHIVE · EST. 2004</div><h1>Life lately,<span>in frames.</span></h1><p class="hero-copy">A little work, a little cinema, a few side quests. Just collecting moments and seeing where the story goes.</p><div class="actions"><a class="btn" href="#gallery">Explore the journal ↗</a><a class="btn" href="#about">A little about me</a></div><div class="hero-note">Old-money editorial · Modern Gen Z · Subtle Gotham atmosphere</div></div><div class="visual"><img class="main" src="images/hero-1.jpg" alt="Sai — featured portrait"><img class="small" src="images/hero-2.jpg" alt="Second featured photograph"><div class="stamp">The story is still unfolding.</div></div></div></section>
-<div class="statement"><small>A little bit of everything</small>New phase. Same plot twists.</div>
-<section class="section" id="about"><div class="wrap"><div class="head"><div class="eyebrow">01 / THE PERSON BEHIND THE PAGE</div><h2 class="display">A little mystery.<br><em>A lot of curiosity.</em></h2></div><div class="about"><div class="about-copy"><p>I'm Sai Kumar Urukuti. Interested in people, technology, cinema, creativity and the small details that make everyday life worth documenting.</p><p>Building a career, finding my style, exploring new places and keeping a camera roll full of moments. No fixed aesthetic. Just good taste.</p></div><div class="facts"><div class="fact"><span>Name</span><strong>Sai Kumar Urukuti</strong></div><div class="fact"><span>Favourite character</span><strong>Batman</strong></div><div class="fact"><span>Education</span><strong>B.Sc Computer Science</strong></div><div class="fact"><span>Current chapter</span><strong>Career & creativity</strong></div></div></div></div></section>
-<section class="section" id="interests"><div class="wrap"><div class="head"><div class="eyebrow">02 / CURRENT INTERESTS</div><h2 class="display">Different tabs.<br><em>Same browser.</em></h2></div><div class="interests"><article class="interest"><small>01 / FITNESS</small><h3>Built in silence.</h3><p>Strength, discipline and the long game.</p></article><article class="interest"><small>02 / STYLE</small><h3>Dress the part.</h3><p>Clean fits, timeless details and old-money energy.</p></article><article class="interest"><small>03 / CINEMA</small><h3>One more scene.</h3><p>Movies, series, plot twists and soundtracks.</p></article><article class="interest"><small>04 / TECHNOLOGY</small><h3>Curiosity.exe</h3><p>Digital ideas and figuring out how things work.</p></article><article class="interest"><small>05 / TRAVEL</small><h3>Out of office.</h3><p>New places, new views, new perspectives.</p></article><article class="interest"><small>06 / CREATIVITY</small><h3>Frame by frame.</h3><p>Photography, editing and visual storytelling.</p></article></div></div></section>
-<section class="section" id="career"><div class="wrap"><div class="head"><div class="eyebrow">03 / THE PROFESSIONAL FILE</div><h2 class="display">Building the <em>next chapter.</em></h2></div><div class="timeline"><article><small>CURRENT ROLE</small><h3>US Bench Sales Recruiter</h3><strong>TetraConnects Private Limited</strong><p>Working in US bench sales recruitment, supporting candidate marketing, communication and recruitment coordination.</p></article></div><div class="education"><div class="eyebrow">EDUCATION</div><h3 style="font:2rem var(--ed);margin-top:5px">B.Sc Computer Science</h3></div></div></section>
-<section class="section" id="projects"><div class="wrap"><div class="head"><div class="eyebrow">04 / THINGS I'VE BUILT</div><h2 class="display">Ideas into <em>reality.</em></h2></div><div class="projects"><article class="project"><div><div class="eyebrow">01 / WEB PROJECT</div><h3>EchoWave.</h3><p>A music-player website experiment exploring web design and digital experiences.</p></div><a class="btn" href="https://saikumarurukuti.github.io/Echowave/" target="_blank" rel="noopener">Explore EchoWave ↗</a></article><article class="project"><div><div class="eyebrow">02 / PERSONAL ARCHIVE</div><h3>This space.</h3><p>A corner of the internet for photographs, interests, projects and the ongoing story.</p></div><a class="btn" href="#home">Back to the beginning ↑</a></article></div></div></section>
-<section class="section" id="gallery"><div class="wrap"><div class="head"><div class="eyebrow">05 / THE PHOTO JOURNAL</div><h2 class="display">Life in <em>frames.</em></h2><p>Somewhere between the plans and the plot twists. A little bit of everything, captured along the way.</p></div><div class="gallery">
-<figure class="photo p1"><div class="frame" style="height:100%"><img src="images/lifestyle-1.jpg" alt="Lifestyle photograph one" loading="lazy"></div><figcaption><strong>Off-duty energy.</strong>No occasion. Just a good day.</figcaption></figure>
-<figure class="photo p2"><div class="frame" style="height:100%"><img src="images/portraits-1.jpg" alt="Portrait photograph one" loading="lazy"></div><figcaption><strong>Quiet confidence.</strong>Less noise. More presence.</figcaption></figure>
-<figure class="photo p3"><div class="frame" style="height:100%"><img src="images/travel-1.jpg" alt="Travel photograph one" loading="lazy"></div><figcaption><strong>Out of the ordinary.</strong>A change of scenery hits different.</figcaption></figure>
-<figure class="photo p4"><div class="frame" style="height:100%"><img src="images/hero-2.jpg" alt="Featured photograph two" loading="lazy"></div><figcaption><strong>Another chapter.</strong>Same person. New perspective.</figcaption></figure>
-<figure class="photo p5"><div class="frame" style="height:100%"><img src="images/Professional-1.jpg" alt="Professional photograph" loading="lazy"></div><figcaption><strong>Business, with a pulse.</strong>Building something beyond the scroll.</figcaption></figure>
-<figure class="photo p6"><div class="frame" style="height:100%"><img src="images/lifestyle-2.jpg" alt="Lifestyle photograph two" loading="lazy"></div><figcaption><strong>Little things.</strong>Collecting moments, not pixels.</figcaption></figure>
-<figure class="photo p7"><div class="frame" style="height:100%"><img src="images/portraits-2.jpg" alt="Portrait photograph two" loading="lazy"></div><figcaption><strong>New perspective.</strong>Life lately, in frames.</figcaption></figure>
-<figure class="photo p8"><div class="frame" style="height:100%"><img src="images/travel-2.jpg" alt="Travel photograph two" loading="lazy"></div><figcaption><strong>Somewhere else.</strong>Mentally, I'm already there.</figcaption></figure>
-<figure class="photo p9"><div class="frame" style="height:100%"><img src="images/hero-1.jpg" alt="Main portrait" loading="lazy"></div><figcaption><strong>The opening scene.</strong>Just collecting moments.</figcaption></figure></div></div></section>
-<section class="section"><div class="wrap"><div class="creator"><div><div class="eyebrow">06 / THE CREATOR CHAPTER</div><h3>Creating without a rulebook.</h3><p>Still experimenting with content, cinematic edits, everyday life and whatever catches my curiosity. The niche? We're letting the plot develop.</p></div><a class="btn" style="border-color:#d7c7ad;color:#f5f0e8" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener">Watch the journey ↗</a></div></div></section>
-<section class="section" id="cinema"><div class="wrap"><div class="cinema-top"><div class="head"><div class="eyebrow">07 / THE CINEMA ARCHIVE</div><h2 class="display">My kind of <em>escape.</em></h2><p>For plot-twist enthusiasts, hopeless romantics and people who say “just one more movie”.</p></div><span class="eyebrow">31 TITLES · 4 COLLECTIONS</span></div><div class="filters" id="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Bollywood">Bollywood</button><button class="filter" data-filter="Tollywood">Tollywood</button><button class="filter" data-filter="Hollywood">Hollywood</button><button class="filter" data-filter="Korean">Korean</button></div><div class="movies" id="movies"><p>Loading cinema archive…</p></div><p class="note">Posters are retrieved automatically from the Cinemeta public movie catalogue. If a title is missing from that catalogue or its artwork is unavailable, a title card appears instead of a broken image.</p><p class="note">Artwork belongs to its respective owners. Metadata and poster images are served by Cinemeta / Stremio.</p></div></section>
-<section class="section" id="socials"><div class="wrap"><div class="head"><div class="eyebrow">08 / FIND ME AROUND THE INTERNET</div><h2 class="display">Different platforms.<br><em>Same person.</em></h2></div><div class="socials"><a class="social" href="https://www.instagram.com/saikumar.fr/" target="_blank" rel="noopener"><div><strong>Instagram</strong><small>@saikumar.fr</small></div>↗</a><a class="social" href="https://www.snapchat.com/add/saikumar.fr" target="_blank" rel="noopener"><div><strong>Snapchat</strong><small>@saikumar.fr</small></div>↗</a><a class="social" href="https://www.linkedin.com/in/sai-kumar-urukuti-519172253/" target="_blank" rel="noopener"><div><strong>LinkedIn</strong><small>Sai Kumar Urukuti</small></div>↗</a><a class="social" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener"><div><strong>YouTube</strong><small>@Saikumarforreal</small></div>↗</a><a class="social" href="https://github.com/Saikumarurukuti" target="_blank" rel="noopener"><div><strong>GitHub</strong><small>@Saikumarurukuti</small></div>↗</a></div></div></section>
-<section class="section" id="contact"><div class="wrap"><div class="contact"><div><div class="eyebrow">09 / THE BAT-SIGNAL</div><h3>Got something<br>interesting?</h3><p>Work, collaboration, ideas or just a good conversation.</p></div><a class="btn" href="mailto:saikumaryadav1436@gmail.com?subject=Hello%20Sai">Send an email ↗</a></div></div></section>
-</main><footer><div class="wrap footer"><span>SAI. — Made with curiosity.</span><span>© <span id="year"></span> Sai Kumar Urukuti</span><a href="#home">Back to top ↑</a></div></footer>
-<script>
-document.getElementById("year").textContent=new Date().getFullYear();const menu=document.getElementById("menu"),nav=document.getElementById("navlinks");menu.addEventListener("click",()=>{nav.classList.toggle("open");menu.textContent=nav.classList.contains("open")?"×":"☰"});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");menu.textContent="☰"}));
-const movieData=[
-["Tamasha",2015,"Bollywood","Movie","movie"],["Rockstar",2011,"Bollywood","Movie","movie"],["Barfi!",2012,"Bollywood","Movie","movie"],["Wake Up Sid",2009,"Bollywood","Movie","movie"],["Yeh Jawaani Hai Deewani",2013,"Bollywood","Movie","movie"],["Ae Dil Hai Mushkil",2016,"Bollywood","Movie","movie"],["Socha Na Tha",2005,"Bollywood","Movie","movie"],["Jab We Met",2007,"Bollywood","Movie","movie"],["Love Aaj Kal",2009,"Bollywood","Movie","movie"],["Highway",2014,"Bollywood","Movie","movie"],["Jab Harry Met Sejal",2017,"Bollywood","Movie","movie"],["Laila Majnu",2018,"Bollywood","Movie","movie"],["Love Aaj Kal",2020,"Bollywood","Movie","movie"],["Amar Singh Chamkila",2024,"Bollywood","Movie","movie"],["Mr. Majnu",2019,"Tollywood","Movie","movie"],["Lucky Baskhar",2024,"Tollywood","Movie","movie"],["Chal Mohan Ranga",2018,"Tollywood","Movie","movie"],["San Andreas",2015,"Hollywood","Movie","movie"],["2012",2009,"Hollywood","Movie","movie"],["The Day After Tomorrow",2004,"Hollywood","Movie","movie"],["Greenland",2020,"Hollywood","Movie","movie"],["The Impossible",2012,"Hollywood","Movie","movie"],["Deepwater Horizon",2016,"Hollywood","Movie","movie"],["Twisters",2024,"Hollywood","Movie","movie"],["Deep Impact",1998,"Hollywood","Movie","movie"],["Armageddon",1998,"Hollywood","Movie","movie"],["Train to Busan",2016,"Korean","Movie","movie"],["All of Us Are Dead",2022,"Korean","Series","series"],["Happiness",2021,"Korean","Series","series"],["Colony",2026,"Korean","Movie","movie"],["Hope",2026,"Korean","Movie","movie"]
-].map(([title,year,category,type,kind])=>({title,year,category,type,kind}));
-const posterPromises=new Map();
-async function getPoster(m){
-const key=m.kind+"|"+m.title+"|"+m.year;if(posterPromises.has(key))return posterPromises.get(key);
-const promise=(async()=>{const urls=[`https://v3-cinemeta.strem.io/catalog/${m.kind}/top/search=${encodeURIComponent(m.title+" "+m.year)}.json`,`https://v3-cinemeta.strem.io/catalog/${m.kind}/top/search=${encodeURIComponent(m.title)}.json`];for(const url of urls){try{const r=await fetch(url);if(!r.ok)continue;const j=await r.json();const list=j.metas||[];const exact=list.find(x=>(x.name||"").toLowerCase()===m.title.toLowerCase()&&(!x.releaseInfo||String(x.releaseInfo).includes(String(m.year))));const match=exact||list.find(x=>(x.name||"").toLowerCase()===m.title.toLowerCase())||list[0];if(match&&match.poster)return match.poster}catch(e){}}return null})();posterPromises.set(key,promise);return promise}
-function cardFor(m){const card=document.createElement("article");card.className="movie";const poster=document.createElement("div");poster.className="poster";const fallback=document.createElement("div");fallback.className="placeholder";fallback.textContent=m.title;poster.append(fallback);const status=document.createElement("span");status.className="status";status.textContent="Looking for poster";poster.append(status);const info=document.createElement("div");info.className="movie-info";const h=document.createElement("h3");h.textContent=m.title;const meta=document.createElement("div");meta.className="meta";meta.textContent=m.category+" · "+m.year;const type=document.createElement("span");type.className="type";type.textContent=m.type;info.append(h,meta,type);card.append(poster,info);
-getPoster(m).then(src=>{if(!src){status.textContent="Artwork unavailable";return}const img=new Image();img.alt=m.title+" poster";img.loading="lazy";img.onload=()=>{fallback.remove();status.textContent="Poster"};img.onerror=()=>{status.textContent="Artwork unavailable";img.remove()};img.src=src;poster.append(img)});return card}
-const movies=document.getElementById("movies");function render(category="All"){movies.replaceChildren();movieData.filter(m=>category==="All"||m.category===category).forEach(m=>movies.append(cardFor(m)))}render();document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));render(b.dataset.filter)}));
-</script></body></html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F3EFE7">
+<meta name="description" content="The personal portfolio and photo journal of Sai Kumar Urukuti.">
+<title>SAI. — Personal Archive</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream:#F3EFE7;
+  --paper:#FAF8F3;
+  --beige:#E6DED1;
+  --ink:#25231F;
+  --muted:#777064;
+  --gold:#A58B60;
+  --line:#D8CCB8;
+  --wine:#713D40;
+  --night:#202127;
+  --serif:"Instrument Serif",Georgia,serif;
+  --editorial:"Cormorant Garamond",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+
+* { box-sizing:border-box; margin:0; padding:0; }
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:85px;
+}
+
+body {
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+img { display:block; max-width:100%; }
+a { color:inherit; text-decoration:none; }
+
+.wrap {
+  width:min(1180px,90%);
+  margin:auto;
+}
+
+.eyebrow {
+  color:var(--gold);
+  font-size:.67rem;
+  font-weight:700;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.display {
+  font:clamp(3.5rem,8vw,7rem)/.92 var(--serif);
+  letter-spacing:-1px;
+}
+
+.display em {
+  color:var(--wine);
+  font-weight:400;
+}
+
+.section {
+  padding:105px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.head { margin-bottom:38px; }
+
+.head p {
+  max-width:650px;
+  margin-top:16px;
+  color:var(--muted);
+}
+
+.btn {
+  display:inline-block;
+  padding:12px 19px;
+  border:1px solid var(--ink);
+  font-size:.67rem;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+  transition:.25s;
+}
+
+.btn:hover {
+  background:var(--ink);
+  color:white;
+}
+
+/* HEADER */
+
+header {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#F3EFE7ed;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav {
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand {
+  font:2.1rem var(--serif);
+  letter-spacing:1px;
+}
+
+.brand span { color:var(--wine); }
+
+.navlinks {
+  display:flex;
+  align-items:center;
+  gap:23px;
+}
+
+.navlinks a {
+  font-size:.65rem;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  color:#625c52;
+}
+
+.navlinks a:hover { color:var(--wine); }
+
+.menu {
+  display:none;
+  background:none;
+  border:1px solid var(--line);
+  padding:7px 12px;
+  font-size:1.3rem;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero {
+  padding:75px 0 90px;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6%;
+  align-items:center;
+}
+
+.kicker {
+  color:var(--gold);
+  font-size:.67rem;
+  letter-spacing:2.5px;
+}
+
+.hero h1 {
+  font:clamp(4.5rem,8.5vw,8.2rem)/.82 var(--serif);
+  letter-spacing:-2px;
+  margin:28px 0;
+}
+
+.hero h1 span {
+  display:block;
+  color:var(--wine);
+  font-style:italic;
+}
+
+.hero-copy {
+  max-width:460px;
+  color:var(--muted);
+}
+
+.actions {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.hero-note {
+  margin-top:25px;
+  color:var(--gold);
+  font-size:.62rem;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+/* HERO PHOTOGRAPHY */
+
+.visual {
+  position:relative;
+  width:100%;
+  height:570px;
+}
+
+.visual .main {
+  position:absolute;
+  right:2%;
+  top:0;
+  width:76%;
+  height:88%;
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(.83);
+}
+
+.visual .small {
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:39%;
+  height:38%;
+  object-fit:cover;
+  border:9px solid var(--cream);
+}
+
+.stamp {
+  position:absolute;
+  right:0;
+  bottom:25px;
+  background:var(--paper);
+  padding:12px 17px;
+  font:italic 1.3rem var(--editorial);
+  color:var(--wine);
+}
+
+/* STATEMENT */
+
+.statement {
+  background:var(--wine);
+  color:#F6EEE3;
+  text-align:center;
+  padding:26px 15px;
+  font:italic clamp(1.8rem,4vw,3rem) var(--editorial);
+}
+
+.statement small {
+  display:block;
+  color:#E0C8B7;
+  font:.62rem var(--sans);
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+/* ABOUT */
+
+.about {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:9%;
+}
+
+.about-copy {
+  font:1.45rem/1.55 var(--editorial);
+}
+
+.about-copy p+p { margin-top:18px; }
+
+.facts { border-top:1px solid var(--line); }
+
+.fact {
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  padding:15px 0;
+  border-bottom:1px solid var(--line);
+  font-size:.82rem;
+}
+
+.fact span { color:var(--muted); }
+.fact strong { text-align:right; }
+
+/* INTERESTS */
+
+.interests {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+}
+
+.interest {
+  padding:25px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  min-height:155px;
+}
+
+.interest small {
+  color:var(--gold);
+  letter-spacing:2px;
+  font-size:.65rem;
+}
+
+.interest h3 {
+  font:2rem var(--editorial);
+  margin:10px 0 3px;
+}
+
+.interest p {
+  color:var(--muted);
+  font-size:.82rem;
+}
+
+/* CAREER */
+
+.timeline {
+  border-left:1px solid var(--gold);
+  padding-left:26px;
+  margin-left:8px;
+}
+
+.timeline article {
+  position:relative;
+  padding-bottom:28px;
+}
+
+.timeline article:before {
+  content:"";
+  position:absolute;
+  left:-31px;
+  top:8px;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--wine);
+}
+
+.timeline small {
+  color:var(--gold);
+  letter-spacing:2px;
+  font-size:.65rem;
+}
+
+.timeline h3 {
+  font:2rem var(--editorial);
+}
+
+.timeline p {
+  color:var(--muted);
+  max-width:700px;
+}
+
+.education {
+  padding:22px;
+  background:var(--beige);
+  margin-top:12px;
+}
+
+/* PROJECTS */
+
+.projects {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.project {
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:30px;
+  min-height:245px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.project h3 {
+  font:3rem var(--serif);
+  margin:10px 0;
+}
+
+.project p {
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+/* PHOTO JOURNAL */
+
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  column-gap:20px;
+  row-gap:85px;
+  align-items:start;
+}
+
+.photo {
+  min-width:0;
+  position:relative;
+}
+
+.photo .frame {
+  width:100%;
+  overflow:hidden;
+  background:var(--beige);
+}
+
+.photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:saturate(.84);
+  transition:transform .6s;
+}
+
+.photo:hover img { transform:scale(1.025); }
+
+.photo figcaption {
+  display:block;
+  width:100%;
+  padding-top:12px;
+  color:var(--muted);
+  font:italic 1.2rem var(--editorial);
+  line-height:1.35;
+}
+
+.photo figcaption strong {
+  display:block;
+  color:var(--ink);
+  font:2rem/1.05 var(--serif);
+  margin-bottom:4px;
+}
+
+/* Editorial gallery arrangement */
+
+.p1 {
+  grid-column:1 / span 8;
+  margin-right:12%;
+}
+
+.p1 .frame { aspect-ratio:4 / 4.3; }
+
+.p2 {
+  grid-column:8 / span 5;
+  margin-top:125px;
+  z-index:2;
+}
+
+.p2 .frame { aspect-ratio:4 / 4.5; }
+
+.p3 {
+  grid-column:2 / span 7;
+  margin-top:-35px;
+}
+
+.p3 .frame { aspect-ratio:4 / 4.5; }
+
+.p4 {
+  grid-column:8 / span 5;
+  margin-top:70px;
+}
+
+.p4 .frame { aspect-ratio:4 / 4.5; }
+
+.p5 {
+  grid-column:2 / span 10;
+}
+
+.p5 .frame { aspect-ratio:16 / 9; }
+
+.p6 {
+  grid-column:7 / span 6;
+  margin-top:-30px;
+}
+
+.p6 .frame { aspect-ratio:4 / 4.5; }
+
+.p7 {
+  grid-column:1 / span 7;
+}
+
+.p7 .frame { aspect-ratio:4 / 4.5; }
+
+.p8 {
+  grid-column:8 / span 5;
+  margin-top:100px;
+}
+
+.p8 .frame { aspect-ratio:4 / 4.5; }
+
+.p9 {
+  grid-column:3 / span 8;
+  margin-top:-15px;
+}
+
+.p9 .frame { aspect-ratio:4 / 3.5; }
+
+/* CREATOR */
+
+.creator {
+  background:var(--night);
+  color:#F5F0E8;
+  padding:35px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:20px;
+  align-items:center;
+}
+
+.creator h3 {
+  font:3rem var(--serif);
+}
+
+.creator p {
+  color:#C9C1B5;
+  max-width:650px;
+}
+
+.creator .eyebrow { color:#C7A979; }
+
+/* CINEMA */
+
+.cinema-top {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+}
+
+.filters {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:25px 0;
+}
+
+.filter {
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--muted);
+  border-radius:30px;
+  padding:9px 16px;
+  font:.7rem var(--sans);
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+.filter.active,.filter:hover {
+  background:var(--ink);
+  color:white;
+  border-color:var(--ink);
+}
+
+.movies {
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:15px;
+}
+
+.movie {
+  background:var(--paper);
+  border:1px solid var(--line);
+  overflow:hidden;
+  transition:.2s;
+}
+
+.movie:hover { transform:translateY(-4px); }
+
+.poster {
+  aspect-ratio:2/3;
+  position:relative;
+  background:linear-gradient(145deg,#B8A994,#403A39);
+  overflow:hidden;
+}
+
+.poster img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.placeholder {
+  height:100%;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:18px;
+  color:white;
+  background:linear-gradient(145deg,#635653,#202127);
+  font:2rem/1.05 var(--serif);
+}
+
+.status {
+  position:absolute;
+  bottom:7px;
+  left:7px;
+  background:#171717d9;
+  color:white;
+  padding:4px 7px;
+  font-size:.54rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.movie-info { padding:11px; }
+
+.movie-info h3 {
+  font:1.3rem/1.05 var(--editorial);
+}
+
+.meta {
+  font-size:.67rem;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+.type {
+  display:block;
+  font-size:.57rem;
+  letter-spacing:1.5px;
+  color:var(--gold);
+  text-transform:uppercase;
+  margin-top:7px;
+}
+
+.note {
+  font-size:.75rem;
+  color:var(--muted);
+  margin-top:18px;
+}
+
+/* SOCIALS */
+
+.socials {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.social {
+  padding:19px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  transition:.2s;
+}
+
+.social:hover { border-color:var(--gold); }
+
+.social strong {
+  display:block;
+  font:1.4rem var(--editorial);
+}
+
+.social small {
+  color:var(--muted);
+  font-size:.7rem;
+}
+
+/* CONTACT */
+
+.contact {
+  background:var(--beige);
+  padding:42px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+}
+
+.contact h3 {
+  font:clamp(2.6rem,6vw,4.8rem)/.9 var(--serif);
+}
+
+.contact p {
+  color:var(--muted);
+  margin-top:12px;
+}
+
+footer {
+  padding:28px 0;
+  color:var(--muted);
+  font-size:.72rem;
+}
+
+.footer {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+/* TABLET */
+
+@media(max-width:900px) {
+  .wrap { width:90%; }
+
+  .navlinks { gap:12px; }
+  .navlinks a { font-size:.58rem; }
+
+  .hero { padding:55px 0 65px; }
+
+  .hero-grid {
+    grid-template-columns:1fr 1fr;
+    gap:3%;
+  }
+
+  .hero h1 {
+    font-size:clamp(4rem,8vw,6rem);
+  }
+
+  .visual { height:460px; }
+
+  .visual .main { height:87%; }
+  .visual .small { height:36%; }
+
+  .about { gap:5%; }
+
+  .interests { grid-template-columns:repeat(2,1fr); }
+
+  .gallery {
+    column-gap:14px;
+    row-gap:65px;
+  }
+
+  .p1 { grid-column:1 / span 9; }
+  .p2 { grid-column:7 / span 6; margin-top:75px; }
+  .p3 { grid-column:1 / span 8; margin-top:-15px; }
+  .p4 { grid-column:8 / span 5; margin-top:45px; }
+  .p5 { grid-column:1 / span 12; }
+  .p6 { grid-column:6 / span 7; }
+  .p7 { grid-column:1 / span 8; }
+  .p8 { grid-column:8 / span 5; margin-top:60px; }
+  .p9 { grid-column:2 / span 10; }
+
+  .movies { grid-template-columns:repeat(4,1fr); }
+}
+
+/* MOBILE */
+
+@media(max-width:650px) {
+  html { scroll-padding-top:70px; }
+
+  .wrap { width:90%; }
+
+  .nav { min-height:65px; }
+
+  .brand { font-size:1.9rem; }
+
+  .menu { display:block; }
+
+  .navlinks {
+    display:none;
+    position:absolute;
+    top:65px;
+    left:0;
+    right:0;
+    background:var(--paper);
+    padding:20px 5%;
+    flex-direction:column;
+    align-items:flex-start;
+    border-bottom:1px solid var(--line);
+    gap:17px;
+  }
+
+  .navlinks.open { display:flex; }
+
+  .navlinks a { font-size:.72rem; }
+
+  .hero { padding:40px 0 55px; }
+
+  .hero-grid {
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .hero h1 {
+    font-size:clamp(4.1rem,16vw,5.7rem);
+    margin:22px 0;
+  }
+
+  .hero-copy { font-size:.92rem; }
+
+  .visual {
+    width:100%;
+    max-width:470px;
+    height:clamp(370px,105vw,450px);
+    margin:15px auto 0;
+  }
+
+  .visual .main {
+    width:78%;
+    height:87%;
+    right:2%;
+  }
+
+  .visual .small {
+    width:39%;
+    height:36%;
+    left:0;
+    bottom:0;
+    border-width:7px;
+  }
+
+  .stamp {
+    bottom:17px;
+    right:0;
+    font-size:1rem;
+    padding:10px 12px;
+  }
+
+  .section { padding:70px 0; }
+
+  .display { font-size:clamp(3.3rem,13vw,5rem); }
+
+  .about {
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .about-copy { font-size:1.3rem; }
+
+  .interests {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+  }
+
+  .interest {
+    padding:15px;
+    min-height:145px;
+  }
+
+  .interest h3 { font-size:1.55rem; }
+  .interest p { font-size:.76rem; }
+
+  .projects { grid-template-columns:1fr; }
+
+  /* Mobile journal: intentional alternating alignment,
+     but no vertical image/caption collisions. */
+
+  .gallery {
+    display:flex;
+    flex-direction:column;
+    gap:48px;
+    width:100%;
+  }
+
+  .photo {
+    width:100%;
+    height:auto!important;
+    margin:0!important;
+    overflow:visible;
+  }
+
+  .photo .frame {
+    height:auto!important;
+    aspect-ratio:4/5;
+  }
+
+  .photo img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .p1,.p3,.p5,.p7,.p9 {
+    width:94%;
+    align-self:flex-start;
+  }
+
+  .p2,.p4,.p6,.p8 {
+    width:86%;
+    align-self:flex-end;
+  }
+
+  .p5 .frame { aspect-ratio:4/3; }
+  .p9 .frame { aspect-ratio:4/3; }
+
+  .photo figcaption {
+    display:block;
+    width:100%;
+    max-width:100%;
+    padding-top:11px;
+    margin:0;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    font-size:1.1rem;
+    line-height:1.35;
+  }
+
+  .photo figcaption strong {
+    font-size:1.65rem;
+    line-height:1.08;
+    margin-bottom:4px;
+  }
+
+  .creator {
+    grid-template-columns:1fr;
+    padding:25px;
+  }
+
+  .creator h3 { font-size:2.5rem; }
+
+  .cinema-top { display:block; }
+
+  .movies {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+  }
+
+  .movie-info { padding:9px; }
+
+  .socials { grid-template-columns:1fr; }
+
+  .contact {
+    display:block;
+    padding:28px;
+  }
+
+  .contact .btn {
+    margin-top:20px;
+  }
+
+  .footer {
+    flex-direction:column;
+    gap:9px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  *,*:before,*:after { transition:none!important; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">SAI<span>.</span></a>
+
+    <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="#career">Career</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Journal</a>
+      <a href="#cinema">Cinema</a>
+      <a href="#socials">Socials</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+
+    <div>
+      <div class="kicker">A PERSONAL ARCHIVE · EST. 2004</div>
+
+      <h1>Life lately,<span>in frames.</span></h1>
+
+      <p class="hero-copy">
+        A little work, a little cinema, a few side quests.
+        Just collecting moments and seeing where the story goes.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="#gallery">Explore the journal ↗</a>
+        <a class="btn" href="#about">A little about me</a>
+      </div>
+
+      <div class="hero-note">
+        Old-money editorial · Modern Gen Z · Subtle Gotham atmosphere
+      </div>
+    </div>
+
+    <div class="visual">
+      <img class="main" src="images/hero-1.jpg" alt="Sai — featured portrait">
+      <img class="small" src="images/hero-2.jpg" alt="Sai — second portrait">
+      <div class="stamp">The story is still unfolding.</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="statement">
+  <small>A little bit of everything</small>
+  New phase. Same plot twists.
+</div>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+  <div class="wrap">
+
+    <div class="head">
+      <div class="eyebrow">01 / THE PERSON BEHIND THE PAGE</div>
+      <h2 class="display">A little mystery.<br><em>A lot of curiosity.</em></h2>
+    </div>
+
+    <div class="about">
+
+      <div class="about-copy">
+        <p>
+          I'm Sai Kumar Urukuti. Interested in people, technology,
+          cinema, creativity and the small details that make everyday
+          life worth documenting.
+        </p>
+
+        <p>
+          Building a career, finding my style, exploring new places
+          and keeping a camera roll full of moments. No fixed
+          aesthetic. Just good taste.
+        </p>
+      </div>
+
+      <div class="facts">
+        <div class="fact"><span>Name</span><strong>Sai Kumar Urukuti</strong></div>
+        <div class="fact"><span>Favourite character</span><strong>Batman</strong></div>
+        <div class="fact"><span>Education</span><strong>B.Sc Computer Science</strong></div>
+        <div class="fact"><span>Current chapter</span><strong>Career & creativity</strong></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTERESTS -->
+
+<section class="section" id="interests">
+  <div class="wrap">
+
+    <div class="head">
+      <div class="eyebrow">02 / CURRENT INTERESTS</div>
+      <h2 class="display">Different tabs.<br><em>Same browser.</em></h2>
+    </div>
+
+    <div class="interests">
+
+      <article class="interest">
+        <small>01 / FITNESS</small>
+        <h3>Built in silence.</h3>
+        <p>Strength, discipline and the long game.</p>
+      </article>
+
+      <article class="interest">
+        <small>02 / STYLE</small>
+        <h3>Dress the part.</h3>
+        <p>Clean fits, timeless details and old-money energy.</p>
+      </article>
+
+      <article class="interest">
+        <small>03 / CINEMA</small>
+        <h3>One more scene.</h3>
+        <p>Movies, series, plot twists and soundtracks.</p>
+      </article>
+
+      <article class="interest">
+        <small>04 / TECHNOLOGY</small>
+        <h3>Curiosity.exe</h3>
+        <p>Digital ideas and figuring out how things work.</p>
+      </article>
+
+      <article class="interest">
+        <small>05 / TRAVEL</small>
+        <h3>Out of office.</h3>
+        <p>New places, new views, new perspectives.</p>
+      </article>
+
+      <article class="interest">
+        <small>06 / CREATIVITY</small>
+        <h3>Frame by frame.</h3>
+        <p>Photography, editing and visual storytelling.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+
+<section class="section" id="career">
+  <div class="wrap">
+
+    <div class="head">
+      <div class="eyebrow">03 / THE PROFESSIONAL FILE</div>
+      <h2 class="display">Building the <em>next chapter.</em></h2>
+    </div>
+
+    <div class="timeline">
+      <article>
+        <small>CURRENT ROLE</small>
+        <h3>US Bench Sales Recruiter</h3>
+        <strong>TetraConnects Private Limited</strong>
+        <p>
+          Working in US bench sales recruitment, supporting candidate
+          marketing, communication and recruitment coordination.
+        </p>
+      </article>
+    </div>
+
+    <div class="education">
+      <div class="eyebrow">EDUCATION</div>
+      <h3 style="font:2rem var(--editorial);margin-top:5px">
+        B.Sc Computer Science
+      </h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+
+<section class="section" id="projects">
+  <div class="wrap">
+
+    <div class="head">
+      <div class="eyebrow">04 / THINGS I'VE BUILT</div>
+      <h2 class="display">Ideas into <em>reality.</em></h2>
+    </div>
+
+    <div class="projects">
+
+      <article class="project">
+        <div>
+          <div class="eyebrow">01 / WEB PROJECT</div>
+          <h3>EchoWave.</h3>
+          <p>
+            A music-player website experiment exploring web design
+            and digital experiences.
+          </p>
+        </div>
+        <a class="btn" href="https://saikumarurukuti.github.io/Echowave/" target="_blank" rel="noopener">
+          Explore EchoWave ↗
+        </a>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="eyebrow">02 / PERSONAL ARCHIVE</div>
+          <h3>This space.</h3>
+          <p>
+            A corner of the internet for photographs, interests,
+            projects and the ongoing story.
+          </p>
+        </div>
+        <a class="btn" href="#home">Back to the beginning ↑</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO JOURNAL -->
+
+<section class="section" id="gallery">
+  <div class="wrap">
+
+    <div class="head">
+      <div class="eyebrow">05 / THE PHOTO JOURNAL</div>
+      <h2 class="display">Life in <em>frames.</em></h2>
+      <p>
+        Somewhere between the plans and the plot twists.
+        A little bit of everything, captured along the way.
+      </p>
+    </div>
+
+    <div class="gallery">
+
+      <figure class="photo p1">
+        <div class="frame">
+          <img src="images/lifestyle-1.jpg" alt="Lifestyle photograph" loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Off-duty energy.</strong>
+          No occasion. Just a good day.
+        </figcaption>
+      </figure>
+
+      <figure class="photo p2">
+        <div class="frame">
+          <img src="images/portraits-1.jpg" alt="Portrait photograph" loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Quiet confidence.</strong>
+          Less noise. More presence.
+        </figcaption>
+      </figure>
+
+      <figure class="photo p3">
+        <div class="frame">
+          <img src="images/travel-1.jpg" alt="Travel photograph" loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Out of the ordinary.</strong>
+          A change of scenery hits different.
+        </figcaption>
+      </figure>
+
+      <figure class="photo p4">
+        <div class="frame">
+          <img src="images/hero-2.jpg" alt="Another personal photograph" loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Another chapter.</strong>
+          Same person. New perspective.
+        </figcaption>
+      </figure>
+
+      <figure class="photo p5">
+        <div class="frame">
+          <img src="images/Professional-1.jpg" alt="Professional portrait" loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Business, with a pulse.</strong>
+          Building something beyond the scroll.
+        </figcaption>
+      </figure>
+
+      <figure class="photo p6">
+        <div class="frame">
+          <img src="images/lifestyle-2.jpg" alt="Lifestyle photograph two" loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Little things.</strong>
+          Collecting moments, not pixels.
+        </figcaption>
+      </figure>
+
+      <figure class="photo p7">
+        <div class="frame">
+          <img src="images/portraits-2.jpg" alt="Portrait photograph two" loading="lazy">
+        </div>
+        <figcaption>
+          <strong>New perspective.</strong>
+          Life lately, in frames.
+        </figcaption>
+      </figure>
+
+      <figure class="photo p8">
+        <div class="frame">
+          <img src="images/travel-2.jpg" alt="Travel photograph two" loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Somewhere else.</strong>
+          Mentally, I'm already there.
+        </figcaption>
+      </figure>
+
+      <figure class="photo p9">
+        <div class="frame">
+          <img src="images/hero-1.jpg" alt="Featured portrait" loading="lazy">
+        </div>
+        <figcaption>
+          <strong>The opening scene.</strong>
+          Just collecting moments.
+        </figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- CREATOR -->
+
+<section class="section">
+  <div class="wrap">
+    <div class="creator">
+
+      <div>
+        <div class="eyebrow">06 / THE CREATOR CHAPTER</div>
+        <h3>Creating without a rulebook.</h3>
+        <p>
+          Still experimenting with content, cinematic edits,
+          everyday life and whatever catches my curiosity.
+          The niche? We're letting the plot develop.
+        </p>
+      </div>
+
+      <a class="btn" style="border-color:#D7C7AD;color:#F5F0E8"
+         href="https://www.youtube.com/@Saikumarforreal"
+         target="_blank" rel="noopener">
+        Watch the journey ↗
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CINEMA -->
+
+<section class="section" id="cinema">
+  <div class="wrap">
+
+    <div class="cinema-top">
+      <div class="head">
+        <div class="eyebrow">07 / THE CINEMA ARCHIVE</div>
+        <h2 class="display">My kind of <em>escape.</em></h2>
+        <p>
+          For plot-twist enthusiasts, hopeless romantics and people
+          who say "just one more movie".
+        </p>
+      </div>
+      <span class="eyebrow">31 TITLES · 4 COLLECTIONS</span>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="All">All</button>
+      <button class="filter" data-filter="Bollywood">Bollywood</button>
+      <button class="filter" data-filter="Tollywood">Tollywood</button>
+      <button class="filter" data-filter="Hollywood">Hollywood</button>
+      <button class="filter" data-filter="Korean">Korean</button>
+    </div>
+
+    <div class="movies" id="movies">
+      <p>Loading cinema archive…</p>
+    </div>
+
+    <p class="note">
+      Posters are retrieved automatically from the Cinemeta public
+      movie catalogue. If artwork is unavailable, a title card
+      appears instead of a broken image.
+    </p>
+
+    <p class="note">
+      Artwork belongs to its respective owners.
+      Metadata and poster images are served by Cinemeta / Stremio.
+    </p>
+
+  </div>
+</section>
+
+<!-- SOCIALS -->
+
+<section class="section" id="socials">
+  <div class="wrap">
+
+    <div class="head">
+      <div class="eyebrow">08 / FIND ME AROUND THE INTERNET</div>
+      <h2 class="display">Different platforms.<br><em>Same person.</em></h2>
+    </div>
+
+    <div class="socials">
+
+      <a class="social" href="https://www.instagram.com/saikumar.fr/" target="_blank" rel="noopener">
+        <div><strong>Instagram</strong><small>@saikumar.fr</small></div>↗
+      </a>
+
+      <a class="social" href="https://www.snapchat.com/add/saikumar.fr" target="_blank" rel="noopener">
+        <div><strong>Snapchat</strong><small>@saikumar.fr</small></div>↗
+      </a>
+
+      <a class="social" href="https://www.linkedin.com/in/sai-kumar-urukuti-519172253/" target="_blank" rel="noopener">
+        <div><strong>LinkedIn</strong><small>Sai Kumar Urukuti</small></div>↗
+      </a>
+
+      <a class="social" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener">
+        <div><strong>YouTube</strong><small>@Saikumarforreal</small></div>↗
+      </a>
+
+      <a class="social" href="https://github.com/Saikumarurukuti" target="_blank" rel="noopener">
+        <div><strong>GitHub</strong><small>@Saikumarurukuti</small></div>↗
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact">
+
+      <div>
+        <div class="eyebrow">09 / THE BAT-SIGNAL</div>
+        <h3>Got something<br>interesting?</h3>
+        <p>Work, collaboration, ideas or just a good conversation.</p>
+      </div>
+
+      <a class="btn" href="mailto:saikumaryadav1436@gmail.com?subject=Hello%20Sai">
+        Send an email ↗
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer">
+    <span>SAI. — Made with curiosity.</span>
+    <span>© <span id="year"></span> Sai Kumar Urukuti</span>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+/* YEAR */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+/* MOBILE NAVIGATION */
+
+const menu = document.getElementById("menu");
+const nav = document.getElementById("navlinks");
+
+menu.addEventListener("click", () => {
+  const open = nav.classList.toggle("open");
+  menu.textContent = open ? "×" : "☰";
+  menu.setAttribute("aria-expanded", String(open));
+});
+
+nav.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menu.textContent = "☰";
+    menu.setAttribute("aria-expanded", "false");
+  });
+});
+
+/* CINEMA ARCHIVE */
+
+const movieData = [
+  ["Tamasha",2015,"Bollywood","Movie","movie"],
+  ["Rockstar",2011,"Bollywood","Movie","movie"],
+  ["Barfi!",2012,"Bollywood","Movie","movie"],
+  ["Wake Up Sid",2009,"Bollywood","Movie","movie"],
+  ["Yeh Jawaani Hai Deewani",2013,"Bollywood","Movie","movie"],
+  ["Ae Dil Hai Mushkil",2016,"Bollywood","Movie","movie"],
+  ["Socha Na Tha",2005,"Bollywood","Movie","movie"],
+  ["Jab We Met",2007,"Bollywood","Movie","movie"],
+  ["Love Aaj Kal",2009,"Bollywood","Movie","movie"],
+  ["Highway",2014,"Bollywood","Movie","movie"],
+  ["Jab Harry Met Sejal",2017,"Bollywood","Movie","movie"],
+  ["Laila Majnu",2018,"Bollywood","Movie","movie"],
+  ["Love Aaj Kal",2020,"Bollywood","Movie","movie"],
+  ["Amar Singh Chamkila",2024,"Bollywood","Movie","movie"],
+
+  ["Mr. Majnu",2019,"Tollywood","Movie","movie"],
+  ["Lucky Baskhar",2024,"Tollywood","Movie","movie"],
+  ["Chal Mohan Ranga",2018,"Tollywood","Movie","movie"],
+
+  ["San Andreas",2015,"Hollywood","Movie","movie"],
+  ["2012",2009,"Hollywood","Movie","movie"],
+  ["The Day After Tomorrow",2004,"Hollywood","Movie","movie"],
+  ["Greenland",2020,"Hollywood","Movie","movie"],
+  ["The Impossible",2012,"Hollywood","Movie","movie"],
+  ["Deepwater Horizon",2016,"Hollywood","Movie","movie"],
+  ["Twisters",2024,"Hollywood","Movie","movie"],
+  ["Deep Impact",1998,"Hollywood","Movie","movie"],
+  ["Armageddon",1998,"Hollywood","Movie","movie"],
+
+  ["Train to Busan",2016,"Korean","Movie","movie"],
+  ["All of Us Are Dead",2022,"Korean","Series","series"],
+  ["Happiness",2021,"Korean","Series","series"],
+  ["Colony",2026,"Korean","Movie","movie"],
+  ["Hope",2026,"Korean","Movie","movie"]
+].map(([title,year,category,type,kind]) => ({
+  title,year,category,type,kind
+}));
+
+const posterPromises = new Map();
+
+async function getPoster(movie) {
+  const key = movie.kind + "|" + movie.title + "|" + movie.year;
+
+  if (posterPromises.has(key)) {
+    return posterPromises.get(key);
+  }
+
+  const promise = (async () => {
+    const urls = [
+      `https://v3-cinemeta.strem.io/catalog/${movie.kind}/top/search=${encodeURIComponent(movie.title+" "+movie.year)}.json`,
+      `https://v3-cinemeta.strem.io/catalog/${movie.kind}/top/search=${encodeURIComponent(movie.title)}.json`
+    ];
+
+    for (const url of urls) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) continue;
+
+        const data = await response.json();
+        const list = data.metas || [];
+
+        const exact = list.find(item =>
+          (item.name || "").toLowerCase() === movie.title.toLowerCase() &&
+          (!item.releaseInfo ||
+           String(item.releaseInfo).includes(String(movie.year)))
+        );
+
+        const match = exact ||
+          list.find(item =>
+            (item.name || "").toLowerCase() === movie.title.toLowerCase()
+          ) ||
+          list[0];
+
+        if (match && match.poster) return match.poster;
+
+      } catch (error) {
+        // Try the next catalogue search.
+      }
+    }
+
+    return null;
+  })();
+
+  posterPromises.set(key,promise);
+  return promise;
+}
+
+function createMovieCard(movie) {
+  const card = document.createElement("article");
+  card.className = "movie";
+
+  const poster = document.createElement("div");
+  poster.className = "poster";
+
+  const fallback = document.createElement("div");
+  fallback.className = "placeholder";
+  fallback.textContent = movie.title;
+
+  const status = document.createElement("span");
+  status.className = "status";
+  status.textContent = "Loading poster";
+
+  poster.append(fallback,status);
+
+  const info = document.createElement("div");
+  info.className = "movie-info";
+
+  const title = document.createElement("h3");
+  title.textContent = movie.title;
+
+  const meta = document.createElement("div");
+  meta.className = "meta";
+  meta.textContent = movie.category + " · " + movie.year;
+
+  const type = document.createElement("span");
+  type.className = "type";
+  type.textContent = movie.type;
+
+  info.append(title,meta,type);
+  card.append(poster,info);
+
+  getPoster(movie).then(source => {
+    if (!source) {
+      status.textContent = "Artwork unavailable";
+      return;
+    }
+
+    const img = new Image();
+    img.alt = movie.title + " poster";
+    img.loading = "lazy";
+
+    img.onload = () => {
+      fallback.remove();
+      status.textContent = "Poster";
+    };
+
+    img.onerror = () => {
+      status.textContent = "Artwork unavailable";
+      img.remove();
+    };
+
+    img.src = source;
+    poster.append(img);
+  });
+
+  return card;
+}
+
+const movies = document.getElementById("movies");
+
+function renderMovies(category = "All") {
+  movies.replaceChildren();
+
+  movieData
+    .filter(movie =>
+      category === "All" || movie.category === category
+    )
+    .forEach(movie => {
+      movies.append(createMovieCard(movie));
+    });
+}
+
+renderMovies();
+
+document.querySelectorAll(".filter").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".filter").forEach(item => {
+      item.classList.toggle("active",item === button);
+    });
+
+    renderMovies(button.dataset.filter);
+  });
+});
+</script>
+
+</body>
+</html>
