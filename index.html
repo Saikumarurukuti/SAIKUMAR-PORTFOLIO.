@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#F3EFE7">
+<meta name="theme-color" content="#F4F1E9">
 <meta name="description" content="The personal portfolio and photo journal of Sai Kumar Urukuti.">
-<title>SAI. — Personal Archive</title>
+<title>SAI. — The Personal Edition</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&display=swap" rel="stylesheet">
 
 <style>
 :root{--cream:#F3EFE7;--paper:#FAF8F3;--beige:#E6DED1;--ink:#25231F;--muted:#777064;--gold:#A58B60;--line:#D8CCB8;--wine:#713D40;--night:#202127;--serif:"Instrument Serif",Georgia,serif;--editorial:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}
@@ -123,7 +123,7 @@ body.archive-dark .visual .small{border-color:var(--cream)}
 body.archive-dark .archive-quote{background:#292a30}
 .archive-tools{position:fixed;z-index:10010;right:15px;bottom:15px;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
 .archive-tools button{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:30px;padding:9px 13px;font:10px var(--sans);letter-spacing:1px;cursor:pointer;box-shadow:0 4px 16px #0002}
-
+#liveClock{background:var(--paper);color:var(--muted);padding:6px 11px;border-radius:30px;font:10px var(--sans);letter-spacing:1px}
 .archive-quote{width:min(760px,86%);margin:38px auto;padding:23px 27px;border-left:2px solid var(--gold);background:var(--paper);color:var(--ink)}
 .archive-quote blockquote{font:italic clamp(22px,4vw,34px)/1.2 var(--editorial)}
 .archive-quote cite{display:block;margin-top:10px;color:var(--muted);font:9px var(--sans);letter-spacing:1.5px;text-transform:uppercase}
@@ -146,22 +146,6 @@ body.archive-dark .archive-quote{background:#292a30}
 #photoViewer img{max-width:100%;max-height:82vh;object-fit:contain}
 .viewer-button{position:absolute;background:#222;color:#fff;border:1px solid #777;padding:10px 14px;cursor:pointer}
 #viewerClose{right:18px;top:18px}#viewerPrev{left:18px;top:50%}#viewerNext{right:18px;top:50%}
-#cinematicIntro{position:fixed;inset:0;z-index:10050;background:#080b10;color:#f3efe7;display:grid;place-items:center;text-align:center;overflow:hidden;padding:25px;transition:opacity 1s ease,visibility 1s ease}
-#cinematicIntro.leaving{opacity:0;visibility:hidden;pointer-events:none}
-.gotham-sky{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 82%,#59616a 0%,#202a35 27%,#0a1019 72%);overflow:hidden}
-.gotham-sky:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#05080dc9 0%,#101a27a8 48%,#05070bd9 100%),repeating-linear-gradient(105deg,transparent 0 8px,#b8c5d022 9px 10px,transparent 11px 21px)}
-.gotham-sky:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-8%;height:48%;background:linear-gradient(0deg,#050609 0 30%,transparent),repeating-linear-gradient(90deg,transparent 0 22px,#111a26 23px 66px,transparent 67px 92px);clip-path:polygon(0 44%,4% 44%,4% 18%,8% 18%,8% 55%,12% 55%,12% 0,17% 0,17% 62%,22% 62%,22% 30%,26% 30%,26% 70%,31% 70%,31% 12%,37% 12%,37% 57%,42% 57%,42% 23%,48% 23%,48% 65%,54% 65%,54% 8%,60% 8%,60% 53%,65% 53%,65% 28%,71% 28%,71% 65%,76% 65%,76% 15%,82% 15%,82% 56%,88% 56%,88% 25%,93% 25%,93% 62%,100% 62%,100% 100%,0 100%);opacity:.96}
-.gotham-building-lights{position:absolute;inset:54% 0 0;background:repeating-linear-gradient(90deg,transparent 0 29px,#d6a75c55 30px 32px,transparent 33px 51px);mask-image:linear-gradient(transparent,#000)}
-.bat-signal{position:absolute;top:3%;right:7%;width:min(38vw,410px);aspect-ratio:1;border-radius:50%;background:radial-gradient(ellipse,#e9e6d8aa 0%,#cbd2d244 35%,transparent 70%);filter:blur(2px);transform:rotate(-17deg);opacity:.8}
-.bat-signal:before{content:"";position:absolute;inset:22%;background:#111821;clip-path:polygon(0 28%,12% 38%,20% 15%,35% 31%,50% 8%,65% 31%,80% 15%,88% 38%,100% 28%,94% 65%,75% 88%,50% 100%,25% 88%,6% 65%);filter:drop-shadow(0 0 12px #fff)}
-.intro-content{position:relative;z-index:2;width:min(850px,100%);padding-top:8vh;text-shadow:0 3px 25px #000}
-.intro-location{font:11px var(--sans);letter-spacing:.42em;text-transform:uppercase;color:#e3ded2}
-.intro-name{font:clamp(48px,10vw,112px)/.95 var(--serif);letter-spacing:.12em;margin:30px 0 12px}
-.intro-tagline{font:italic clamp(17px,3vw,26px) var(--editorial);letter-spacing:.25em;color:#c6a36b}
-.intro-rule{width:150px;height:1px;background:#b8955e;margin:25px auto}
-#enterArchive{margin-top:14px;padding:15px 25px;border:1px solid #b8955e;background:#0a0d12aa;color:#f5eee2;font:10px var(--sans);letter-spacing:.25em;cursor:pointer}
-#enterArchive:hover{background:#b8955e;color:#111}
-.intro-credit{margin-top:18px;color:#c7c1b6;font:9px var(--sans);letter-spacing:.16em;text-transform:uppercase}
 @media(max-width:900px){
 .navlinks{gap:12px}.navlinks a{font-size:.58rem}
 .hero{padding:55px 0 65px}.hero-grid{gap:3%}
@@ -209,440 +193,735 @@ html{scroll-padding-top:70px}.nav{min-height:65px}.brand{font-size:1.9rem}
 .archive-tools{right:9px;bottom:9px}.archive-tools button{padding:8px 10px}
 .archive-quote{width:90%;margin:27px auto;padding:18px}
 #archiveTimeline{padding:55px 8%}
-.intro-name{letter-spacing:.06em}.intro-location{letter-spacing:.22em;font-size:9px}
 .bat-signal{top:6%;right:2%;width:55vw;opacity:.65}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* LUXE EDITION — visual skin only; original layout and image positions remain intact */
+:root{
+ --cream:#F4F1E9;--paper:#FBFAF6;--beige:#E7E2D6;--ink:#17231F;
+ --muted:#73796F;--gold:#A88956;--line:#D8D3C6;--wine:#23483D;--night:#101D19;
+ --serif:"Bodoni Moda","Instrument Serif",Georgia,serif;
+ --editorial:"Cormorant Garamond",Georgia,serif;
+ --sans:"Manrope","DM Sans",Arial,sans-serif;
+}
+body{font-size:14px;letter-spacing:.005em}
+.wrap{width:min(1210px,88%)}
+header{background:rgba(244,241,233,.94);border-bottom-color:rgba(168,137,86,.32);box-shadow:0 8px 30px rgba(23,35,31,.035)}
+.nav{min-height:82px}
+.brand{font-size:2.35rem;letter-spacing:2px}
+.brand span{color:var(--gold)}
+.navlinks{gap:clamp(13px,2vw,27px)}
+.navlinks a{font-size:.62rem;font-weight:700;letter-spacing:1.55px;color:#58645C;transition:color .25s}
+.navlinks a:hover{color:var(--gold)}
+.eyebrow,.kicker{color:var(--gold);font-weight:800;letter-spacing:3px}
+.display,.hero h1{font-family:var(--serif);font-weight:400;letter-spacing:-.045em}
+.display{font-size:clamp(3.8rem,8.4vw,7.4rem);line-height:.91}
+.display em,.hero h1 span{color:var(--wine)}
+.hero{padding:clamp(70px,9vw,125px) 0 105px}
+.hero-grid{gap:7%}
+.hero h1{font-size:clamp(5rem,9.2vw,9rem);line-height:.83;letter-spacing:-.055em;margin:30px 0}
+.hero-copy{font-size:.94rem;line-height:1.9;color:#68736B}
+.hero-note{color:var(--gold);font-weight:800;letter-spacing:2.4px}
+.visual .main{filter:saturate(.72) contrast(1.04)}
+.visual .small{border-color:var(--cream);box-shadow:0 18px 50px rgba(23,35,31,.13)}
+.stamp{background:var(--night);color:#E9D8B7;padding:15px 20px;box-shadow:0 12px 35px #17231f22}
+.btn{border-color:var(--wine);color:var(--wine);font-weight:800;letter-spacing:1.55px;padding:14px 22px}
+.btn:hover{background:var(--wine);color:#F8F5ED;border-color:var(--wine);transform:translateY(-2px)}
+.statement{background:var(--night);color:#F4F1E9;padding:38px 15px;font-size:clamp(2rem,4.4vw,3.35rem)}
+.statement small{color:#BCA77E;font-weight:800;letter-spacing:3.5px;margin-top:10px}
+.section{padding:clamp(82px,9vw,125px) 0;border-bottom-color:rgba(168,137,86,.28)}
+.head{margin-bottom:48px}
+.head p{line-height:1.9;color:#73796F}
+.about-copy{font-size:clamp(1.35rem,2.1vw,1.75rem);line-height:1.62}
+.fact{padding:17px 0;font-size:.78rem;letter-spacing:.02em}
+.fact strong{font-weight:800}
+.inline-photo img,.photo img{filter:saturate(.72) contrast(1.035)}
+.inline-photo figcaption,.photo figcaption{font-size:1.25rem;color:#73796F}
+.inline-photo figcaption strong,.photo figcaption strong{font-family:var(--serif);font-weight:500;letter-spacing:-.025em}
+.interest,.project,.social,.movie{background:rgba(251,250,246,.82);border-color:#D8D3C6;box-shadow:0 8px 28px rgba(23,35,31,.035);transition:transform .3s,box-shadow .3s,border-color .3s}
+.interest:hover,.project:hover,.social:hover,.movie:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(23,35,31,.09);border-color:var(--gold)}
+.interest{padding:29px;min-height:170px}
+.interest small,.timeline small,.type{color:var(--gold);font-weight:800;letter-spacing:2px}
+.interest h3,.timeline h3,.movie-info h3{font-family:var(--editorial);font-weight:600;letter-spacing:-.02em}
+.interest h3{font-size:2.25rem}
+.interest-photo{background:#E5E0D3;border:1px solid #D8D3C6}
+.timeline{border-left-color:var(--gold)}
+.timeline article:before{background:var(--gold);box-shadow:0 0 0 5px rgba(168,137,86,.13)}
+.education{background:#E8E3D7;border-left:2px solid var(--gold)}
+.project{padding:34px;min-height:265px}
+.project h3{font-family:var(--serif);font-weight:400;letter-spacing:-.04em}
+.project-feature p{color:#73796F}
+.photo .frame{background:#E7E2D6}
+.photo:hover img{transform:scale(1.035)}
+.creator{background:var(--night);border:1px solid #33483E;padding:42px}
+.creator h3{font-family:var(--serif);font-weight:400;letter-spacing:-.035em}
+.creator .eyebrow{color:#C6A66C}
+.filter{border-radius:2px;border-color:#D8D3C6;font-weight:800}
+.filter.active,.filter:hover{background:var(--wine);border-color:var(--wine)}
+.poster{background:linear-gradient(145deg,#A99B7F,#203B32)}
+.placeholder{background:linear-gradient(145deg,#53695C,#14251F);font-family:var(--serif)}
+.movie-info h3{font-size:1.45rem}
+.social{padding:23px}
+.social strong{font-family:var(--editorial);font-size:1.65rem}
+.contact{background:#E8E3D7;border:1px solid #D8D3C6;padding:clamp(30px,5vw,58px)}
+.contact h3{font-family:var(--serif);letter-spacing:-.04em}
+footer{color:#73796F}
+#readingProgress{background:var(--gold);height:3px}
+.archive-tools button{border-radius:3px;border-color:#CFC7B6;box-shadow:0 8px 25px #17231f18;font-weight:800}
+#liveClock{border-radius:3px}
+.archive-quote{border-left:2px solid var(--gold);background:#EAE6DB}
+.archive-quote blockquote{font-family:var(--editorial)}
+#archiveTimeline{background:#ECE8DE}
+.archive-timeline-item h3{font-family:var(--serif)}
+body.archive-dark{--cream:#111B17;--paper:#19251F;--beige:#26352D;--ink:#F0EBDD;--muted:#A8B0A6;--line:#3B4A40;--gold:#C3A36A;--wine:#9AB39C;--night:#0C1511}
+body.archive-dark header{background:rgba(17,27,23,.95)}
+body.archive-dark .navlinks a{color:#D6D9CF}
+body.archive-dark .interest,body.archive-dark .project,body.archive-dark .social,body.archive-dark .movie{background:#19251F;border-color:#3B4A40}
+body.archive-dark .education,body.archive-dark .interest-photo,body.archive-dark .contact,body.archive-dark .archive-quote,body.archive-dark #archiveTimeline{background:#26352D}
+@media(max-width:900px){.wrap{width:90%}.hero h1{font-size:clamp(4.8rem,9vw,7rem)}}
+@media(max-width:650px){
+ .wrap{width:90%}.nav{min-height:68px}.brand{font-size:2.1rem}
+ .navlinks{background:var(--paper);box-shadow:0 18px 30px #17231f12}
+ .hero{padding:48px 0 65px}.hero h1{font-size:clamp(4.4rem,17vw,6rem);line-height:.86}
+ .section{padding:76px 0}.display{font-size:clamp(3.5rem,14vw,5.2rem)}
+ .interest{padding:17px;min-height:150px}.interest h3{font-size:1.8rem}
+ .creator{padding:28px}.contact{padding:30px}
+}
+
 </style>
 </head>
 <body>
 <div id="readingProgress"></div>
 
-<!-- GOTHAM CINEMATIC INTRO -->
-<div id="cinematicIntro" aria-label="Gotham cinematic introduction">
-  <div class="gotham-sky"><div class="gotham-building-lights"></div><div class="bat-signal"></div><div class="batman-rooftop" aria-hidden="true"><svg viewBox="0 0 260 230"><path class="cape" d="M108 80 L65 106 L28 205 L85 184 L111 218 L132 185 L184 205 L155 105 L132 80 Z" fill="#05070b"/><path d="M105 76 L98 43 L84 17 L109 30 L130 10 L151 30 L176 17 L161 45 L154 78 Z" fill="#05070b"/><path d="M108 81 L154 81 L165 145 L96 145 Z" fill="#080a0e"/><path d="M112 83 L100 119 L82 155 L100 164 L127 132 L150 164 L171 155 L154 119 L148 83 Z" fill="#05070b"/><path d="M119 82 L130 98 L141 82" fill="none" stroke="#777" stroke-width="2" opacity=".45"/><path d="M0 215 H260" stroke="#030407" stroke-width="14"/></svg></div><div class="rain"></div><div class="searchlight"></div></div>
-  <div class="intro-content">
-    <div class="intro-location">GOTHAM CITY</div>
-    <div class="intro-name">SAI KUMAR</div>
-    <div class="intro-tagline">THE STORY BEGINS.</div>
-    <div class="intro-rule"></div>
-    <button id="enterArchive">ENTER THE ARCHIVE →</button>
-    <div class="intro-credit">A PERSONAL ARCHIVE · EST. 2004</div>
-  </div>
-</div>
-
 <header>
-<div class="wrap nav">
-<a class="brand" href="#home">SAI<span>.</span></a>
-<button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-<nav class="navlinks" id="navlinks">
-<a href="#about">About</a><a href="#interests">Interests</a><a href="#career">Career</a><a href="#projects">Projects</a><a href="#gallery">Journal</a><a href="#cinema">Cinema</a><a href="#socials">Socials</a>
-</nav>
-</div>
+  <div class="wrap nav">
+    <a class="brand" href="#home">SAI<span>.</span></a>
+    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="#journey">Journey</a>
+      <a href="#projects">Projects</a>
+      <a href="#journal">Journal</a>
+      <a href="#cinema">Cinema</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-<section class="hero" id="home">
-<div class="wrap hero-grid">
-<div>
-<div class="kicker">A PERSONAL ARCHIVE · EST. 2004</div>
-<h1>Life lately,<span>in frames.</span></h1>
-<p class="hero-copy">A little work, a little cinema, a few side quests. Just collecting moments and seeing where the story goes.</p>
-<div class="actions"><a class="btn" href="#gallery">Explore the journal ↗</a><a class="btn" href="#about">A little about me</a></div>
-<div class="hero-note">Old-money editorial · Modern Gen Z · Subtle Gotham atmosphere</div>
-</div>
-<div class="visual">
-<img class="main" src="images/hero-1.jpg" alt="Sai — featured portrait">
-<img class="small" src="images/hero-2.jpg" alt="Sai — second portrait">
-<div class="stamp">The story is still unfolding.</div>
-</div>
-</div>
-</section>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">A PERSONAL ARCHIVE · EST. 2004</div>
+        <h1>Not just<br>another <span>story.</span></h1>
+        <p class="hero-copy">A collection of moments, places, interests and everything in between. Still figuring things out, one chapter at a time.</p>
+        <div class="actions">
+          <a class="btn" href="#journal">Explore the archive</a>
+          <a class="btn" href="#about">A little about me</a>
+        </div>
+        <div class="hero-note">LIVING · LEARNING · COLLECTING MOMENTS</div>
+      </div>
+      <div class="visual">
+        <img class="main" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85" alt="Landscape">
+        <img class="small" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=85" alt="Portrait">
+        <div class="stamp">The personal edition.</div>
+      </div>
+    </div>
+  </section>
 
-<div class="statement"><small>A little bit of everything</small>New phase. Same plot twists.</div>
+  <div class="statement">
+    “Life lately, in no particular order.”
+    <small>A few things worth keeping</small>
+  </div>
 
-<section class="section" id="about">
-<div class="wrap">
-<div class="head"><div class="eyebrow">01 / THE PERSON BEHIND THE PAGE</div><h2 class="display">A little mystery.<br><em>A lot of curiosity.</em></h2></div>
-<div class="about">
-<div class="about-copy">
-<p>I'm Sai Kumar Urukuti. Interested in people, technology, cinema, creativity and the small details that make everyday life worth documenting.</p>
-<p>Building a career, finding my style, exploring new places and keeping a camera roll full of moments. No fixed aesthetic. Just good taste.</p>
-<div class="facts" style="margin-top:25px">
-<div class="fact"><span>Name</span><strong>Sai Kumar Urukuti</strong></div>
-<div class="fact"><span>Favourite character</span><strong>Batman</strong></div>
-<div class="fact"><span>Education</span><strong>B.Sc Computer Science</strong></div>
-<div class="fact"><span>Current chapter</span><strong>Career & creativity</strong></div>
-</div>
-</div>
-<figure class="inline-photo offset-right">
-<img src="images/portraits-1.jpg" alt="Portrait — quiet confidence" loading="lazy">
-<figcaption><strong>Quiet confidence.</strong>A little mystery, a lot of curiosity.</figcaption>
-</figure>
-</div>
-</div>
-</section>
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">01 / THE PERSON</div>
+        <h2 class="display">A little <em>context.</em></h2>
+      </div>
+      <div class="about">
+        <div class="about-copy">
+          <p>I'm Sai Kumar. Somewhere between ambition and figuring life out, I'm building my own story.</p>
+          <p>Into good design, cinema, music, new experiences and the little details that make ordinary days memorable.</p>
+          <div class="facts">
+            <div class="fact"><span>Name</span><strong>Sai Kumar</strong></div>
+            <div class="fact"><span>Based in</span><strong>Visakhapatnam, India</strong></div>
+            <div class="fact"><span>Currently</span><strong>Learning & building</strong></div>
+            <div class="fact"><span>Mindset</span><strong>Always evolving</strong></div>
+          </div>
+        </div>
+        <figure class="inline-photo offset-right">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=85" alt="Portrait">
+          <figcaption><strong>In progress.</strong>Not a finished product. Never was.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="interests">
-<div class="wrap">
-<div class="head"><div class="eyebrow">02 / CURRENT INTERESTS</div><h2 class="display">Different tabs.<br><em>Same browser.</em></h2></div>
-<div class="interests">
-<article class="interest"><small>01 / FITNESS</small><h3>Built in silence.</h3><p>Strength, discipline and the long game.</p></article>
-<article class="interest"><small>02 / STYLE</small><h3>Dress the part.</h3><p>Clean fits, timeless details and old-money energy.</p></article>
-<article class="interest"><small>03 / CINEMA</small><h3>One more scene.</h3><p>Movies, series, plot twists and soundtracks.</p></article>
-<article class="interest"><small>04 / TECHNOLOGY</small><h3>Curiosity.exe</h3><p>Digital ideas and figuring out how things work.</p></article>
-<article class="interest"><small>05 / TRAVEL</small><h3>Out of office.</h3><p>New places, new views, new perspectives.</p></article>
-<article class="interest"><small>06 / CREATIVITY</small><h3>Frame by frame.</h3><p>Photography, editing and visual storytelling.</p></article>
-</div>
-<div class="interest-photo" style="margin-top:30px">
-<img src="images/lifestyle-1.jpg" alt="Lifestyle photograph" loading="lazy">
-<p>“The best chapters usually happen between the plans.”</p>
-</div>
-</div>
-</section>
+  <section class="section" id="interests">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">02 / THE INTERESTS</div>
+        <h2 class="display">Things I'm <em>into.</em></h2>
+        <p>A few interests that keep me curious and give my days a little character.</p>
+      </div>
+      <div class="interests">
+        <article class="interest"><small>01</small><h3>Design</h3><p>Clean visuals, thoughtful details and good typography.</p></article>
+        <article class="interest"><small>02</small><h3>Cinema</h3><p>Stories, characters, frames and unforgettable scenes.</p></article>
+        <article class="interest"><small>03</small><h3>Music</h3><p>Soundtracks for every version of life.</p></article>
+        <article class="interest"><small>04</small><h3>Fitness</h3><p>Showing up, getting stronger and staying consistent.</p></article>
+        <article class="interest"><small>05</small><h3>Technology</h3><p>Exploring ideas and building things on the internet.</p></article>
+        <article class="interest"><small>06</small><h3>Photography</h3><p>Collecting moments through a lens.</p></article>
+        <div class="interest-photo">
+          <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=85" alt="Morning landscape">
+          <p>Somewhere between the plan and the unexpected, life happens.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="career">
-<div class="wrap">
-<div class="head"><div class="eyebrow">03 / THE WORK IN PROGRESS</div><h2 class="display">Building the<br><em>next chapter.</em></h2></div>
-<div class="career-layout">
-<div class="timeline">
-<article><small>THE PRESENT</small><h3>Learning by doing.</h3><p>Exploring business, technology and communication while building practical skills and professional experience.</p></article>
-<article><small>THE DIRECTION</small><h3>Business & technology.</h3><p>Interested in business analysis, digital products, data and the way technology solves real-world problems.</p></article>
-<article><small>THE MINDSET</small><h3>Stay curious.</h3><p>Small improvements, consistent effort and a long-term approach to growth.</p></article>
-</div>
-<div>
-<figure class="inline-photo offset-left">
-<img src="images/Professional-1.jpg" alt="Professional portrait" loading="lazy">
-<figcaption><strong>Work in progress.</strong>Building something worth remembering.</figcaption>
-</figure>
-<div class="education"><div class="eyebrow">EDUCATION</div><h3 style="font:1.8rem var(--editorial);margin-top:8px">B.Sc Computer Science</h3><p style="font-size:.8rem;color:var(--muted)">Mathematics · Electronics · Computer Science</p></div>
-</div>
-</div>
-</div>
-</section>
+  <section class="section" id="journey">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">03 / THE JOURNEY</div>
+        <h2 class="display">Still <em>becoming.</em></h2>
+      </div>
+      <div class="career-layout">
+        <div class="timeline">
+          <article><small>THE BEGINNING</small><h3>Curiosity first</h3><p>Exploring technology, creativity and the things that make the world interesting.</p></article>
+          <article><small>THE LEARNING YEARS</small><h3>Finding direction</h3><p>Studying computer science, building skills and learning through real experiences.</p></article>
+          <article><small>THE CURRENT CHAPTER</small><h3>Building momentum</h3><p>Working, learning and figuring out what the next version of life should look like.</p></article>
+        </div>
+        <div>
+          <div class="eyebrow">EDUCATION</div>
+          <div class="education">
+            <h3 style="font:2rem var(--editorial)">B.Sc. Computer Science</h3>
+            <p>Mathematics · Electronics · Computer Science</p>
+            <p style="color:var(--muted);margin-top:8px">Andhra University</p>
+          </div>
+          <figure class="inline-photo offset-left" style="margin-top:30px">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85" alt="Workspace">
+            <figcaption><strong>Next chapter.</strong>One step at a time.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="projects">
-<div class="wrap">
-<div class="head"><div class="eyebrow">04 / THINGS I'VE BUILT</div><h2 class="display">Ideas into<br><em>something real.</em></h2></div>
-<div class="projects">
-<article class="project"><div><div class="eyebrow">WEB PROJECT / 01</div><h3>EchoWave</h3><p>A personal music-player web experience exploring interface design, layout and front-end creativity.</p></div><a class="btn" href="https://saikumarurukuti.github.io/Echowave/" target="_blank" rel="noopener">Visit project ↗</a></article>
-<article class="project"><div><div class="eyebrow">PERSONAL PROJECT / 02</div><h3>This archive.</h3><p>A living portfolio and visual journal — a place to collect projects, photographs, interests and milestones.</p></div><a class="btn" href="#home">Back to the beginning ↑</a></article>
-</div>
-<div class="project-feature">
-<img src="images/travel-1.jpg" alt="Travel photograph" loading="lazy">
-<p>“You don't need to have it all figured out. You just need to start building.”</p>
-</div>
-</div>
-</section>
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">04 / THE WORK</div>
+        <h2 class="display">Made with <em>curiosity.</em></h2>
+        <p>Small experiments, ideas and things built along the way.</p>
+      </div>
+      <div class="projects">
+        <article class="project">
+          <div><div class="eyebrow">WEB PROJECT · 01</div><h3>EchoWave</h3><p>A music-player web experience exploring interface design and the joy of listening.</p></div>
+          <a class="btn" href="https://saikumarurukuti.github.io/Echowave/" target="_blank" rel="noopener">View project ↗</a>
+        </article>
+        <article class="project">
+          <div><div class="eyebrow">PERSONAL PROJECT · 02</div><h3>This space.</h3><p>A personal corner of the internet. An evolving archive of interests, images and ideas.</p></div>
+          <a class="btn" href="#home">You're here ↗</a>
+        </article>
+      </div>
+      <div class="project-feature">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85" alt="Creative workspace">
+        <p>“The best way to learn is to make something, break something, and make it better.”</p>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="gallery">
-<div class="wrap">
-<div class="head"><div class="eyebrow">05 / THE VISUAL JOURNAL</div><h2 class="display">Collected<br><em>moments.</em></h2><p>Little fragments of life, saved one frame at a time. Tap any photograph to see it full-screen.</p></div>
-<div class="gallery">
-<figure class="photo p1"><div class="frame"><img src="images/lifestyle-2.jpg" alt="Lifestyle journal photograph" loading="lazy"></div><figcaption><strong>Slow moments.</strong>Finding beauty in the everyday.</figcaption></figure>
-<figure class="photo p2"><div class="frame"><img src="images/portraits-2.jpg" alt="Portrait journal photograph" loading="lazy"></div><figcaption><strong>In my own frame.</strong>A little perspective goes a long way.</figcaption></figure>
-<figure class="photo p3"><div class="frame"><img src="images/travel-2.jpg" alt="Travel journal photograph" loading="lazy"></div><figcaption><strong>Somewhere new.</strong>Collecting places, not things.</figcaption></figure>
-<figure class="photo p4"><div class="frame"><img src="images/hero-2.jpg" alt="Personal journal photograph" loading="lazy"></div><figcaption><strong>Another chapter.</strong>The story keeps moving.</figcaption></figure>
-</div>
-</div>
-</section>
+  <section class="section" id="journal">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">05 / THE JOURNAL</div>
+        <h2 class="display">Collected <em>moments.</em></h2>
+        <p>Not everything needs a big story. Sometimes a photo is enough.</p>
+      </div>
+      <div class="gallery">
+        <figure class="photo p1">
+          <div class="frame"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85" alt="Open landscape"></div>
+          <figcaption><strong>Out of office.</strong>Mentally, at least.</figcaption>
+        </figure>
+        <figure class="photo p2">
+          <div class="frame"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=85" alt="Night sky"></div>
+          <figcaption><strong>Night mode.</strong>Different mood, same city.</figcaption>
+        </figure>
+        <figure class="photo p3">
+          <div class="frame"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1100&q=85" alt="Mountain lake"></div>
+          <figcaption><strong>Needed this.</strong>A little space to breathe.</figcaption>
+        </figure>
+        <figure class="photo p4">
+          <div class="frame"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85" alt="Golden hour landscape"></div>
+          <figcaption><strong>Good light.</strong>this one stays. good light, good mood.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
-<div class="wrap" style="padding:35px 0">
-<div class="creator">
-<div><div class="eyebrow">THE CREATOR</div><h3>Just getting started.</h3><p>Documenting the process — the work, the lessons, the little wins and everything in between.</p></div>
-<a class="btn" href="#socials" style="border-color:#c7a979;color:#f5f0e8">Find me online ↗</a>
-</div>
-</div>
+  <section class="section" id="cinema">
+    <div class="wrap">
+      <div class="cinema-top">
+        <div class="head" style="margin-bottom:0">
+          <div class="eyebrow">06 / THE WATCHLIST</div>
+          <h2 class="display">After the <em>credits.</em></h2>
+          <p>Films and series that made the watchlist.</p>
+        </div>
+      </div>
+      <div class="filters" id="movieFilters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="movie">Movies</button>
+        <button class="filter" data-filter="series">Series</button>
+        <button class="filter" data-filter="dc">DC</button>
+      </div>
+      <div class="movies" id="movieGrid"></div>
+      <p class="note">Posters load from Cinemeta when available. Some titles may show a simple fallback card.</p>
+    </div>
+  </section>
 
-<section class="section" id="cinema"><div class="wrap"><div class="cinema-top"><div class="head"><div class="eyebrow">06 / THE CINEMA ARCHIVE</div><h2 class="display">Stories that<br><em>stay with me.</em></h2></div><p style="color:var(--muted);font-size:.8rem">A personal collection of films and series.</p></div><div class="filters" role="group" aria-label="Filter cinema collection"><button class="filter active" data-filter="all" aria-pressed="true">All · 38</button><button class="filter" data-filter="batman" aria-pressed="false">Batman · 3</button><button class="filter" data-filter="film" aria-pressed="false">Films</button><button class="filter" data-filter="series" aria-pressed="false">Series</button></div><div class="movies" id="movies" aria-live="polite"></div><p class="note">A personal watchlist of stories, characters and worlds worth revisiting.</p></div></section>
+  <section class="section" id="social">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">07 / ELSEWHERE</div>
+        <h2 class="display">Around the <em>internet.</em></h2>
+      </div>
+      <div class="socials">
+        <a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener"><span><strong>Instagram</strong><small>Visual diary</small></span><span>↗</span></a>
+        <a class="social" href="https://www.youtube.com/" target="_blank" rel="noopener"><span><strong>YouTube</strong><small>Videos & moments</small></span><span>↗</span></a>
+        <a class="social" href="https://github.com/Saikumarurukuti" target="_blank" rel="noopener"><span><strong>GitHub</strong><small>Things I build</small></span><span>↗</span></a>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="socials"><div class="wrap"><div class="head"><div class="eyebrow">07 / ELSEWHERE ON THE INTERNET</div><h2 class="display">Stay in<br><em>the loop.</em></h2></div><div class="socials"><a class="social" href="https://www.instagram.com/saikumar.fr/" target="_blank" rel="noopener"><span><strong>Instagram</strong><small>@saikumar.fr · Photos & everyday frames</small></span><span>↗</span></a><a class="social" href="https://www.snapchat.com/add/saikumar.fr" target="_blank" rel="noopener"><span><strong>Snapchat</strong><small>@saikumar.fr · Everyday moments</small></span><span>↗</span></a><a class="social" href="https://www.linkedin.com/in/sai-kumar-urukuti-519172253/" target="_blank" rel="noopener"><span><strong>LinkedIn</strong><small>Sai Kumar Urukuti · Professional</small></span><span>↗</span></a><a class="social" href="https://www.youtube.com/@Saikumarforreal" target="_blank" rel="noopener"><span><strong>YouTube</strong><small>@Saikumarforreal · Videos & experiments</small></span><span>↗</span></a><a class="social" href="https://github.com/Saikumarurukuti" target="_blank" rel="noopener"><span><strong>GitHub</strong><small>@Saikumarurukuti · Projects & code</small></span><span>↗</span></a></div></div></section>
-
-<section class="section" id="contact">
-<div class="wrap">
-<div class="contact">
-<div><div class="eyebrow">HAVE A GOOD IDEA?</div><h3>Let's make<br>something happen.</h3><p>For collaborations, opportunities or just a friendly hello.</p></div>
-<button class="btn" id="openContact">Open contact card ↗</button>
-</div>
-</div>
-</section>
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <div class="eyebrow">08 / SAY HELLO</div>
+          <h3>Good things<br>start with a hello.</h3>
+          <p>For a conversation, collaboration or just a friendly hello.</p>
+        </div>
+        <button class="btn" id="openContact">Get in touch ↗</button>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer><div class="wrap footer"><span>© <span id="year"></span> SAI KUMAR URUKUTI. ALL RIGHTS RESERVED.</span><span>MADE WITH CURIOSITY. AND A LITTLE GOTHAM ENERGY.</span></div></footer>
+<section id="archiveTimeline">
+  <div class="archive-timeline-inner">
+    <div class="eyebrow">A NOTE TO SELF</div>
+    <h2 class="display">Keep <em>going.</em></h2>
+    <div class="archive-timeline-list">
+      <article class="archive-timeline-item"><h3>Stay curious.</h3><p>Keep asking questions. Keep learning things that make you think.</p></article>
+      <article class="archive-timeline-item"><h3>Make it count.</h3><p>Small steps still move you forward. Consistency has its own kind of magic.</p></article>
+      <article class="archive-timeline-item"><h3>Enjoy the plot.</h3><p>Not every chapter needs to make sense while you're living it.</p></article>
+    </div>
+  </div>
+</section>
 
-<style>
-/* Cinematic enhancement — original gallery layout preserved */
-.batman-rooftop{position:absolute;z-index:3;left:50%;bottom:10%;width:min(34vw,300px);transform:translateX(-50%);filter:drop-shadow(0 0 18px #000)}
-.batman-rooftop svg{display:block;width:100%;height:auto;overflow:visible}
-.batman-rooftop .cape{transform-origin:130px 90px;animation:capeWind 2.8s ease-in-out infinite alternate}
-@keyframes capeWind{from{transform:skewX(-2deg) scaleX(.96)}to{transform:skewX(5deg) scaleX(1.04)}}
-.gotham-sky{isolation:isolate}
-.gotham-sky:before{animation:skyDrift 18s linear infinite}
-.gotham-sky:after{box-shadow:0 -15px 50px #080b12}
-.bat-signal{animation:signalPulse 5s ease-in-out infinite}
-.bat-signal:before{
-  clip-path:none;
-  inset:25%;
-  background:#111821;
-  filter:drop-shadow(0 0 10px #fff);
-  -webkit-mask:none;
-}
-.bat-signal svg{width:100%;height:100%;display:block}
-.gotham-sky .rain{
-  position:absolute;inset:-30% 0 0;
-  z-index:1;pointer-events:none;
-  background:repeating-linear-gradient(105deg,transparent 0 18px,#c6d2df30 19px,#c6d2df30 20px,transparent 21px 38px);
-  animation:rainFall .65s linear infinite;
-}
-.gotham-sky .searchlight{
-  position:absolute;z-index:1;left:50%;bottom:15%;
-  width:80vw;height:100vh;
-  background:linear-gradient(0deg,#d9e5ef18,transparent 65%);
-  clip-path:polygon(48% 100%,52% 100%,100% 0,0 0);
-  transform-origin:50% 100%;
-  animation:searchSweep 12s ease-in-out infinite alternate;
-  pointer-events:none;
-}
-@keyframes rainFall{to{transform:translateY(35px)}}
-@keyframes searchSweep{from{transform:rotate(-25deg)}to{transform:rotate(25deg)}}
-@keyframes signalPulse{50%{opacity:.55;transform:rotate(-17deg) scale(.96)}}
-@keyframes skyDrift{to{background-position:300px 0}}
-@media(prefers-reduced-motion:reduce){
- .gotham-sky .rain,.gotham-sky .searchlight{display:none}
- .bat-signal{animation:none}.batman-rooftop .cape{animation:none}
-}
-</style>
+<div class="archive-quote">
+  <blockquote>“Somewhere, something incredible is waiting to be known.”</blockquote>
+  <cite>A reminder to stay curious</cite>
+</div>
+
+<footer>
+  <div class="wrap footer">
+    <span>© <span id="year"></span> SAI KUMAR</span>
+    <span>Made with curiosity, not a template.</span>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
+<div class="archive-tools">
+  <span id="liveClock"></span>
+  <button id="themeToggle">☾ / LIGHT MODE</button>
+  <button id="copyLink">COPY SITE LINK</button>
+</div>
+
+<div id="contactCard">
+  <div class="contact-card-inner">
+    <button id="cardClose" aria-label="Close">×</button>
+    <div class="eyebrow">LET'S CONNECT</div>
+    <h2>Say hello.</h2>
+    <p id="emailText">Add your email address in the JavaScript section.</p>
+    <button id="copyEmail">COPY EMAIL</button>
+    <button id="emailCompose">OPEN EMAIL APP</button>
+  </div>
+</div>
+
+<div id="photoViewer">
+  <button class="viewer-button" id="viewerClose">CLOSE ✕</button>
+  <button class="viewer-button" id="viewerPrev">←</button>
+  <img id="viewerImage" src="" alt="Expanded photograph">
+  <button class="viewer-button" id="viewerNext">→</button>
+</div>
 
 <script>
-(() => {
-  "use strict";
+  // ========================================
+// SAI — PERSONAL ARCHIVE
+// PREMIUM EDITION JAVASCRIPT
+// ========================================
 
-  const $ = (selector, root = document) => root.querySelector(selector);
-  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+// MOBILE NAVIGATION
+const menuBtn = document.getElementById("menu");
+const navlinks = document.getElementById("navlinks");
 
-  // Current year
-  const year = $("#year");
-  if (year) year.textContent = new Date().getFullYear();
-
-  // Mobile navigation
-  const menu = $("#menu");
-  const nav = $("#navlinks");
-
-  menu?.addEventListener("click", () => {
-    const opened = nav.classList.toggle("open");
-    menu.setAttribute("aria-expanded", String(opened));
-    menu.textContent = opened ? "✕" : "☰";
+if (menuBtn && navlinks) {
+  menuBtn.addEventListener("click", () => {
+    const isOpen = navlinks.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", isOpen);
+    menuBtn.textContent = isOpen ? "×" : "☰";
   });
 
-  $$("#navlinks a").forEach(link => {
+  navlinks.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
-      nav?.classList.remove("open");
-      menu?.setAttribute("aria-expanded", "false");
-      if (menu) menu.textContent = "☰";
+      navlinks.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.textContent = "☰";
     });
   });
+}
 
-  // Cinematic Gotham intro
-  const intro = $("#cinematicIntro");
-  const enter = $("#enterArchive");
-  const signal = $(".bat-signal");
-  const sky = $(".gotham-sky");
+// FOOTER YEAR
+const yearElement = document.getElementById("year");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
-  if (signal) {
-    signal.innerHTML = `
-      <svg viewBox="0 0 300 150" aria-hidden="true">
-        <path fill="#111821" d="
-          M8 28 L48 45 L76 14 L112 39
-          L150 7 L188 39 L224 14 L252 45
-          L292 28 L276 92 L244 119
-          L202 139 L150 148 L98 139
-          L56 119 L24 92 Z"/>
-      </svg>`;
+// READING PROGRESS
+window.addEventListener("scroll", () => {
+  const scrollable =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+  const progress =
+    scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+
+  const bar = document.getElementById("readingProgress");
+
+  if (bar) {
+    bar.style.width = progress + "%";
   }
+});
 
-  if (sky) {
-    const rain = document.createElement("div");
-    rain.className = "rain";
-    sky.appendChild(rain);
+// DARK MODE
+const themeToggle = document.getElementById("themeToggle");
 
-    const light = document.createElement("div");
-    light.className = "searchlight";
-    sky.appendChild(light);
-  }
-
-  const leaveIntro = () => {
-    if (!intro || intro.classList.contains("leaving")) return;
-    intro.classList.add("leaving");
-    window.setTimeout(() => intro.remove(), 1100);
+if (themeToggle) {
+  const updateThemeButton = () => {
+    themeToggle.textContent = document.body.classList.contains("archive-dark")
+      ? "☀ LIGHT MODE"
+      : "☾ DARK MODE";
   };
 
-  enter?.addEventListener("click", leaveIntro);
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("archive-dark");
+    updateThemeButton();
+  });
 
-  // Reading progress
-  const progress = $("#readingProgress");
+  updateThemeButton();
+}
 
-  const updateProgress = () => {
-    if (!progress) return;
-    const available = document.documentElement.scrollHeight - innerHeight;
-    const percentage = available > 0 ? scrollY / available * 100 : 0;
-    progress.style.width = Math.min(100, percentage) + "%";
-  };
+// LIVE CLOCK
+function updateClock() {
+  const clock = document.getElementById("liveClock");
 
-  window.addEventListener("scroll", updateProgress, { passive: true });
-  window.addEventListener("resize", updateProgress);
-  updateProgress();
+  if (!clock) return;
 
-  // Dark mode control
-  let dark = false;
-  try {
-    dark = localStorage.getItem("sai-archive-dark") === "yes";
-  } catch (_) {}
+  const now = new Date();
 
-  document.body.classList.toggle("archive-dark", dark);
+  const time = now.toLocaleTimeString("en-IN", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true
+  });
 
-  const tools=document.createElement("div");tools.className="archive-tools";tools.innerHTML=`<button type="button" id="themeToggle" aria-label="Toggle dark mode">${dark?"☀ LIGHT MODE":"☾ DARK MODE"}</button>`;document.body.appendChild(tools);
-  $("#themeToggle").addEventListener("click",()=>{dark=!dark;document.body.classList.toggle("archive-dark",dark);$("#themeToggle").textContent=dark?"☀ LIGHT MODE":"☾ DARK MODE";try{localStorage.setItem("sai-archive-dark",dark?"yes":"no");}catch(_){}});
-  // Cinema collection — 38 selected titles
-  const movieData = [{"title":"Laila Majnu","year":2018,"kind":"film","category":"film","label":"Bollywood"},{"title":"Rockstar","year":2011,"kind":"film","category":"film","label":"Bollywood"},{"title":"Tamasha","year":2015,"kind":"film","category":"film","label":"Bollywood"},{"title":"Yeh Jawaani Hai Deewani","year":2013,"kind":"film","category":"film","label":"Bollywood"},{"title":"October","year":2018,"kind":"film","category":"film","label":"Bollywood"},{"title":"Badlapur","year":2015,"kind":"film","category":"film","label":"Bollywood"},{"title":"Humpty Sharma Ki Dulhania","year":2014,"kind":"film","category":"film","label":"Bollywood"},{"title":"Chal Mohan Ranga","year":2018,"kind":"film","category":"film","label":"Tollywood"},{"title":"Mr. Majnu","year":2019,"kind":"film","category":"film","label":"Tollywood"},{"title":"Gautham Nanda","year":2017,"kind":"film","category":"film","label":"Tollywood"},{"title":"Lucky Baskhar","year":2024,"kind":"film","category":"film","label":"Tollywood"},{"title":"Baththa","year":2026,"kind":"film","category":"film","label":"Tamil"},{"title":"San Andreas","year":2015,"kind":"film","category":"film","label":"Hollywood"},{"title":"Crawl","year":2019,"kind":"film","category":"film","label":"Hollywood"},{"title":"Twisters","year":2024,"kind":"film","category":"film","label":"Hollywood"},{"title":"2012","year":2009,"kind":"film","category":"film","label":"Hollywood"},{"title":"Breaking Bad","year":2008,"kind":"series","category":"series","label":"Series"},{"title":"From","year":2022,"kind":"series","category":"series","label":"Series"},{"title":"All of Us Are Dead","year":2022,"kind":"series","category":"series","label":"Korean series"},{"title":"Happiness","year":2021,"kind":"series","category":"series","label":"Korean series"},{"title":"Hope","year":2026,"kind":"film","category":"film","label":"Korean"},{"title":"Colony","year":2026,"kind":"film","category":"film","label":"Korean"},{"title":"Meem Se Mohobbat","year":2024,"kind":"series","category":"series","label":"Pakistani series"},{"title":"Kabhi Main Kabhi Tum","year":2024,"kind":"series","category":"series","label":"Pakistani series"},{"title":"Love Aaj Kal","year":2020,"kind":"film","category":"film","label":"Bollywood"},{"title":"Chhichhore","year":2019,"kind":"film","category":"film","label":"Bollywood"},{"title":"Kedarnath","year":2018,"kind":"film","category":"film","label":"Bollywood"},{"title":"Son of Satyamurthy","year":2015,"kind":"film","category":"film","label":"Tollywood"},{"title":"A Aa","year":2016,"kind":"film","category":"film","label":"Tollywood"},{"title":"Dude","year":2025,"kind":"film","category":"film","label":"Tamil"},{"title":"Dragon","year":2025,"kind":"film","category":"film","label":"Tamil"},{"title":"Premalu","year":2024,"kind":"film","category":"film","label":"Malayalam"},{"title":"24","year":2016,"kind":"film","category":"film","label":"Tamil"},{"title":"Ra.One","year":2011,"kind":"film","category":"film","label":"Bollywood"},{"title":"Saiyaara","year":2025,"kind":"film","category":"film","label":"Bollywood"},{"title":"Batman Begins","year":2005,"kind":"film","category":"batman","label":"Batman"},{"title":"The Dark Knight","year":2008,"kind":"film","category":"batman","label":"Batman"},{"title":"The Batman","year":2022,"kind":"film","category":"batman","label":"Batman"}];
-  const movieGrid = $("#movies"), filters = $$(".filter"), posterCache = new Map();
-  async function findPoster(movie) {
-    const key=movie.kind+"|"+movie.title+"|"+movie.year;
-    if(posterCache.has(key)) return posterCache.get(key);
-    const task=(async()=>{const urls=[
-      `https://v3-cinemeta.strem.io/catalog/${movie.kind}/top/search=${encodeURIComponent(movie.title+" "+movie.year)}.json`,
-      `https://v3-cinemeta.strem.io/catalog/${movie.kind}/top/search=${encodeURIComponent(movie.title)}.json`];
-      for(const url of urls){try{const response=await fetch(url);if(!response.ok)continue;const json=await response.json(),list=json.metas||[];
-      const exact=list.find(item=>(item.name||"").toLowerCase()===movie.title.toLowerCase()&&(!item.releaseInfo||String(item.releaseInfo).includes(String(movie.year))));
-      const match=exact||list.find(item=>(item.name||"").toLowerCase()===movie.title.toLowerCase())||list[0];if(match?.poster)return match.poster;}catch(_){}}
-      return null;})();posterCache.set(key,task);return task;
-  }
-  function renderMovies(category="all"){
-    if(!movieGrid)return;movieGrid.innerHTML="";
-    movieData.filter(movie=>category==="all"||movie.category===category).forEach(movie=>{
-      const card=document.createElement("article");card.className="movie";card.dataset.category=movie.category;
-      const poster=document.createElement("div");poster.className="poster";
-      const fallback=document.createElement("div");fallback.className="placeholder";fallback.textContent=movie.title;poster.appendChild(fallback);
-      const info=document.createElement("div");info.className="movie-info";
-      const title=document.createElement("h3");title.textContent=movie.title;
-      const meta=document.createElement("div");meta.className="meta";meta.textContent=movie.year+" · "+(movie.kind==="series"?"Series":"Film");
-      const type=document.createElement("span");type.className="type";type.textContent=movie.label+(movie.category==="batman"?" · Gotham collection":"");
-      info.append(title,meta,type);card.append(poster,info);movieGrid.appendChild(card);
-      findPoster(movie).then(url=>{if(!url||!card.isConnected)return;const image=document.createElement("img");image.loading="lazy";image.alt=movie.title+" poster";image.src=url;image.onerror=()=>image.remove();poster.replaceChildren(image);});
-    });
-  }
-  filters.forEach(button=>button.addEventListener("click",()=>{const category=button.dataset.filter;filters.forEach(item=>{const active=item===button;item.classList.toggle("active",active);item.setAttribute("aria-pressed",String(active));});renderMovies(category);}));
-  renderMovies("all");
+  clock.textContent = "GOTHAM · " + time;
+}
 
-  // Contact card — no invented email address
-  const contactCard = document.createElement("div");
-  contactCard.id = "contactCard";
-  contactCard.setAttribute("role", "dialog");
-  contactCard.setAttribute("aria-modal", "true");
-  contactCard.setAttribute("aria-label", "Sai Kumar contact card");
+updateClock();
+setInterval(updateClock, 30000);
 
-  contactCard.innerHTML = `
-    <div class="contact-card-inner">
-      <button id="cardClose" type="button" aria-label="Close">×</button>
-      <div class="eyebrow">PERSONAL CONTACT CARD</div>
-      <h2>Sai Kumar.</h2>
-      <p>Projects, collaborations and professional connections.</p>
-      <button id="copyProfile" type="button">COPY GITHUB PROFILE</button>
-      <a class="btn" href="https://github.com/Saikumarurukuti"
-         target="_blank" rel="noopener">OPEN GITHUB ↗</a>
-      <p id="copyStatus" aria-live="polite"></p>
-    </div>`;
-  document.body.appendChild(contactCard);
+// CONTACT CARD
+const contactCard = document.getElementById("contactCard");
+const contactOpen = document.getElementById("contactOpen");
+const cardClose = document.getElementById("cardClose");
 
-  const openContact = $("#openContact");
-  const closeContact = () => contactCard.classList.remove("open");
-
-  openContact?.addEventListener("click", () => {
+if (contactOpen && contactCard) {
+  contactOpen.addEventListener("click", () => {
     contactCard.classList.add("open");
-    $("#cardClose").focus();
   });
+}
 
-  $("#cardClose").addEventListener("click", closeContact);
+if (cardClose && contactCard) {
+  cardClose.addEventListener("click", () => {
+    contactCard.classList.remove("open");
+  });
+}
 
+if (contactCard) {
   contactCard.addEventListener("click", event => {
-    if (event.target === contactCard) closeContact();
+    if (event.target === contactCard) {
+      contactCard.classList.remove("open");
+    }
   });
+}
 
-  $("#copyProfile").addEventListener("click", async () => {
-    const status = $("#copyStatus");
+// COPY EMAIL
+const emailAddress = "saikumaryadav1436@gmail.com";
+const copyEmail = document.getElementById("copyEmail");
+
+if (copyEmail) {
+  copyEmail.addEventListener("click", async () => {
     try {
-      await navigator.clipboard.writeText(
-        "https://github.com/Saikumarurukuti"
-      );
-      status.textContent = "GitHub profile copied.";
-    } catch (_) {
-      status.textContent =
-        "Copy unavailable here. Open the GitHub link instead.";
+      await navigator.clipboard.writeText(emailAddress);
+      copyEmail.textContent = "COPIED ✓";
+    } catch (error) {
+      window.prompt("Copy this email address:", emailAddress);
     }
   });
+}
 
-  // Full-screen journal photo viewer
-  const galleryImages = $$(".gallery .photo img");
-  let currentPhoto = 0;
+// SAVE CONTACT AS VCARD
+const saveVcard = document.getElementById("saveVcard");
 
-  const viewer = document.createElement("div");
-  viewer.id = "photoViewer";
-  viewer.setAttribute("role", "dialog");
-  viewer.setAttribute("aria-modal", "true");
-  viewer.setAttribute("aria-label", "Photo viewer");
+if (saveVcard) {
+  saveVcard.addEventListener("click", () => {
+    const vcard = [
+      "BEGIN:VCARD",
+      "VERSION:3.0",
+      "FN:Sai Kumar Urukuti",
+      "EMAIL:" + emailAddress,
+      "URL:https://saikumarurukuti.github.io/SAIKUMAR-PORTFOLIO./",
+      "END:VCARD"
+    ].join("\r\n");
 
-  viewer.innerHTML = `
-    <button class="viewer-button" id="viewerClose"
-      type="button" aria-label="Close photo viewer">✕</button>
-    <button class="viewer-button" id="viewerPrev"
-      type="button" aria-label="Previous photo">←</button>
-    <img id="viewerImage" alt="">
-    <button class="viewer-button" id="viewerNext"
-      type="button" aria-label="Next photo">→</button>`;
-  document.body.appendChild(viewer);
-
-  const showPhoto = index => {
-    if (!galleryImages.length) return;
-    currentPhoto = (index + galleryImages.length) % galleryImages.length;
-    const source = galleryImages[currentPhoto];
-    const image = $("#viewerImage");
-    image.src = source.src;
-    image.alt = source.alt || "Journal photograph";
-  };
-
-  const closeViewer = () => viewer.classList.remove("open");
-
-  galleryImages.forEach((image, index) => {
-    image.style.cursor = "zoom-in";
-    image.addEventListener("click", () => {
-      showPhoto(index);
-      viewer.classList.add("open");
-      $("#viewerClose").focus();
+    const blob = new Blob([vcard], {
+      type: "text/vcard"
     });
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = "Sai-Kumar.vcf";
+    link.click();
+
+    URL.revokeObjectURL(url);
+  });
+}
+
+// ========================================
+// CINEMA ARCHIVE
+// ========================================
+
+const movieData = [
+  {title:"The Batman",year:2022,type:"Hollywood",kind:"movie",id:"tt1877830"},
+  {title:"The Dark Knight",year:2008,type:"Hollywood",kind:"movie",id:"tt0468569"},
+  {title:"The Dark Knight Rises",year:2012,type:"Hollywood",kind:"movie",id:"tt1345836"},
+  {title:"Joker",year:2019,type:"Hollywood",kind:"movie",id:"tt7286456"},
+  {title:"Joker: Folie à Deux",year:2024,type:"Hollywood",kind:"movie",id:"tt11315808"},
+  {title:"The Penguin",year:2024,type:"Hollywood",kind:"series",id:"tt15435876"},
+  {title:"Batman Begins",year:2005,type:"Hollywood",kind:"movie",id:"tt0372784"},
+  {title:"Man of Steel",year:2013,type:"Hollywood",kind:"movie",id:"tt0770828"},
+  {title:"Zack Snyder's Justice League",year:2021,type:"Hollywood",kind:"movie",id:"tt12361974"},
+  {title:"Dhurandhar",year:2025,type:"Bollywood",kind:"movie",id:""},
+  {title:"Animal",year:2023,type:"Bollywood",kind:"movie",id:"tt13751694"},
+  {title:"Pushpa: The Rise",year:2021,type:"Tollywood",kind:"movie",id:"tt9389998"},
+  {title:"Pushpa 2: The Rule",year:2024,type:"Tollywood",kind:"movie",id:"tt16539454"},
+  {title:"RRR",year:2022,type:"Tollywood",kind:"movie",id:"tt8178634"},
+  {title:"Salaar",year:2023,type:"Tollywood",kind:"movie",id:"tt13927994"},
+  {title:"Kalki 2898 AD",year:2024,type:"Tollywood",kind:"movie",id:"tt12735488"},
+  {title:"Baahubali: The Beginning",year:2015,type:"Tollywood",kind:"movie",id:"tt2631186"},
+  {title:"Baahubali 2",year:2017,type:"Tollywood",kind:"movie",id:"tt4849438"},
+  {title:"KGF Chapter 1",year:2018,type:"Tollywood",kind:"movie",id:"tt7838252"},
+  {title:"KGF Chapter 2",year:2022,type:"Tollywood",kind:"movie",id:"tt10698680"},
+  {title:"Hi Nanna",year:2023,type:"Tollywood",kind:"movie",id:"tt25433734"},
+  {title:"Sita Ramam",year:2022,type:"Tollywood",kind:"movie",id:"tt20850406"},
+  {title:"Arjun Reddy",year:2017,type:"Tollywood",kind:"movie",id:"tt7294534"},
+  {title:"Maharaja",year:2024,type:"Tollywood",kind:"movie",id:"tt26548265"},
+  {title:"Interstellar",year:2014,type:"Hollywood",kind:"movie",id:"tt0816692"},
+  {title:"Inception",year:2010,type:"Hollywood",kind:"movie",id:"tt1375666"},
+  {title:"The Prestige",year:2006,type:"Hollywood",kind:"movie",id:"tt0482571"},
+  {title:"Breaking Bad",year:2008,type:"Hollywood",kind:"series",id:"tt0903747"},
+  {title:"Peaky Blinders",year:2013,type:"Hollywood",kind:"series",id:"tt2442560"},
+  {title:"Squid Game",year:2021,type:"Korean",kind:"series",id:"tt10919420"},
+  {title:"Kingdom",year:2019,type:"Korean",kind:"series",id:"tt6611916"}
+];
+
+const movieGrid = document.getElementById("movies");
+const filterButtons = document.querySelectorAll(".filter");
+
+function renderMovies(filter = "All") {
+  if (!movieGrid) return;
+
+  const filtered = movieData.filter(movie => {
+    if (filter === "All") return true;
+    return movie.type === filter;
   });
 
-  $("#viewerClose").addEventListener("click", closeViewer);
-  $("#viewerPrev").addEventListener("click", () => showPhoto(currentPhoto - 1));
-  $("#viewerNext").addEventListener("click", () => showPhoto(currentPhoto + 1));
+  movieGrid.innerHTML = "";
 
-  viewer.addEventListener("click", event => {
-    if (event.target === viewer) closeViewer();
-  });
+  filtered.forEach(movie => {
+    const card = document.createElement("article");
+    card.className = "movie";
 
-  // Keyboard controls
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      closeViewer();
-      closeContact();
-      if (intro?.isConnected) leaveIntro();
+    const poster = document.createElement("div");
+    poster.className = "poster";
+
+    const fallback = document.createElement("div");
+    fallback.className = "placeholder";
+    fallback.textContent = movie.title;
+
+    poster.appendChild(fallback);
+
+    if (movie.id) {
+      const image = document.createElement("img");
+
+      image.src =
+        "https://images.metahub.space/poster/medium/" +
+        movie.id +
+        "/img";
+
+      image.alt = movie.title + " poster";
+      image.loading = "lazy";
+
+      image.onload = () => {
+        fallback.style.display = "none";
+      };
+
+      image.onerror = () => {
+        image.remove();
+        fallback.style.display = "grid";
+      };
+
+      poster.appendChild(image);
     }
 
-    if (viewer.classList.contains("open")) {
-      if (event.key === "ArrowRight") showPhoto(currentPhoto + 1);
-      if (event.key === "ArrowLeft") showPhoto(currentPhoto - 1);
+    const status = document.createElement("span");
+    status.className = "status";
+    status.textContent = movie.kind;
+
+    poster.appendChild(status);
+
+    const info = document.createElement("div");
+    info.className = "movie-info";
+
+    const title = document.createElement("h3");
+    title.textContent = movie.title;
+
+    const meta = document.createElement("div");
+    meta.className = "meta";
+    meta.textContent = movie.year;
+
+    const type = document.createElement("span");
+    type.className = "type";
+    type.textContent = movie.type;
+
+    info.append(title, meta, type);
+    card.append(poster, info);
+    movieGrid.appendChild(card);
+  });
+}
+
+renderMovies();
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach(item => {
+      item.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    renderMovies(button.dataset.filter);
+  });
+});
+
+// ========================================
+// PHOTO VIEWER
+// ========================================
+
+const photoViewer = document.getElementById("photoViewer");
+const viewerImage = document.getElementById("viewerImage");
+const viewerClose = document.getElementById("viewerClose");
+const viewerPrev = document.getElementById("viewerPrev");
+const viewerNext = document.getElementById("viewerNext");
+
+const galleryImages = Array.from(
+  document.querySelectorAll(".gallery .photo img")
+);
+
+let currentPhoto = 0;
+
+function showPhoto(index) {
+  if (!galleryImages.length) return;
+
+  currentPhoto =
+    (index + galleryImages.length) % galleryImages.length;
+
+  viewerImage.src = galleryImages[currentPhoto].src;
+  viewerImage.alt = galleryImages[currentPhoto].alt;
+
+  photoViewer.classList.add("open");
+}
+
+galleryImages.forEach((image, index) => {
+  image.style.cursor = "zoom-in";
+
+  image.addEventListener("click", () => {
+    showPhoto(index);
+  });
+});
+
+if (viewerClose) {
+  viewerClose.addEventListener("click", () => {
+    photoViewer.classList.remove("open");
+  });
+}
+
+if (viewerPrev) {
+  viewerPrev.addEventListener("click", () => {
+    showPhoto(currentPhoto - 1);
+  });
+}
+
+if (viewerNext) {
+  viewerNext.addEventListener("click", () => {
+    showPhoto(currentPhoto + 1);
+  });
+}
+
+if (photoViewer) {
+  photoViewer.addEventListener("click", event => {
+    if (event.target === photoViewer) {
+      photoViewer.classList.remove("open");
     }
   });
+}
 
-})();
+document.addEventListener("keydown", event => {
+  if (!photoViewer.classList.contains("open")) return;
+
+  if (event.key === "Escape") {
+    photoViewer.classList.remove("open");
+  }
+
+  if (event.key === "ArrowLeft") {
+    showPhoto(currentPhoto - 1);
+  }
+
+  if (event.key === "ArrowRight") {
+    showPhoto(currentPhoto + 1);
+  }
+});
+
+// ========================================
+// END OF SAI PERSONAL ARCHIVE
+// ========================================
 </script>
 </body>
-  </html>
+</html>
