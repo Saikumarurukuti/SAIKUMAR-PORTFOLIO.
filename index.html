@@ -393,5 +393,301 @@ html{scroll-padding-top:70px}.nav{min-height:65px}.brand{font-size:1.9rem}
 </main>
 
 <footer><div class="wrap footer"><span>© <span id="year"></span> SAI KUMAR URUKUTI. ALL RIGHTS RESERVED.</span><span>MADE WITH CURIOSITY. AND A LITTLE GOTHAM ENERGY.</span></div></footer>
+
+<style>
+/* Cinematic enhancement — does not alter gallery layout */
+.gotham-sky{isolation:isolate}
+.gotham-sky:before{animation:skyDrift 18s linear infinite}
+.gotham-sky:after{box-shadow:0 -15px 50px #080b12}
+.bat-signal{animation:signalPulse 5s ease-in-out infinite}
+.bat-signal:before{
+  clip-path:none;
+  inset:25%;
+  background:#111821;
+  filter:drop-shadow(0 0 10px #fff);
+  -webkit-mask:none;
+}
+.bat-signal svg{width:100%;height:100%;display:block}
+.gotham-sky .rain{
+  position:absolute;inset:-30% 0 0;
+  z-index:1;pointer-events:none;
+  background:repeating-linear-gradient(105deg,transparent 0 18px,#c6d2df30 19px,#c6d2df30 20px,transparent 21px 38px);
+  animation:rainFall .65s linear infinite;
+}
+.gotham-sky .searchlight{
+  position:absolute;z-index:1;left:50%;bottom:15%;
+  width:80vw;height:100vh;
+  background:linear-gradient(0deg,#d9e5ef18,transparent 65%);
+  clip-path:polygon(48% 100%,52% 100%,100% 0,0 0);
+  transform-origin:50% 100%;
+  animation:searchSweep 12s ease-in-out infinite alternate;
+  pointer-events:none;
+}
+@keyframes rainFall{to{transform:translateY(35px)}}
+@keyframes searchSweep{from{transform:rotate(-25deg)}to{transform:rotate(25deg)}}
+@keyframes signalPulse{50%{opacity:.55;transform:rotate(-17deg) scale(.96)}}
+@keyframes skyDrift{to{background-position:300px 0}}
+@media(prefers-reduced-motion:reduce){
+ .gotham-sky .rain,.gotham-sky .searchlight{display:none}
+ .bat-signal{animation:none}
+}
+</style>
+
+<script>
+(() => {
+  "use strict";
+
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+  // Current year
+  const year = $("#year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  // Mobile navigation
+  const menu = $("#menu");
+  const nav = $("#navlinks");
+
+  menu?.addEventListener("click", () => {
+    const opened = nav.classList.toggle("open");
+    menu.setAttribute("aria-expanded", String(opened));
+    menu.textContent = opened ? "✕" : "☰";
+  });
+
+  $$("#navlinks a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav?.classList.remove("open");
+      menu?.setAttribute("aria-expanded", "false");
+      if (menu) menu.textContent = "☰";
+    });
+  });
+
+  // Cinematic Gotham intro
+  const intro = $("#cinematicIntro");
+  const enter = $("#enterArchive");
+  const signal = $(".bat-signal");
+  const sky = $(".gotham-sky");
+
+  if (signal) {
+    signal.innerHTML = `
+      <svg viewBox="0 0 300 150" aria-hidden="true">
+        <path fill="#111821" d="
+          M8 28 L48 45 L76 14 L112 39
+          L150 7 L188 39 L224 14 L252 45
+          L292 28 L276 92 L244 119
+          L202 139 L150 148 L98 139
+          L56 119 L24 92 Z"/>
+      </svg>`;
+  }
+
+  if (sky) {
+    const rain = document.createElement("div");
+    rain.className = "rain";
+    sky.appendChild(rain);
+
+    const light = document.createElement("div");
+    light.className = "searchlight";
+    sky.appendChild(light);
+  }
+
+  const leaveIntro = () => {
+    if (!intro || intro.classList.contains("leaving")) return;
+    intro.classList.add("leaving");
+    window.setTimeout(() => intro.remove(), 1100);
+  };
+
+  enter?.addEventListener("click", leaveIntro);
+
+  // Reading progress
+  const progress = $("#readingProgress");
+
+  const updateProgress = () => {
+    if (!progress) return;
+    const available = document.documentElement.scrollHeight - innerHeight;
+    const percentage = available > 0 ? scrollY / available * 100 : 0;
+    progress.style.width = Math.min(100, percentage) + "%";
+  };
+
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("resize", updateProgress);
+  updateProgress();
+
+  // Dark mode control
+  let dark = false;
+  try {
+    dark = localStorage.getItem("sai-archive-dark") === "yes";
+  } catch (_) {}
+
+  document.body.classList.toggle("archive-dark", dark);
+
+  const tools = document.createElement("div");
+  tools.className = "archive-tools";
+  tools.innerHTML = `
+    <span id="liveClock" aria-live="off"></span>
+    <button type="button" id="themeToggle" aria-label="Toggle dark mode">
+      ${dark ? "☀ LIGHT MODE" : "☾ DARK MODE"}
+    </button>`;
+  document.body.appendChild(tools);
+
+  $("#themeToggle").addEventListener("click", () => {
+    dark = !dark;
+    document.body.classList.toggle("archive-dark", dark);
+    $("#themeToggle").textContent = dark ? "☀ LIGHT MODE" : "☾ DARK MODE";
+    try {
+      localStorage.setItem("sai-archive-dark", dark ? "yes" : "no");
+    } catch (_) {}
+  });
+
+  // India clock
+  const clock = $("#liveClock");
+  const updateClock = () => {
+    if (!clock) return;
+    clock.textContent = new Intl.DateTimeFormat("en-IN", {
+      timeZone: "Asia/Kolkata",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true
+    }).format(new Date()) + " IST";
+  };
+
+  updateClock();
+  window.setInterval(updateClock, 1000);
+
+  // Cinema filters
+  const filters = $$(".filter");
+  const movies = $$(".movie");
+
+  filters.forEach(button => {
+    button.addEventListener("click", () => {
+      const category = button.dataset.filter;
+
+      filters.forEach(item => {
+        const active = item === button;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+
+      movies.forEach(movie => {
+        movie.hidden = category !== "all" &&
+          movie.dataset.category !== category;
+      });
+    });
+
+    button.setAttribute("aria-pressed",
+      String(button.classList.contains("active")));
+  });
+
+  // Contact card — no invented email address
+  const contactCard = document.createElement("div");
+  contactCard.id = "contactCard";
+  contactCard.setAttribute("role", "dialog");
+  contactCard.setAttribute("aria-modal", "true");
+  contactCard.setAttribute("aria-label", "Sai Kumar contact card");
+
+  contactCard.innerHTML = `
+    <div class="contact-card-inner">
+      <button id="cardClose" type="button" aria-label="Close">×</button>
+      <div class="eyebrow">PERSONAL CONTACT CARD</div>
+      <h2>Sai Kumar.</h2>
+      <p>Projects, collaborations and professional connections.</p>
+      <button id="copyProfile" type="button">COPY GITHUB PROFILE</button>
+      <a class="btn" href="https://github.com/Saikumarurukuti"
+         target="_blank" rel="noopener">OPEN GITHUB ↗</a>
+      <p id="copyStatus" aria-live="polite"></p>
+    </div>`;
+  document.body.appendChild(contactCard);
+
+  const openContact = $("#openContact");
+  const closeContact = () => contactCard.classList.remove("open");
+
+  openContact?.addEventListener("click", () => {
+    contactCard.classList.add("open");
+    $("#cardClose").focus();
+  });
+
+  $("#cardClose").addEventListener("click", closeContact);
+
+  contactCard.addEventListener("click", event => {
+    if (event.target === contactCard) closeContact();
+  });
+
+  $("#copyProfile").addEventListener("click", async () => {
+    const status = $("#copyStatus");
+    try {
+      await navigator.clipboard.writeText(
+        "https://github.com/Saikumarurukuti"
+      );
+      status.textContent = "GitHub profile copied.";
+    } catch (_) {
+      status.textContent =
+        "Copy unavailable here. Open the GitHub link instead.";
+    }
+  });
+
+  // Full-screen journal photo viewer
+  const galleryImages = $$(".gallery .photo img");
+  let currentPhoto = 0;
+
+  const viewer = document.createElement("div");
+  viewer.id = "photoViewer";
+  viewer.setAttribute("role", "dialog");
+  viewer.setAttribute("aria-modal", "true");
+  viewer.setAttribute("aria-label", "Photo viewer");
+
+  viewer.innerHTML = `
+    <button class="viewer-button" id="viewerClose"
+      type="button" aria-label="Close photo viewer">✕</button>
+    <button class="viewer-button" id="viewerPrev"
+      type="button" aria-label="Previous photo">←</button>
+    <img id="viewerImage" alt="">
+    <button class="viewer-button" id="viewerNext"
+      type="button" aria-label="Next photo">→</button>`;
+  document.body.appendChild(viewer);
+
+  const showPhoto = index => {
+    if (!galleryImages.length) return;
+    currentPhoto = (index + galleryImages.length) % galleryImages.length;
+    const source = galleryImages[currentPhoto];
+    const image = $("#viewerImage");
+    image.src = source.src;
+    image.alt = source.alt || "Journal photograph";
+  };
+
+  const closeViewer = () => viewer.classList.remove("open");
+
+  galleryImages.forEach((image, index) => {
+    image.style.cursor = "zoom-in";
+    image.addEventListener("click", () => {
+      showPhoto(index);
+      viewer.classList.add("open");
+      $("#viewerClose").focus();
+    });
+  });
+
+  $("#viewerClose").addEventListener("click", closeViewer);
+  $("#viewerPrev").addEventListener("click", () => showPhoto(currentPhoto - 1));
+  $("#viewerNext").addEventListener("click", () => showPhoto(currentPhoto + 1));
+
+  viewer.addEventListener("click", event => {
+    if (event.target === viewer) closeViewer();
+  });
+
+  // Keyboard controls
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      closeViewer();
+      closeContact();
+      if (intro?.isConnected) leaveIntro();
+    }
+
+    if (viewer.classList.contains("open")) {
+      if (event.key === "ArrowRight") showPhoto(currentPhoto + 1);
+      if (event.key === "ArrowLeft") showPhoto(currentPhoto - 1);
+    }
+  });
+
+})();
+</script>
 </body>
 </html>
